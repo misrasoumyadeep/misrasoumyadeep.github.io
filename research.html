@@ -26,7 +26,9 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center md:hidden">
                     <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none p-2">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
                     </button>
                 </div>
                 <div class="flex items-center justify-center flex-1 md:flex-none md:justify-start">
@@ -49,7 +51,11 @@
         <div id="mobile-overlay" class="fixed inset-0 bg-black/70 transition-opacity opacity-0"></div>
         <div id="mobile-drawer" class="fixed inset-y-0 left-0 w-64 bg-slate-900 shadow-2xl border-r border-slate-800 transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
             <div class="p-4 flex justify-end">
-                <button id="close-menu-button" class="text-gray-400 hover:text-white focus:outline-none p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                <button id="close-menu-button" class="text-gray-400 hover:text-white focus:outline-none p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
             </div>
             <div class="px-8 py-4 flex flex-col space-y-6">
                 <a href="index.html" class="text-gray-400 hover:text-white font-semibold text-lg transition-colors">Home</a>
@@ -63,38 +69,70 @@
     </div>
 
     <main class="flex-grow max-w-4xl mx-auto px-4 py-16 w-full">
-        <h2 class="text-3xl font-semibold mb-8 text-blue-400 border-b border-slate-700 pb-3">Research</h2>
+        <h2 class="text-3xl font-semibold mb-10 text-white border-b border-slate-700 pb-3 tracking-wide">Research</h2>
         
-        <div class="space-y-10 text-gray-300">
-            <section class="bg-cardSlate p-6 rounded-lg border border-slate-700 shadow-lg">
-                <h3 class="text-xl font-bold text-white mb-3">Overview</h3>
-                <p class="leading-relaxed">Broadly, my research interests lie in <strong class="text-blue-300">Commutative Algebra</strong>, with a focus on the algebraic and combinatorial properties of ideals and rings. I am particularly interested in the regularity of edge ideals, the behavior of symbolic powers, and the study of Hilbert functions and vectors of Stanley–Reisner rings.</p>
+        <div class="space-y-12 text-gray-300 leading-relaxed">
+            
+            <section class="bg-cardSlate p-8 rounded-xl border border-slate-700 shadow-lg">
+                <h3 class="text-xl font-bold text-white mb-4">Overview</h3>
+                <p>Broadly, my research interests lie in <strong class="text-blue-400">Commutative Algebra</strong>.</p>
             </section>
 
-            <section class="bg-cardSlate p-6 rounded-lg border border-slate-700 shadow-lg">
-                <h3 class="text-xl font-bold text-white mb-3">Publications & Preprints</h3>
-                <ul class="list-disc pl-5 space-y-2 text-gray-400">
-                    <li><em>Ongoing...</em></li>
+            <section class="bg-cardSlate p-8 rounded-xl border border-slate-700 shadow-lg">
+                <h3 class="text-xl font-bold text-white mb-4">Working Papers & Current Projects</h3>
+                <p class="mb-4">Currently, my focus is directed toward the interactions between commutative algebra and combinatorics. Specific areas of active exploration include:</p>
+                <ul class="list-disc pl-6 space-y-3 marker:text-blue-500">
+                    <li>Stanley–Reisner theory and its applications.</li>
+                    <li>Graph-theoretic aspects and properties of edge ideals.</li>
                 </ul>
+                <p class="mt-6 text-sm text-gray-400 italic">Papers and formal preprints will be uploaded here as they become available.</p>
             </section>
+
         </div>
     </main>
 
     <footer class="bg-black text-gray-400 py-10 mt-auto border-t border-slate-800">
         <div class="max-w-4xl mx-auto px-4 text-center space-y-4">
             <h3 class="font-semibold text-lg tracking-wider text-gray-200 uppercase">Contact Me</h3>
-            <p class="leading-relaxed">Department of Mathematics<br>Office: Snow Hall 562<br>University of Kansas</p>
+            <p class="leading-relaxed">
+                Department of Mathematics<br>
+                Office: Snow Hall 562<br>
+                University of Kansas
+            </p>
             <div class="pt-4">
-                <a href="mailto:soumyadeep@ku.edu" class="inline-block border border-slate-600 text-gray-300 hover:text-white hover:bg-slate-800 hover:border-slate-400 px-6 py-2 rounded-full font-medium transition duration-300 shadow-lg">✉️ soumyadeep@ku.edu</a>
+                <a href="mailto:soumyadeep@ku.edu" class="inline-block border border-slate-600 text-gray-300 hover:text-white hover:bg-slate-800 hover:border-slate-400 px-6 py-2 rounded-full font-medium transition duration-300 shadow-lg">
+                    ✉️ soumyadeep@ku.edu
+                </a>
             </div>
         </div>
     </footer>
 
     <script>
-        const menuBtn = document.getElementById('mobile-menu-button'); const closeBtn = document.getElementById('close-menu-button'); const drawerContainer = document.getElementById('mobile-drawer-container'); const drawer = document.getElementById('mobile-drawer'); const overlay = document.getElementById('mobile-overlay');
-        function openMenu() { drawerContainer.classList.remove('hidden'); requestAnimationFrame(() => { drawer.classList.remove('-translate-x-full'); overlay.classList.remove('opacity-0'); }); }
-        function closeMenu() { drawer.classList.add('-translate-x-full'); overlay.classList.add('opacity-0'); setTimeout(() => { drawerContainer.classList.add('hidden'); }, 300); }
-        menuBtn.addEventListener('click', openMenu); closeBtn.addEventListener('click', closeMenu); overlay.addEventListener('click', closeMenu);
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const closeBtn = document.getElementById('close-menu-button');
+        const drawerContainer = document.getElementById('mobile-drawer-container');
+        const drawer = document.getElementById('mobile-drawer');
+        const overlay = document.getElementById('mobile-overlay');
+
+        function openMenu() {
+            drawerContainer.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('opacity-0');
+            });
+        }
+
+        function closeMenu() {
+            drawer.classList.add('-translate-x-full');
+            overlay.classList.add('opacity-0');
+            setTimeout(() => {
+                drawerContainer.classList.add('hidden');
+            }, 300);
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
     </script>
 </body>
 </html>
