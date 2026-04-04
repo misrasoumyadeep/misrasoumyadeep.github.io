@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class', // Enables the light/dark mode toggle functionality
+            darkMode: 'class', 
             theme: {
                 extend: {
                     colors: {
@@ -49,10 +49,10 @@
                 
                 <div class="flex items-center pl-4 md:pl-0">
                     <button id="theme-toggle" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none rounded-lg p-2 transition-colors">
-                        <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 4.22a1 1 0 011.415 0l.708.708a1 1 0 01-1.414 1.414l-.708-.708a1 1 0 010-1.414zM16 10a1 1 0 011 1h1a1 1 0 110-2h-1a1 1 0 01-1 1zm-4.22 4.22a1 1 0 010 1.415l-.708.708a1 1 0 01-1.414-1.414l.708-.708a1 1 0 011.415 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.22-4.22a1 1 0 01-1.415 0l-.708.708a1 1 0 011.414 1.414l.708-.708a1 1 0 010-1.414zM4 10a1 1 0 01-1 1H2a1 1 0 110-2h1a1 1 0 011 1zm4.22-4.22a1 1 0 010-1.415l.708-.708a1 1 0 011.414 1.414l-.708.708a1 1 0 01-1.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z"></path>
                         </svg>
-                        <svg id="theme-toggle-dark-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="theme-toggle-dark-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                         </svg>
                     </button>
@@ -82,13 +82,17 @@
         </div>
     </div>
 
-    <main class="flex-grow max-w-5xl mx-auto px-4 py-16 w-full">
+    <header class="relative py-24 md:py-32 bg-cover bg-center shadow-lg border-b border-gray-200 dark:border-slate-800" style="background-image: url('cover_teaching.jpg');">
+        <div class="absolute inset-0 bg-slate-900/60 dark:bg-slate-900/70 transition-colors duration-300"></div>
         
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-white mb-2 tracking-wide">Teaching Experience</h2>
-            <p class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">University of Kansas • Lawrence, USA</p>
-            <div class="w-16 h-1 bg-kuBlue dark:bg-blue-500 mx-auto mt-6 rounded-full"></div>
+        <div class="relative max-w-5xl mx-auto px-4 text-center z-10 flex flex-col items-center">
+            <h1 class="text-white text-4xl md:text-5xl font-serif font-bold tracking-wide drop-shadow-lg">Teaching Experience</h1>
+            <p class="mt-4 text-gray-200 text-sm md:text-base font-medium tracking-wider uppercase drop-shadow-md">University of Kansas • Lawrence, USA</p>
+            <div class="w-16 h-1 bg-blue-400 dark:bg-blue-500 mx-auto mt-6 rounded-full"></div>
         </div>
+    </header>
+
+    <main class="flex-grow max-w-5xl mx-auto px-4 py-16 w-full">
         
         <div class="space-y-12 text-gray-800 dark:text-gray-300">
             
@@ -101,13 +105,12 @@
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    
                     <div class="bg-white dark:bg-cardSlate border border-gray-200 dark:border-slate-700 rounded-xl p-6 shadow-sm hover:shadow-md dark:shadow-lg dark:hover:border-slate-500 transition duration-300">
                         <div class="flex justify-between items-start mb-4">
                             <h4 class="font-bold text-xl text-gray-900 dark:text-white">MATH 115</h4>
                             <span class="bg-blue-50 dark:bg-blue-900/40 text-kuBlue dark:text-blue-300 border border-blue-100 dark:border-blue-800 text-xs px-3 py-1 rounded-full font-semibold tracking-wide">Spring 2026</span>
                         </div>
-                        <p class="text-gray-600 dark:text-gray-400 font-medium">Calculus I</p>
+                        <p class="text-gray-600 dark:text-gray-400 font-medium">Business Calculus</p>
                     </div>
 
                     <div class="bg-white dark:bg-cardSlate border border-gray-200 dark:border-slate-700 rounded-xl p-6 shadow-sm hover:shadow-md dark:shadow-lg dark:hover:border-slate-500 transition duration-300">
@@ -125,7 +128,6 @@
                         </div>
                         <p class="text-gray-600 dark:text-gray-400 font-medium">College Algebra</p>
                     </div>
-
                 </div>
             </section>
 
@@ -138,7 +140,6 @@
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    
                     <div class="bg-white dark:bg-cardSlate border border-gray-200 dark:border-slate-700 rounded-xl p-6 shadow-sm hover:shadow-md dark:shadow-lg dark:hover:border-slate-500 transition duration-300">
                         <div class="flex justify-between items-start mb-4">
                             <h4 class="font-bold text-xl text-gray-900 dark:text-white">MATH 125</h4>
@@ -154,7 +155,6 @@
                         </div>
                         <p class="text-gray-600 dark:text-gray-400 font-medium">Calculus II</p>
                     </div>
-
                 </div>
             </section>
 
@@ -183,7 +183,6 @@
         const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
         const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
-        // Check local storage or system preference, default to LIGHT
         if (localStorage.getItem('color-theme') === 'dark') {
             document.documentElement.classList.add('dark');
             themeToggleLightIcon.classList.remove('hidden');
@@ -195,11 +194,9 @@
         }
 
         themeToggleBtn.addEventListener('click', function() {
-            // Toggle icons inside button
             themeToggleDarkIcon.classList.toggle('hidden');
             themeToggleLightIcon.classList.toggle('hidden');
 
-            // If is set in localstorage
             if (localStorage.getItem('color-theme')) {
                 if (localStorage.getItem('color-theme') === 'light') {
                     document.documentElement.classList.add('dark');
@@ -209,7 +206,6 @@
                     localStorage.setItem('color-theme', 'light');
                 }
             } else {
-                // If NOT in localstorage, we are currently light, so switch to dark
                 document.documentElement.classList.add('dark');
                 localStorage.setItem('color-theme', 'dark');
             }
