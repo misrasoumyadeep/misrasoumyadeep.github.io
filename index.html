@@ -11,8 +11,8 @@
                 extend: {
                     colors: {
                         kuBlue: '#0051BA',
-                        darkSlate: '#0f172a', // Deep slate for the background
-                        cardSlate: '#1e293b', // Slightly lighter slate for contrast
+                        darkSlate: '#0f172a',
+                        cardSlate: '#1e293b',
                     }
                 }
             }
@@ -24,7 +24,6 @@
     <nav class="bg-darkSlate/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                
                 <div class="flex items-center md:hidden">
                     <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none p-2">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -32,11 +31,9 @@
                         </svg>
                     </button>
                 </div>
-
                 <div class="flex items-center justify-center flex-1 md:flex-none md:justify-start">
                     <span class="font-bold text-xl text-blue-400 tracking-wide">Soumyadeep Misra</span>
                 </div>
-
                 <div class="hidden md:flex flex-wrap items-center space-x-6">
                     <a href="index.html" class="text-white border-b-2 border-blue-400 font-medium pb-1">Home</a>
                     <a href="research.html" class="text-gray-400 hover:text-white transition-colors font-medium pb-1">Research</a>
@@ -45,7 +42,6 @@
                     <a href="talks.html" class="text-gray-400 hover:text-white transition-colors font-medium pb-1">Talks</a>
                     <a href="resume.pdf" target="_blank" class="text-gray-400 hover:text-white transition-colors font-medium pb-1">CV</a>
                 </div>
-                
                 <div class="w-11 md:hidden"></div>
             </div>
         </div>
@@ -61,7 +57,6 @@
                     </svg>
                 </button>
             </div>
-            
             <div class="px-8 py-4 flex flex-col space-y-6">
                 <a href="index.html" class="text-white border-b-2 border-blue-400 pb-1 inline-block w-max font-semibold text-lg">Home</a>
                 <a href="research.html" class="text-gray-400 hover:text-white font-semibold text-lg transition-colors">Research</a>
@@ -74,11 +69,11 @@
     </div>
 
     <header class="relative py-32 md:py-40 bg-cover bg-center shadow-2xl" style="background-image: url('cover-photo.jpg');">
-        <div class="absolute inset-0 bg-slate-900/40"></div>
+        <div class="absolute inset-0 bg-slate-900/60"></div>
         
         <div class="relative max-w-5xl mx-auto px-4 text-center z-10 flex flex-col items-center">
-            <h1 class="text-white text-4xl md:text-6xl font-serif tracking-wide drop-shadow-lg">Hello! I am Soumyadeep</h1>
-           
+            <h1 class="text-white text-4xl md:text-6xl font-sans font-extrabold tracking-tight drop-shadow-lg">Hello! I am Soumyadeep</h1>
+            <p class="mt-4 text-gray-200 text-lg md:text-xl font-medium tracking-wider uppercase drop-shadow-md">Mathematics • Commutative Algebra</p>
         </div>
     </header>
 
@@ -90,7 +85,7 @@
                 <img src="profile.jpg" alt="Soumyadeep Misra" class="w-full rounded-xl shadow-2xl object-cover border border-slate-700">
             </div>
             
-            <div class="md:col-span-2 space-y-6 text-gray-300 text-lg leading-relaxed">
+            <div class="md:col-span-2 space-y-6 text-gray-300 text-lg leading-relaxed flex flex-col h-full justify-center">
                 <p>
                     I am Soumyadeep Misra, a Ph.D. candidate in Mathematics at the <strong class="text-white">University of Kansas</strong>, working under the guidance of 
                     <a href="https://hailongdao.github.io/" target="_blank" class="text-blue-400 hover:text-blue-300 hover:underline font-medium transition-colors">Prof. Hai Long Dao <span class="text-xs">↗</span></a>.
@@ -101,6 +96,15 @@
                 <p>
                     Prior to this, I completed my Master of Science in Mathematics at the Indian Institute of Technology Madras, and my Bachelor of Science in Mathematics at St. Xavier's College, Kolkata.
                 </p>
+
+                <div class="pt-4">
+                    <a href="resume.pdf" target="_blank" class="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-lg shadow-blue-500/20 w-max">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <span>Download CV (PDF)</span>
+                    </a>
+                </div>
             </div>
         </div>
     </main>
@@ -108,13 +112,11 @@
     <footer class="bg-black text-gray-400 py-10 mt-auto border-t border-slate-800">
         <div class="max-w-4xl mx-auto px-4 text-center space-y-4">
             <h3 class="font-semibold text-lg tracking-wider text-gray-200 uppercase">Contact Me</h3>
-            
             <p class="leading-relaxed">
                 Department of Mathematics<br>
                 Office: Snow Hall 562<br>
                 University of Kansas
             </p>
-            
             <div class="pt-4">
                 <a href="mailto:soumyadeep@ku.edu" class="inline-block border border-slate-600 text-gray-300 hover:text-white hover:bg-slate-800 hover:border-slate-400 px-6 py-2 rounded-full font-medium transition duration-300 shadow-lg">
                     ✉️ soumyadeep@ku.edu
