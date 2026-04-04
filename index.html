@@ -11,37 +11,39 @@
                 extend: {
                     colors: {
                         kuBlue: '#0051BA',
+                        darkSlate: '#0f172a', // Deep slate for the background
+                        cardSlate: '#1e293b', // Slightly lighter slate for contrast
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed flex flex-col min-h-screen">
+<body class="bg-darkSlate text-gray-300 font-sans leading-relaxed flex flex-col min-h-screen">
 
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="bg-darkSlate/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 
                 <div class="flex items-center md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-800 hover:text-kuBlue focus:outline-none p-2">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
 
                 <div class="flex items-center justify-center flex-1 md:flex-none md:justify-start">
-                    <span class="font-bold text-xl text-kuBlue">Soumyadeep Misra</span>
+                    <span class="font-bold text-xl text-blue-400 tracking-wide">Soumyadeep Misra</span>
                 </div>
 
                 <div class="hidden md:flex flex-wrap items-center space-x-6">
-                    <a href="index.html" class="text-gray-900 border-b-2 border-kuBlue font-medium">Home</a>
-                    <a href="research.html" class="text-gray-500 hover:text-gray-900 font-medium">Research</a>
-                    <a href="teaching.html" class="text-gray-500 hover:text-gray-900 font-medium">Teaching</a>
-                    <a href="conferences.html" class="text-gray-500 hover:text-gray-900 font-medium">Conferences</a>
-                    <a href="talks.html" class="text-gray-500 hover:text-gray-900 font-medium">Talks</a>
-                    <a href="resume.pdf" target="_blank" class="text-gray-500 hover:text-gray-900 font-medium">CV</a>
+                    <a href="index.html" class="text-white border-b-2 border-blue-400 font-medium pb-1">Home</a>
+                    <a href="research.html" class="text-gray-400 hover:text-white transition-colors font-medium pb-1">Research</a>
+                    <a href="teaching.html" class="text-gray-400 hover:text-white transition-colors font-medium pb-1">Teaching</a>
+                    <a href="conferences.html" class="text-gray-400 hover:text-white transition-colors font-medium pb-1">Conferences</a>
+                    <a href="talks.html" class="text-gray-400 hover:text-white transition-colors font-medium pb-1">Talks</a>
+                    <a href="resume.pdf" target="_blank" class="text-gray-400 hover:text-white transition-colors font-medium pb-1">CV</a>
                 </div>
                 
                 <div class="w-11 md:hidden"></div>
@@ -50,11 +52,10 @@
     </nav>
 
     <div id="mobile-drawer-container" class="fixed inset-0 z-[60] hidden">
-        <div id="mobile-overlay" class="fixed inset-0 bg-black/60 transition-opacity opacity-0"></div>
-
-        <div id="mobile-drawer" class="fixed inset-y-0 left-0 w-64 bg-[#3b3539] shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <div id="mobile-overlay" class="fixed inset-0 bg-black/70 transition-opacity opacity-0"></div>
+        <div id="mobile-drawer" class="fixed inset-y-0 left-0 w-64 bg-slate-900 shadow-2xl border-r border-slate-800 transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
             <div class="p-4 flex justify-end">
-                <button id="close-menu-button" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                <button id="close-menu-button" class="text-gray-400 hover:text-white focus:outline-none p-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -62,40 +63,40 @@
             </div>
             
             <div class="px-8 py-4 flex flex-col space-y-6">
-                <a href="index.html" class="text-white border-b-2 border-kuBlue pb-1 inline-block w-max font-semibold text-lg">Home</a>
-                <a href="research.html" class="text-gray-200 hover:text-white font-semibold text-lg">Research</a>
-                <a href="teaching.html" class="text-gray-200 hover:text-white font-semibold text-lg">Teaching</a>
-                <a href="conferences.html" class="text-gray-200 hover:text-white font-semibold text-lg">Conferences</a>
-                <a href="talks.html" class="text-gray-200 hover:text-white font-semibold text-lg">Talks</a>
-                <a href="resume.pdf" target="_blank" class="text-gray-200 hover:text-white font-semibold text-lg">CV</a>
+                <a href="index.html" class="text-white border-b-2 border-blue-400 pb-1 inline-block w-max font-semibold text-lg">Home</a>
+                <a href="research.html" class="text-gray-400 hover:text-white font-semibold text-lg transition-colors">Research</a>
+                <a href="teaching.html" class="text-gray-400 hover:text-white font-semibold text-lg transition-colors">Teaching</a>
+                <a href="conferences.html" class="text-gray-400 hover:text-white font-semibold text-lg transition-colors">Conferences</a>
+                <a href="talks.html" class="text-gray-400 hover:text-white font-semibold text-lg transition-colors">Talks</a>
+                <a href="resume.pdf" target="_blank" class="text-gray-400 hover:text-white font-semibold text-lg transition-colors">CV</a>
             </div>
         </div>
     </div>
 
-    <header class="relative py-32 md:py-40 bg-cover bg-center shadow-lg" style="background-image: url('cover-photo.jpg');">
-        <div class="absolute inset-0 bg-gray-900/50"></div>
+    <header class="relative py-32 md:py-40 bg-cover bg-center shadow-2xl" style="background-image: url('cover-photo.jpg');">
+        <div class="absolute inset-0 bg-slate-900/40"></div>
         
         <div class="relative max-w-5xl mx-auto px-4 text-center z-10 flex flex-col items-center">
             <h1 class="text-white text-4xl md:text-6xl font-serif tracking-wide drop-shadow-lg">Hello! I am Soumyadeep</h1>
-            
+            <p class="mt-4 text-gray-100 text-lg md:text-xl font-medium tracking-wider uppercase drop-shadow-md">Mathematics • Commutative Algebra</p>
         </div>
     </header>
 
-    <main class="flex-grow max-w-5xl mx-auto px-4 py-12 w-full">
-        <h2 class="text-2xl font-semibold mb-8 text-center text-gray-700 uppercase tracking-wider">About Me</h2>
+    <main class="flex-grow max-w-5xl mx-auto px-4 py-16 w-full">
+        <h2 class="text-2xl font-semibold mb-10 text-center text-white uppercase tracking-widest">About Me</h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
             <div class="md:col-span-1">
-                <img src="profile.jpg" alt="Soumyadeep Misra" class="w-full rounded-lg shadow-lg object-cover bg-gray-200" style="min-height: 300px;">
+                <img src="profile.jpg" alt="Soumyadeep Misra" class="w-full rounded-xl shadow-2xl object-cover border border-slate-700">
             </div>
             
-            <div class="md:col-span-2 space-y-5 text-gray-700 text-lg leading-relaxed">
+            <div class="md:col-span-2 space-y-6 text-gray-300 text-lg leading-relaxed">
                 <p>
-                    I am Soumyadeep Misra, a Ph.D. candidate in Mathematics at the <a href="https://math.ku.edu" target="_blank" class="text-kuBlue hover:text-blue-800 hover:underline font-medium transition-colors"> <strong>University of Kansas</strong>,  <span class="text-xs">↗</span></a> working under the guidance of 
-                    <a href="https://hailongdao.github.io/" target="_blank" class="text-kuBlue hover:text-blue-800 hover:underline font-medium transition-colors">Prof. Hai Long Dao <span class="text-xs">↗</span></a>.
+                    I am Soumyadeep Misra, a Ph.D. candidate in Mathematics at the <strong class="text-white">University of Kansas</strong>, working under the guidance of 
+                    <a href="https://hailongdao.github.io/" target="_blank" class="text-blue-400 hover:text-blue-300 hover:underline font-medium transition-colors">Prof. Hai Long Dao <span class="text-xs">↗</span></a>.
                 </p>
                 <p>
-                    I am interested in <strong>commutative algebra</strong>, and its interactions with combinatorics, especially Stanley–Reisner theory and graph-theoretic aspects.
+                    I am interested in <strong class="text-white">commutative algebra</strong>, with an emphasis on its interactions with combinatorics, especially Stanley–Reisner theory and graph-theoretic aspects.
                 </p>
                 <p>
                     Prior to this, I completed my Master of Science in Mathematics at the Indian Institute of Technology Madras, and my Bachelor of Science in Mathematics at St. Xavier's College, Kolkata.
@@ -104,18 +105,18 @@
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white py-10 mt-auto">
-        <div class="max-w-4xl mx-auto px-4 text-center space-y-3">
-            <h3 class="font-semibold text-lg tracking-wider text-gray-300 uppercase">Contact Me</h3>
+    <footer class="bg-black text-gray-400 py-10 mt-auto border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-4">
+            <h3 class="font-semibold text-lg tracking-wider text-gray-200 uppercase">Contact Me</h3>
             
-            <p class="text-gray-400 leading-relaxed">
+            <p class="leading-relaxed">
                 Department of Mathematics<br>
                 Office: Snow Hall 562<br>
                 University of Kansas
             </p>
             
             <div class="pt-4">
-                <a href="mailto:soumyadeep@ku.edu" class="inline-block border border-gray-500 text-gray-300 hover:text-white hover:bg-gray-700 hover:border-gray-400 px-6 py-2 rounded-full font-medium transition duration-300">
+                <a href="mailto:soumyadeep@ku.edu" class="inline-block border border-slate-600 text-gray-300 hover:text-white hover:bg-slate-800 hover:border-slate-400 px-6 py-2 rounded-full font-medium transition duration-300 shadow-lg">
                     ✉️ soumyadeep@ku.edu
                 </a>
             </div>
