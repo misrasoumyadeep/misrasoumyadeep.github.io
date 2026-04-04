@@ -26,7 +26,9 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center md:hidden">
                     <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none p-2">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
                     </button>
                 </div>
                 <div class="flex items-center justify-center flex-1 md:flex-none md:justify-start">
@@ -49,7 +51,11 @@
         <div id="mobile-overlay" class="fixed inset-0 bg-black/70 transition-opacity opacity-0"></div>
         <div id="mobile-drawer" class="fixed inset-y-0 left-0 w-64 bg-slate-900 shadow-2xl border-r border-slate-800 transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
             <div class="p-4 flex justify-end">
-                <button id="close-menu-button" class="text-gray-400 hover:text-white focus:outline-none p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                <button id="close-menu-button" class="text-gray-400 hover:text-white focus:outline-none p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
             </div>
             <div class="px-8 py-4 flex flex-col space-y-6">
                 <a href="index.html" class="text-gray-400 hover:text-white font-semibold text-lg transition-colors">Home</a>
@@ -62,201 +68,162 @@
         </div>
     </div>
 
-    <main class="flex-grow max-w-5xl mx-auto px-4 py-16 w-full">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-serif tracking-wide text-white mb-3">Conferences & Workshops</h2>
-            <div class="w-24 h-1 bg-emerald-500/50 mx-auto mt-6 rounded-full"></div>
-        </div>
+    <main class="flex-grow max-w-4xl mx-auto px-4 py-16 w-full">
+        <h2 class="text-3xl font-semibold mb-10 text-white border-b border-slate-700 pb-3 tracking-wide">Conferences & Workshops</h2>
         
-        <div class="space-y-16">
+        <div class="space-y-12">
             
             <section>
-                <div class="flex items-center mb-8">
-                    <div class="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center mr-3 border border-emerald-500/30">
-                        <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white tracking-wide">Upcoming</h3>
+                <div class="flex items-baseline justify-between mb-6 border-b border-slate-700/50 pb-2">
+                    <h3 class="text-2xl font-bold text-white">Upcoming</h3>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                    <div class="relative bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-emerald-400/50 hover:shadow-[0_8px_30px_rgb(16,185,129,0.15)] hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-teal-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h4 class="text-xl font-bold text-white leading-tight">PASCA 2.0</h4>
-                            <span class="inline-block bg-emerald-500/10 text-emerald-400 text-xs font-bold px-3 py-1.5 rounded-full border border-emerald-500/20 shrink-0 ml-4">Upcoming</span>
+                <div class="bg-blue-900/20 rounded-xl shadow-lg border border-blue-500/30 overflow-hidden relative">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+                    <div class="px-6 py-6 flex flex-col md:flex-row md:items-center justify-between">
+                        <div class="pl-2">
+                            <h4 class="font-bold text-xl text-blue-300 tracking-wide">PASCA 2.0</h4>
+                            <p class="text-gray-300 mt-1">CIMAT, Mexico</p>
                         </div>
-                        <div class="space-y-2 mt-4 text-sm text-gray-400">
-                            <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-emerald-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> CIMAT, Mexico</p>
-                            <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-emerald-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> May 18 - May 29, 2026</p>
+                        <div class="mt-4 md:mt-0 text-left md:text-right">
+                            <span class="inline-block bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider mb-2 shadow-lg shadow-blue-900/50">Upcoming</span>
+                            <p class="text-gray-400 text-sm font-medium block">May 18 - May 29, 2026</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section>
-                <div class="flex items-center mb-8">
-                    <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center mr-3 border border-blue-500/30">
-                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white tracking-wide">Attended</h3>
+                <div class="flex items-baseline justify-between mb-6 border-b border-slate-700/50 pb-2">
+                    <h3 class="text-2xl font-bold text-white">Attended</h3>
                 </div>
                 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    
-                    <div class="relative bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-blue-400/50 hover:shadow-[0_8px_30px_rgb(59,130,246,0.1)] hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h4 class="text-lg font-bold text-white leading-tight">CA+</h4>
-                            <span class="inline-block bg-slate-800 text-gray-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-600 shrink-0 ml-4">2026</span>
-                        </div>
-                        <div class="space-y-1.5 mt-3 text-sm text-gray-400">
-                            <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> Iowa State University</p>
-                            <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> March 28 - 29, 2026</p>
-                        </div>
-                    </div>
-
-                    <div class="relative bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-blue-400/50 hover:shadow-[0_8px_30px_rgb(59,130,246,0.1)] hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h4 class="text-lg font-bold text-white leading-tight">KUMUNU 2025</h4>
-                            <span class="inline-block bg-slate-800 text-gray-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-600 shrink-0 ml-4">2025</span>
-                        </div>
-                        <div class="space-y-1.5 mt-3 text-sm text-gray-400">
-                            <p class="flex items-start"><svg class="w-4 h-4 mr-2 text-slate-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> <span>University of Missouri • Columbia, MO</span></p>
-                            <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> October 25 - 26, 2025</p>
-                        </div>
-                    </div>
-
-                    <div class="relative bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-blue-400/50 hover:shadow-[0_8px_30px_rgb(59,130,246,0.1)] hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h4 class="text-lg font-bold text-white leading-tight">URiCA 2025</h4>
-                            <span class="inline-block bg-slate-800 text-gray-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-600 shrink-0 ml-4">2025</span>
-                        </div>
-                        <div class="space-y-1.5 mt-3 text-sm text-gray-400">
-                            <p class="flex items-start"><svg class="w-4 h-4 mr-2 text-slate-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> <span>University of Nebraska-Lincoln • Lincoln, NE</span></p>
-                            <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> May 3 - 4, 2025</p>
-                        </div>
-                    </div>
-
-                    <div class="relative bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-blue-400/50 hover:shadow-[0_8px_30px_rgb(59,130,246,0.1)] hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h4 class="text-lg font-bold text-white leading-tight">Rayfest 2025</h4>
-                            <span class="inline-block bg-slate-800 text-gray-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-600 shrink-0 ml-4">2025</span>
-                        </div>
-                        <div class="space-y-1.5 mt-3 text-sm text-gray-400">
-                            <p class="flex items-start"><svg class="w-4 h-4 mr-2 text-slate-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> <span>University of Nebraska-Lincoln • Lincoln, NE</span></p>
-                            <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> April 12 - 13, 2025</p>
-                        </div>
-                    </div>
-
-                    <div class="relative bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-blue-400/50 hover:shadow-[0_8px_30px_rgb(59,130,246,0.1)] hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h4 class="text-lg font-bold text-white leading-tight">AMS Spring Central Sectional</h4>
-                            <span class="inline-block bg-slate-800 text-gray-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-600 shrink-0 ml-4">2025</span>
-                        </div>
-                        <div class="space-y-1.5 mt-3 text-sm text-gray-400">
-                            <p class="flex items-start"><svg class="w-4 h-4 mr-2 text-slate-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> <span>University of Kansas • Lawrence, KS</span></p>
-                            <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> March 29 - 30, 2025</p>
-                        </div>
-                    </div>
-
-                    <div class="relative bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-blue-400/50 hover:shadow-[0_8px_30px_rgb(59,130,246,0.1)] hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h4 class="text-lg font-bold text-white leading-tight">Commutative Algebra in Mixed Characteristic</h4>
-                            <span class="inline-block bg-slate-800 text-gray-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-600 shrink-0 ml-4">2025</span>
-                        </div>
-                        <div class="space-y-1.5 mt-3 text-sm text-gray-400">
-                            <p class="flex items-start"><svg class="w-4 h-4 mr-2 text-slate-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> <span>University of Nebraska-Lincoln • Lincoln, NE</span></p>
-                            <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> March 28 - 29, 2025</p>
-                        </div>
-                    </div>
-
-                    <div class="relative bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-blue-400/50 hover:shadow-[0_8px_30px_rgb(59,130,246,0.1)] hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h4 class="text-lg font-bold text-white leading-tight">KUMUNU 2024</h4>
-                            <span class="inline-block bg-slate-800 text-gray-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-600 shrink-0 ml-4">2024</span>
-                        </div>
-                        <div class="space-y-1.5 mt-3 text-sm text-gray-400">
-                            <p class="flex items-start"><svg class="w-4 h-4 mr-2 text-slate-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> <span>University of Missouri • Columbia, MO</span></p>
-                            <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> September 28 - 29, 2024</p>
-                        </div>
-                    </div>
-
-                    <div class="relative col-span-1 lg:col-span-2 bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-blue-400/50 hover:shadow-[0_8px_30px_rgb(59,130,246,0.1)] hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                <div class="bg-cardSlate rounded-xl shadow-lg border border-slate-700 overflow-hidden">
+                    <ul class="divide-y divide-slate-700/80 text-gray-300">
                         
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <li class="px-6 py-5 flex flex-col md:flex-row md:items-center justify-between hover:bg-slate-800/50 transition-colors">
                             <div>
-                                <h4 class="text-lg font-bold text-white leading-tight">Workshop on Representation Theory and Syzygies</h4>
-                                <div class="space-y-1 mt-2 text-sm text-gray-400">
-                                    <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> National Centre of Mathematics • India</p>
-                                    <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> December 18 - 23, 2023</p>
+                                <p class="font-bold text-lg text-white">CA+</p>
+                                <p class="text-gray-400 text-sm mt-1">Iowa State University</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 text-left md:text-right shrink-0">
+                                <span class="inline-block bg-slate-800 text-gray-300 text-sm px-3 py-1 rounded-full font-semibold border border-slate-600">Mar 28 - 29, 2026</span>
+                            </div>
+                        </li>
+
+                        <li class="px-6 py-5 flex flex-col md:flex-row md:items-center justify-between hover:bg-slate-800/50 transition-colors">
+                            <div>
+                                <p class="font-bold text-lg text-white">KUMUNU 2025</p>
+                                <p class="text-gray-400 text-sm mt-1">University of Missouri • Columbia, MO</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 text-left md:text-right shrink-0">
+                                <span class="inline-block bg-slate-800 text-gray-300 text-sm px-3 py-1 rounded-full font-semibold border border-slate-600">Oct 25 - 26, 2025</span>
+                            </div>
+                        </li>
+
+                        <li class="px-6 py-5 flex flex-col md:flex-row md:items-center justify-between hover:bg-slate-800/50 transition-colors">
+                            <div>
+                                <p class="font-bold text-lg text-white">URiCA 2025</p>
+                                <p class="text-gray-400 text-sm mt-1">University of Nebraska-Lincoln • Lincoln, NE</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 text-left md:text-right shrink-0">
+                                <span class="inline-block bg-slate-800 text-gray-300 text-sm px-3 py-1 rounded-full font-semibold border border-slate-600">May 3 - 4, 2025</span>
+                            </div>
+                        </li>
+
+                        <li class="px-6 py-5 flex flex-col md:flex-row md:items-center justify-between hover:bg-slate-800/50 transition-colors">
+                            <div>
+                                <p class="font-bold text-lg text-white">Rayfest 2025</p>
+                                <p class="text-gray-400 text-sm mt-1">University of Nebraska-Lincoln • Lincoln, NE</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 text-left md:text-right shrink-0">
+                                <span class="inline-block bg-slate-800 text-gray-300 text-sm px-3 py-1 rounded-full font-semibold border border-slate-600">Apr 12 - 13, 2025</span>
+                            </div>
+                        </li>
+
+                        <li class="px-6 py-5 flex flex-col md:flex-row md:items-center justify-between hover:bg-slate-800/50 transition-colors">
+                            <div>
+                                <p class="font-bold text-lg text-white">AMS Spring Central Sectional Meeting</p>
+                                <p class="text-gray-400 text-sm mt-1">University of Kansas • Lawrence, KS</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 text-left md:text-right shrink-0">
+                                <span class="inline-block bg-slate-800 text-gray-300 text-sm px-3 py-1 rounded-full font-semibold border border-slate-600">Mar 29 - 30, 2025</span>
+                            </div>
+                        </li>
+
+                        <li class="px-6 py-5 flex flex-col md:flex-row md:items-center justify-between hover:bg-slate-800/50 transition-colors">
+                            <div>
+                                <p class="font-bold text-lg text-white">Commutative Algebra in Mixed Characteristic</p>
+                                <p class="text-gray-400 text-sm mt-1">University of Nebraska-Lincoln • Lincoln, NE</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 text-left md:text-right shrink-0">
+                                <span class="inline-block bg-slate-800 text-gray-300 text-sm px-3 py-1 rounded-full font-semibold border border-slate-600">Mar 28 - 29, 2025</span>
+                            </div>
+                        </li>
+
+                        <li class="px-6 py-5 flex flex-col md:flex-row md:items-center justify-between hover:bg-slate-800/50 transition-colors">
+                            <div>
+                                <p class="font-bold text-lg text-white">KUMUNU 2024</p>
+                                <p class="text-gray-400 text-sm mt-1">University of Missouri • Columbia, MO</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 text-left md:text-right shrink-0">
+                                <span class="inline-block bg-slate-800 text-gray-300 text-sm px-3 py-1 rounded-full font-semibold border border-slate-600">Sep 28 - 29, 2024</span>
+                            </div>
+                        </li>
+
+                        <li class="px-6 py-5 hover:bg-slate-800/50 transition-colors">
+                            <div class="flex flex-col md:flex-row justify-between">
+                                <div>
+                                    <p class="font-bold text-lg text-white">Workshop on Representation Theory and Syzygies</p>
+                                    <p class="text-gray-400 text-sm mt-1">National Centre of Mathematics • India</p>
+                                </div>
+                                <div class="mt-2 md:mt-0 text-left md:text-right shrink-0">
+                                    <span class="inline-block bg-slate-800 text-gray-300 text-sm px-3 py-1 rounded-full font-semibold border border-slate-600">Dec 18 - 23, 2023</span>
                                 </div>
                             </div>
-                            <span class="inline-block bg-slate-800 text-gray-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-600 shrink-0 mt-3 md:mt-0">2023</span>
-                        </div>
-                        
-                        <div class="mt-4 pt-4 border-t border-slate-700/50">
-                            <div class="flex items-start">
-                                <svg class="w-4 h-4 text-blue-400 mt-0.5 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                                <p class="text-sm text-gray-300"><strong class="text-white">Talk:</strong> "Pure resolutions and Boij-Soederberg conjectures" by Dr. Manoj Kummini</p>
+                            <div class="mt-4 bg-slate-800/40 rounded-lg p-3 border border-slate-700/50">
+                                <ul class="list-disc pl-5 text-sm text-gray-300 space-y-1">
+                                    <li><strong class="text-blue-400">Talk:</strong> "Pure resolutions and Boij-Soederberg conjectures" by Dr. Manoj Kummini</li>
+                                </ul>
                             </div>
-                        </div>
-                    </div>
+                        </li>
 
-                    <div class="relative col-span-1 lg:col-span-2 bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-blue-400/50 hover:shadow-[0_8px_30px_rgb(59,130,246,0.1)] hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                        
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                            <div>
-                                <h4 class="text-lg font-bold text-white leading-tight">Indian Women and Mathematics (IWM) Annual Conference</h4>
-                                <div class="space-y-1 mt-2 text-sm text-gray-400">
-                                    <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> IISER Bhopal • Bhopal, India</p>
-                                    <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> July 13 - 15, 2023</p>
+                        <li class="px-6 py-5 hover:bg-slate-800/50 transition-colors">
+                            <div class="flex flex-col md:flex-row justify-between">
+                                <div>
+                                    <p class="font-bold text-lg text-white">Indian Women and Mathematics (IWM) Annual Conference</p>
+                                    <p class="text-gray-400 text-sm mt-1">IISER Bhopal • Bhopal, India</p>
+                                </div>
+                                <div class="mt-2 md:mt-0 text-left md:text-right shrink-0">
+                                    <span class="inline-block bg-slate-800 text-gray-300 text-sm px-3 py-1 rounded-full font-semibold border border-slate-600">Jul 13 - 15, 2023</span>
                                 </div>
                             </div>
-                            <span class="inline-block bg-slate-800 text-gray-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-600 shrink-0 mt-3 md:mt-0">2023</span>
-                        </div>
-                        
-                        <div class="mt-4 pt-4 border-t border-slate-700/50 space-y-2">
-                            <div class="flex items-start">
-                                <svg class="w-4 h-4 text-blue-400 mt-0.5 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                                <p class="text-sm text-gray-300"><strong class="text-white">Talk:</strong> "Reduction number, Ratliff-Rush filtration, and Hilbert coefficients" by Kumari Saloni</p>
+                            <div class="mt-4 bg-slate-800/40 rounded-lg p-3 border border-slate-700/50">
+                                <ul class="list-disc pl-5 text-sm text-gray-300 space-y-2">
+                                    <li><strong class="text-blue-400">Talk:</strong> "Reduction number, Ratliff-Rush filtration, and Hilbert coefficients" by Kumari Saloni</li>
+                                    <li><strong class="text-blue-400">Talk:</strong> "F-thresholds of symbolic power filtration..." by Mitra Koley</li>
+                                </ul>
                             </div>
-                            <div class="flex items-start">
-                                <svg class="w-4 h-4 text-blue-400 mt-0.5 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                                <p class="text-sm text-gray-300"><strong class="text-white">Talk:</strong> "F-thresholds of symbolic power filtration..." by Mitra Koley</p>
-                            </div>
-                        </div>
-                    </div>
+                        </li>
 
-                    <div class="relative col-span-1 lg:col-span-2 bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-blue-400/50 hover:shadow-[0_8px_30px_rgb(59,130,246,0.1)] hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                        
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                            <div>
-                                <h4 class="text-lg font-bold text-white leading-tight">IIT Madras Seminar Series</h4>
-                                <div class="space-y-1 mt-2 text-sm text-gray-400">
-                                    <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> Indian Institute of Technology Madras • Chennai, India</p>
-                                    <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> April 21, 2023</p>
+                        <li class="px-6 py-5 hover:bg-slate-800/50 transition-colors">
+                            <div class="flex flex-col md:flex-row justify-between">
+                                <div>
+                                    <p class="font-bold text-lg text-white">IIT Madras Seminar Series</p>
+                                    <p class="text-gray-400 text-sm mt-1">Indian Institute of Technology Madras • Chennai, India</p>
+                                </div>
+                                <div class="mt-2 md:mt-0 text-left md:text-right shrink-0">
+                                    <span class="inline-block bg-slate-800 text-gray-300 text-sm px-3 py-1 rounded-full font-semibold border border-slate-600">Apr 21, 2023</span>
                                 </div>
                             </div>
-                            <span class="inline-block bg-slate-800 text-gray-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-600 shrink-0 mt-3 md:mt-0">2023</span>
-                        </div>
-                        
-                        <div class="mt-4 pt-4 border-t border-slate-700/50">
-                            <div class="flex items-start">
-                                <svg class="w-4 h-4 text-blue-400 mt-0.5 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                                <p class="text-sm text-gray-300"><strong class="text-white">Talk:</strong> "Homogeneous Length Functions on Groups" by Dr. Apoorva Khare</p>
+                            <div class="mt-4 bg-slate-800/40 rounded-lg p-3 border border-slate-700/50">
+                                <ul class="list-disc pl-5 text-sm text-gray-300 space-y-1">
+                                    <li><strong class="text-blue-400">Talk:</strong> "Homogeneous Length Functions on Groups" by Dr. Apoorva Khare</li>
+                                </ul>
                             </div>
-                        </div>
-                    </div>
+                        </li>
 
+                    </ul>
                 </div>
             </section>
 
@@ -266,18 +233,45 @@
     <footer class="bg-black text-gray-400 py-10 mt-auto border-t border-slate-800">
         <div class="max-w-4xl mx-auto px-4 text-center space-y-4">
             <h3 class="font-semibold text-lg tracking-wider text-gray-200 uppercase">Contact Me</h3>
-            <p class="leading-relaxed">Department of Mathematics<br>Office: Snow Hall 562<br>University of Kansas</p>
+            <p class="leading-relaxed">
+                Department of Mathematics<br>
+                Office: Snow Hall 562<br>
+                University of Kansas
+            </p>
             <div class="pt-4">
-                <a href="mailto:soumyadeep@ku.edu" class="inline-block border border-slate-600 text-gray-300 hover:text-white hover:bg-slate-800 hover:border-slate-400 px-6 py-2 rounded-full font-medium transition duration-300 shadow-lg">✉️ soumyadeep@ku.edu</a>
+                <a href="mailto:soumyadeep@ku.edu" class="inline-block border border-slate-600 text-gray-300 hover:text-white hover:bg-slate-800 hover:border-slate-400 px-6 py-2 rounded-full font-medium transition duration-300 shadow-lg">
+                    ✉️ soumyadeep@ku.edu
+                </a>
             </div>
         </div>
     </footer>
 
     <script>
-        const menuBtn = document.getElementById('mobile-menu-button'); const closeBtn = document.getElementById('close-menu-button'); const drawerContainer = document.getElementById('mobile-drawer-container'); const drawer = document.getElementById('mobile-drawer'); const overlay = document.getElementById('mobile-overlay');
-        function openMenu() { drawerContainer.classList.remove('hidden'); requestAnimationFrame(() => { drawer.classList.remove('-translate-x-full'); overlay.classList.remove('opacity-0'); }); }
-        function closeMenu() { drawer.classList.add('-translate-x-full'); overlay.classList.add('opacity-0'); setTimeout(() => { drawerContainer.classList.add('hidden'); }, 300); }
-        menuBtn.addEventListener('click', openMenu); closeBtn.addEventListener('click', closeMenu); overlay.addEventListener('click', closeMenu);
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const closeBtn = document.getElementById('close-menu-button');
+        const drawerContainer = document.getElementById('mobile-drawer-container');
+        const drawer = document.getElementById('mobile-drawer');
+        const overlay = document.getElementById('mobile-overlay');
+
+        function openMenu() {
+            drawerContainer.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('opacity-0');
+            });
+        }
+
+        function closeMenu() {
+            drawer.classList.add('-translate-x-full');
+            overlay.classList.add('opacity-0');
+            setTimeout(() => {
+                drawerContainer.classList.add('hidden');
+            }, 300);
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
     </script>
 </body>
 </html>
