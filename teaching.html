@@ -11,102 +11,151 @@
                 extend: {
                     colors: {
                         kuBlue: '#0051BA',
+                        darkSlate: '#0f172a',
+                        cardSlate: '#1e293b',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed flex flex-col min-h-screen">
+<body class="bg-darkSlate text-gray-300 font-sans leading-relaxed flex flex-col min-h-screen">
 
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="bg-darkSlate/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap justify-between h-auto md:h-16 py-4 md:py-0">
-                <div class="flex items-center w-full md:w-auto justify-center md:justify-start mb-4 md:mb-0">
-                    <span class="font-bold text-xl text-kuBlue">Soumyadeep Misra</span>
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
                 </div>
-                <div class="flex flex-wrap items-center justify-center space-x-4 md:space-x-6 w-full md:w-auto">
-    <a href="index.html" class="text-gray-500 hover:text-gray-900">Home</a>
-    <a href="research.html" class="text-gray-500 hover:text-gray-900">Research</a>
-    <a href="teaching.html" class="text-gray-500 hover:text-gray-900">Teaching</a>
-    <a href="conferences.html" class="text-gray-500 hover:text-gray-900">Conferences</a>
-    <a href="talks.html" class="text-gray-500 hover:text-gray-900">Talks</a>
-    <a href="resume.pdf" target="_blank" class="text-gray-500 hover:text-gray-900">CV</a>
-</div>
+                <div class="flex items-center justify-center flex-1 md:flex-none md:justify-start">
+                    <span class="font-bold text-xl text-blue-400 tracking-wide">Soumyadeep Misra</span>
+                </div>
+                <div class="hidden md:flex flex-wrap items-center space-x-6">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors font-medium pb-1">Home</a>
+                    <a href="research.html" class="text-gray-400 hover:text-white transition-colors font-medium pb-1">Research</a>
+                    <a href="teaching.html" class="text-white border-b-2 border-blue-400 font-medium pb-1">Teaching</a>
+                    <a href="conferences.html" class="text-gray-400 hover:text-white transition-colors font-medium pb-1">Conferences</a>
+                    <a href="talks.html" class="text-gray-400 hover:text-white transition-colors font-medium pb-1">Talks</a>
+                    <a href="resume.pdf" target="_blank" class="text-gray-400 hover:text-white transition-colors font-medium pb-1">CV</a>
+                </div>
+                <div class="w-11 md:hidden"></div>
             </div>
         </div>
     </nav>
 
-    <main class="flex-grow max-w-4xl mx-auto px-4 py-12 w-full">
-        <h2 class="text-3xl font-semibold mb-8 text-kuBlue border-b pb-2">Teaching Experience</h2>
+    <div id="mobile-drawer-container" class="fixed inset-0 z-[60] hidden">
+        <div id="mobile-overlay" class="fixed inset-0 bg-black/70 transition-opacity opacity-0"></div>
+        <div id="mobile-drawer" class="fixed inset-y-0 left-0 w-64 bg-slate-900 shadow-2xl border-r border-slate-800 transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+            <div class="p-4 flex justify-end">
+                <button id="close-menu-button" class="text-gray-400 hover:text-white focus:outline-none p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+            </div>
+            <div class="px-8 py-4 flex flex-col space-y-6">
+                <a href="index.html" class="text-gray-400 hover:text-white font-semibold text-lg transition-colors">Home</a>
+                <a href="research.html" class="text-gray-400 hover:text-white font-semibold text-lg transition-colors">Research</a>
+                <a href="teaching.html" class="text-white border-b-2 border-blue-400 pb-1 inline-block w-max font-semibold text-lg">Teaching</a>
+                <a href="conferences.html" class="text-gray-400 hover:text-white font-semibold text-lg transition-colors">Conferences</a>
+                <a href="talks.html" class="text-gray-400 hover:text-white font-semibold text-lg transition-colors">Talks</a>
+                <a href="resume.pdf" target="_blank" class="text-gray-400 hover:text-white font-semibold text-lg transition-colors">CV</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="flex-grow max-w-5xl mx-auto px-4 py-16 w-full">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif tracking-wide text-white mb-3">Teaching Experience</h2>
+            <p class="text-gray-400 text-lg">University of Kansas • Lawrence, USA</p>
+            <div class="w-24 h-1 bg-blue-500/50 mx-auto mt-6 rounded-full"></div>
+        </div>
         
-        <div class="space-y-10 text-gray-700">
+        <div class="space-y-16">
             
             <section>
-                <div class="flex items-baseline justify-between mb-4">
-                    <h3 class="text-2xl font-bold text-gray-800">Instructor of Record</h3>
-                    <span class="text-sm font-medium text-gray-500">University of Kansas • Lawrence, USA</span>
+                <div class="flex items-center mb-8">
+                    <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center mr-3 border border-blue-500/30">
+                        <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white tracking-wide">Instructor of Record</h3>
                 </div>
                 
-                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-                    <ul class="divide-y divide-gray-200">
-                        <li class="px-6 py-4 flex items-center">
-                            <div class="w-3 h-3 rounded-full bg-kuBlue mr-4"></div>
-                            <div>
-                                <p class="font-semibold text-lg">MATH 115</p>
-                                <p class="text-gray-500 text-sm">Spring 2026</p>
-                            </div>
-                        </li>
-                        <li class="px-6 py-4 flex items-center">
-                            <div class="w-3 h-3 rounded-full bg-kuBlue mr-4"></div>
-                            <div>
-                                <p class="font-semibold text-lg">MATH 104</p>
-                                <p class="text-gray-500 text-sm">Fall 2025</p>
-                            </div>
-                        </li>
-                        <li class="px-6 py-4 flex items-center">
-                            <div class="w-3 h-3 rounded-full bg-kuBlue mr-4"></div>
-                            <div>
-                                <p class="font-semibold text-lg">MATH 101</p>
-                                <p class="text-gray-500 text-sm">Fall 2024</p>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="relative bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-blue-400/50 hover:shadow-[0_8px_30px_rgb(59,130,246,0.15)] hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white">MATH 115</h4>
+                            <span class="inline-block bg-blue-500/10 text-blue-400 text-xs font-bold px-3 py-1.5 rounded-full border border-blue-500/20">Spring 2026</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Calculus I</p>
+                    </div>
+
+                    <div class="relative bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-blue-400/50 hover:shadow-[0_8px_30px_rgb(59,130,246,0.15)] hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white">MATH 104</h4>
+                            <span class="inline-block bg-blue-500/10 text-blue-400 text-xs font-bold px-3 py-1.5 rounded-full border border-blue-500/20">Fall 2025</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Precalculus Mathematics</p>
+                    </div>
+
+                    <div class="relative bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-blue-400/50 hover:shadow-[0_8px_30px_rgb(59,130,246,0.15)] hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white">MATH 101</h4>
+                            <span class="inline-block bg-blue-500/10 text-blue-400 text-xs font-bold px-3 py-1.5 rounded-full border border-blue-500/20">Fall 2024</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">College Algebra</p>
+                    </div>
                 </div>
             </section>
 
             <section>
-                <div class="flex items-baseline justify-between mb-4">
-                    <h3 class="text-2xl font-bold text-gray-800">Teaching Assistant</h3>
-                    <span class="text-sm font-medium text-gray-500">University of Kansas • Lawrence, USA</span>
+                <div class="flex items-center mb-8">
+                    <div class="w-8 h-8 rounded-full bg-slate-700/50 flex items-center justify-center mr-3 border border-slate-600">
+                        <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white tracking-wide">Teaching Assistant</h3>
                 </div>
                 
-                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-                    <ul class="divide-y divide-gray-200">
-                        <li class="px-6 py-4 flex items-center">
-                            <div class="w-3 h-3 rounded-full bg-gray-400 mr-4"></div>
-                            <div>
-                                <p class="font-semibold text-lg">MATH 125</p>
-                                <p class="text-gray-500 text-sm">Summer 2025</p>
-                            </div>
-                        </li>
-                        <li class="px-6 py-4 flex items-center">
-                            <div class="w-3 h-3 rounded-full bg-gray-400 mr-4"></div>
-                            <div>
-                                <p class="font-semibold text-lg">MATH 126</p>
-                                <p class="text-gray-500 text-sm">Spring 2024</p>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="relative bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-slate-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-slate-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white">MATH 125</h4>
+                            <span class="inline-block bg-slate-800 text-slate-300 text-xs font-bold px-3 py-1.5 rounded-full border border-slate-600">Summer 2025</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Calculus I</p>
+                    </div>
+
+                    <div class="relative bg-cardSlate rounded-xl p-6 border border-slate-700 hover:border-slate-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-slate-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white">MATH 126</h4>
+                            <span class="inline-block bg-slate-800 text-slate-300 text-xs font-bold px-3 py-1.5 rounded-full border border-slate-600">Spring 2024</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Calculus II</p>
+                    </div>
                 </div>
             </section>
 
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white py-8 mt-auto text-center">
-        <p>Department of Mathematics | The University of Kansas</p>
+    <footer class="bg-black text-gray-400 py-10 mt-auto border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-4">
+            <h3 class="font-semibold text-lg tracking-wider text-gray-200 uppercase">Contact Me</h3>
+            <p class="leading-relaxed">Department of Mathematics<br>Office: Snow Hall 562<br>University of Kansas</p>
+            <div class="pt-4">
+                <a href="mailto:soumyadeep@ku.edu" class="inline-block border border-slate-600 text-gray-300 hover:text-white hover:bg-slate-800 hover:border-slate-400 px-6 py-2 rounded-full font-medium transition duration-300 shadow-lg">✉️ soumyadeep@ku.edu</a>
+            </div>
+        </div>
     </footer>
 
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-button'); const closeBtn = document.getElementById('close-menu-button'); const drawerContainer = document.getElementById('mobile-drawer-container'); const drawer = document.getElementById('mobile-drawer'); const overlay = document.getElementById('mobile-overlay');
+        function openMenu() { drawerContainer.classList.remove('hidden'); requestAnimationFrame(() => { drawer.classList.remove('-translate-x-full'); overlay.classList.remove('opacity-0'); }); }
+        function closeMenu() { drawer.classList.add('-translate-x-full'); overlay.classList.add('opacity-0'); setTimeout(() => { drawerContainer.classList.add('hidden'); }, 300); }
+        menuBtn.addEventListener('click', openMenu); closeBtn.addEventListener('click', closeMenu); overlay.addEventListener('click', closeMenu);
+    </script>
 </body>
 </html>
