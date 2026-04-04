@@ -6,7 +6,18 @@
     <title>Conferences - Soumyadeep Misra</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { kuBlue: '#0051BA', darkSlate: '#0f172a' } } } }
+        tailwind.config = {
+            darkMode: 'class', // Enables the Dark/Light switch
+            theme: {
+                extend: {
+                    colors: {
+                        kuBlue: '#0051BA',
+                        darkSlate: '#0f172a',
+                        cardSlate: '#1e293b',
+                    }
+                }
+            }
+        }
     </script>
 </head>
 <body class="bg-gray-50 dark:bg-darkSlate text-gray-800 dark:text-gray-300 font-sans leading-relaxed flex flex-col min-h-screen transition-colors duration-300">
@@ -19,9 +30,11 @@
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
                 </div>
+                
                 <div class="flex items-center justify-center flex-1 md:flex-none md:justify-start">
                     <span class="font-bold text-xl text-blue-600 dark:text-blue-400 tracking-wide transition-colors">Soumyadeep Misra</span>
                 </div>
+
                 <div class="hidden md:flex flex-wrap items-center space-x-6">
                     <a href="index.html" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium pb-1">Home</a>
                     <a href="research.html" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium pb-1">Research</a>
@@ -30,6 +43,7 @@
                     <a href="talks.html" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium pb-1">Talks</a>
                     <a href="resume.pdf" target="_blank" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-medium pb-1">CV</a>
                 </div>
+                
                 <div class="flex items-center">
                     <button id="theme-toggle" class="p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg focus:outline-none transition-colors">
                         <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
@@ -52,7 +66,7 @@
                 <a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white font-semibold text-lg transition-colors">Home</a>
                 <a href="research.html" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white font-semibold text-lg transition-colors">Research</a>
                 <a href="teaching.html" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white font-semibold text-lg transition-colors">Teaching</a>
-                <a href="conferences.html" class="text-gray-900 dark:text-white border-b-2 border-blue-600 dark:border-blue-400 pb-1 inline-block w-max font-semibold text-lg">Conferences</a>
+                <a href="conferences.html" class="text-gray-900 dark:text-white border-b-2 border-blue-600 dark:border-blue-400 pb-1 inline-block w-max font-semibold text-lg transition-colors">Conferences</a>
                 <a href="talks.html" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white font-semibold text-lg transition-colors">Talks</a>
                 <a href="resume.pdf" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white font-semibold text-lg transition-colors">CV</a>
             </div>
@@ -60,24 +74,24 @@
     </div>
 
     <main class="flex-grow max-w-4xl mx-auto px-4 py-12 w-full">
-        <h2 class="text-3xl font-semibold mb-8 text-blue-600 dark:text-blue-400 border-b border-gray-200 dark:border-slate-700 pb-2 transition-colors">Conferences & Workshops</h2>
+        <h2 class="text-3xl font-semibold mb-10 text-gray-900 dark:text-white border-b border-gray-300 dark:border-slate-700 pb-3 tracking-wide transition-colors">Conferences & Workshops</h2>
         
-        <div class="space-y-10 text-gray-700 dark:text-gray-300">
+        <div class="space-y-12 text-gray-700 dark:text-gray-300">
             
             <section>
                 <div class="flex items-baseline justify-between mb-4">
                     <h3 class="text-2xl font-bold text-gray-800 dark:text-white transition-colors">Upcoming</h3>
                 </div>
                 
-                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-sm dark:shadow-lg border border-blue-600 dark:border-blue-500 overflow-hidden transition-colors">
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-blue-500 dark:border-blue-500 overflow-hidden transition-colors">
                     <ul class="divide-y divide-gray-200 dark:divide-slate-700">
                         <li class="px-6 py-5 flex flex-col sm:flex-row sm:items-center justify-between bg-blue-50/30 dark:bg-blue-900/20 transition-colors">
                             <div>
-                                <p class="font-semibold text-lg text-blue-600 dark:text-blue-400 transition-colors">PASCA 2.0</p>
+                                <p class="font-semibold text-lg text-blue-700 dark:text-blue-400 transition-colors">PASCA 2.0</p>
                                 <p class="text-gray-600 dark:text-gray-400 transition-colors">CIMAT, Mexico</p>
                             </div>
                             <div class="mt-2 sm:mt-0 text-left sm:text-right">
-                                <span class="inline-block bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 text-xs px-2 py-1 rounded-full font-medium mb-1 border border-transparent dark:border-blue-700 transition-colors">Upcoming</span>
+                                <span class="inline-block bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs px-2 py-1 rounded-full font-medium mb-1 border border-blue-200 dark:border-blue-700 transition-colors">Upcoming</span>
                                 <p class="text-gray-500 dark:text-gray-400 text-sm font-medium block transition-colors">May 18 - May 29, 2026</p>
                             </div>
                         </li>
@@ -91,59 +105,59 @@
                 </div>
                 
                 <div class="bg-white dark:bg-slate-800 rounded-lg shadow-sm dark:shadow-lg border border-gray-200 dark:border-slate-700 overflow-hidden transition-colors">
-                    <ul class="divide-y divide-gray-200 dark:divide-slate-700 text-gray-700 dark:text-gray-300">
+                    <ul class="divide-y divide-gray-100 dark:divide-slate-700 text-gray-700 dark:text-gray-300">
                         
                         <li class="px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors">
-                            <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">CA+</p><p class="text-gray-600 dark:text-gray-400 transition-colors">Iowa State University</p></div>
+                            <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">CA+</p><p class="text-gray-500 dark:text-gray-400 transition-colors">Iowa State University</p></div>
                             <div class="mt-1 sm:mt-0 text-left sm:text-right"><p class="text-gray-500 dark:text-gray-400 text-sm transition-colors">March 28 - 29, 2026</p></div>
                         </li>
 
                         <li class="px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors">
-                            <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">KUMUNU 2025</p><p class="text-gray-600 dark:text-gray-400 transition-colors">University of Missouri • Columbia, MO</p></div>
+                            <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">KUMUNU 2025</p><p class="text-gray-500 dark:text-gray-400 transition-colors">University of Missouri • Columbia, MO</p></div>
                             <div class="mt-1 sm:mt-0 text-left sm:text-right"><p class="text-gray-500 dark:text-gray-400 text-sm transition-colors">October 25 - 26, 2025</p></div>
                         </li>
 
                         <li class="px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors">
-                            <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">URiCA 2025</p><p class="text-gray-600 dark:text-gray-400 transition-colors">University of Nebraska-Lincoln • Lincoln, NE</p></div>
+                            <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">URiCA 2025</p><p class="text-gray-500 dark:text-gray-400 transition-colors">University of Nebraska-Lincoln • Lincoln, NE</p></div>
                             <div class="mt-1 sm:mt-0 text-left sm:text-right"><p class="text-gray-500 dark:text-gray-400 text-sm transition-colors">May 3 - 4, 2025</p></div>
                         </li>
 
                         <li class="px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors">
-                            <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">Rayfest 2025</p><p class="text-gray-600 dark:text-gray-400 transition-colors">University of Nebraska-Lincoln • Lincoln, NE</p></div>
+                            <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">Rayfest 2025</p><p class="text-gray-500 dark:text-gray-400 transition-colors">University of Nebraska-Lincoln • Lincoln, NE</p></div>
                             <div class="mt-1 sm:mt-0 text-left sm:text-right"><p class="text-gray-500 dark:text-gray-400 text-sm transition-colors">April 12 - 13, 2025</p></div>
                         </li>
 
                         <li class="px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors">
-                            <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">AMS Spring Central Sectional Meeting</p><p class="text-gray-600 dark:text-gray-400 transition-colors">University of Kansas • Lawrence, KS</p></div>
+                            <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">AMS Spring Central Sectional Meeting</p><p class="text-gray-500 dark:text-gray-400 transition-colors">University of Kansas • Lawrence, KS</p></div>
                             <div class="mt-1 sm:mt-0 text-left sm:text-right"><p class="text-gray-500 dark:text-gray-400 text-sm transition-colors">March 29 - 30, 2025</p></div>
                         </li>
 
                         <li class="px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors">
-                            <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">Commutative Algebra in Mixed Characteristic</p><p class="text-gray-600 dark:text-gray-400 transition-colors">University of Nebraska-Lincoln • Lincoln, NE</p></div>
+                            <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">Commutative Algebra in Mixed Characteristic</p><p class="text-gray-500 dark:text-gray-400 transition-colors">University of Nebraska-Lincoln • Lincoln, NE</p></div>
                             <div class="mt-1 sm:mt-0 text-left sm:text-right"><p class="text-gray-500 dark:text-gray-400 text-sm transition-colors">March 28 - 29, 2025</p></div>
                         </li>
 
                         <li class="px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors">
-                            <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">KUMUNU 2024</p><p class="text-gray-600 dark:text-gray-400 transition-colors">University of Missouri • Columbia, MO</p></div>
+                            <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">KUMUNU 2024</p><p class="text-gray-500 dark:text-gray-400 transition-colors">University of Missouri • Columbia, MO</p></div>
                             <div class="mt-1 sm:mt-0 text-left sm:text-right"><p class="text-gray-500 dark:text-gray-400 text-sm transition-colors">September 28 - 29, 2024</p></div>
                         </li>
 
                         <li class="px-6 py-4 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors">
                             <div class="flex flex-col sm:flex-row justify-between">
-                                <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">Workshop on Representation Theory and Syzygies</p><p class="text-gray-600 dark:text-gray-400 transition-colors">National Centre of Mathematics • India</p></div>
+                                <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">Workshop on Representation Theory and Syzygies</p><p class="text-gray-500 dark:text-gray-400 transition-colors">National Centre of Mathematics • India</p></div>
                                 <div class="mt-1 sm:mt-0 text-left sm:text-right"><p class="text-gray-500 dark:text-gray-400 text-sm transition-colors">December 18 - 23, 2023</p></div>
                             </div>
-                            <ul class="mt-3 list-disc pl-5 text-sm text-gray-600 dark:text-gray-300 space-y-1 transition-colors">
+                            <ul class="mt-3 list-disc pl-5 text-sm text-gray-600 dark:text-gray-400 space-y-1 transition-colors">
                                 <li><strong>Talk:</strong> "Pure resolutions and Boij-Soederberg conjectures" by Dr. Manoj Kummini</li>
                             </ul>
                         </li>
 
                         <li class="px-6 py-4 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors">
                             <div class="flex flex-col sm:flex-row justify-between">
-                                <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">Indian Women and Mathematics (IWM) Annual Conference</p><p class="text-gray-600 dark:text-gray-400 transition-colors">IISER Bhopal • Bhopal, India</p></div>
+                                <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">Indian Women and Mathematics (IWM) Annual Conference</p><p class="text-gray-500 dark:text-gray-400 transition-colors">IISER Bhopal • Bhopal, India</p></div>
                                 <div class="mt-1 sm:mt-0 text-left sm:text-right"><p class="text-gray-500 dark:text-gray-400 text-sm transition-colors">July 13 - 15, 2023</p></div>
                             </div>
-                            <ul class="mt-3 list-disc pl-5 text-sm text-gray-600 dark:text-gray-300 space-y-1 transition-colors">
+                            <ul class="mt-3 list-disc pl-5 text-sm text-gray-600 dark:text-gray-400 space-y-1 transition-colors">
                                 <li><strong>Talk:</strong> "Reduction number, Ratliff-Rush filtration, and Hilbert coefficients" by Kumari Saloni</li>
                                 <li><strong>Talk:</strong> "F-thresholds of symbolic power filtration..." by Mitra Koley</li>
                             </ul>
@@ -151,10 +165,10 @@
 
                         <li class="px-6 py-4 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors">
                             <div class="flex flex-col sm:flex-row justify-between">
-                                <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">IIT Madras Seminar Series</p><p class="text-gray-600 dark:text-gray-400 transition-colors">Indian Institute of Technology Madras • Chennai, India</p></div>
+                                <div><p class="font-semibold text-lg text-gray-800 dark:text-gray-100 transition-colors">IIT Madras Seminar Series</p><p class="text-gray-500 dark:text-gray-400 transition-colors">Indian Institute of Technology Madras • Chennai, India</p></div>
                                 <div class="mt-1 sm:mt-0 text-left sm:text-right"><p class="text-gray-500 dark:text-gray-400 text-sm transition-colors">April 21, 2023</p></div>
                             </div>
-                            <ul class="mt-3 list-disc pl-5 text-sm text-gray-600 dark:text-gray-300 space-y-1 transition-colors">
+                            <ul class="mt-3 list-disc pl-5 text-sm text-gray-600 dark:text-gray-400 space-y-1 transition-colors">
                                 <li><strong>Talk:</strong> "Homogeneous Length Functions on Groups" by Dr. Apoorva Khare</li>
                             </ul>
                         </li>
@@ -178,6 +192,7 @@
     </footer>
 
     <script>
+        // Mobile Drawer Logic
         const menuBtn = document.getElementById('mobile-menu-button');
         const closeBtn = document.getElementById('close-menu-button');
         const drawerContainer = document.getElementById('mobile-drawer-container');
@@ -188,11 +203,17 @@
         function closeMenu() { drawer.classList.add('-translate-x-full'); overlay.classList.add('opacity-0'); setTimeout(() => { drawerContainer.classList.add('hidden'); }, 300); }
         menuBtn.addEventListener('click', openMenu); closeBtn.addEventListener('click', closeMenu); overlay.addEventListener('click', closeMenu);
 
+        // Dark/Light Theme Logic
         const themeToggleBtn = document.getElementById('theme-toggle');
         const darkIcon = document.getElementById('theme-toggle-dark-icon');
         const lightIcon = document.getElementById('theme-toggle-light-icon');
         const htmlElement = document.documentElement;
-        function updateIcons() { if (htmlElement.classList.contains('dark')) { lightIcon.classList.remove('hidden'); darkIcon.classList.add('hidden'); } else { darkIcon.classList.remove('hidden'); lightIcon.classList.add('hidden'); } }
+
+        function updateIcons() { 
+            if (htmlElement.classList.contains('dark')) { lightIcon.classList.remove('hidden'); darkIcon.classList.add('hidden'); } 
+            else { darkIcon.classList.remove('hidden'); lightIcon.classList.add('hidden'); } 
+        }
+        
         updateIcons();
         themeToggleBtn.addEventListener('click', function() { htmlElement.classList.toggle('dark'); updateIcons(); });
     </script>
