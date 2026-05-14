@@ -829,3 +829,35 @@ img{
     font-size:1.7rem;
   }
 }
+/* Fix homepage small bio image on desktop and mobile */
+.bio-accent.image-only {
+  display: block !important;
+  width: 100%;
+  max-width: 540px;
+  margin-top: 1.35rem;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255,253,250,.68);
+  box-shadow: 0 14px 34px rgba(30,37,45,.05);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.bio-accent.image-only img {
+  display: block !important;
+  width: 100% !important;
+  height: 170px !important;
+  max-width: none !important;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  filter: saturate(.92) contrast(.98);
+}
+
+@media (max-width: 520px) {
+  .bio-accent.image-only img {
+    height: 140px !important;
+  }
+}
