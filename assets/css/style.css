@@ -861,3 +861,43 @@ img{
     height: 140px !important;
   }
 }
+.visitor-section {
+  padding: 0 0 4rem;
+}
+
+.visitor-card {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255,253,250,.84);
+  box-shadow: 0 14px 34px rgba(30,37,45,.05);
+  text-align: center;
+}
+
+.visitor-card h2 {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  line-height: 1.05;
+  margin: .2rem 0 .55rem;
+}
+
+.visitor-card p {
+  margin: 0 0 1rem;
+  color: #505b66;
+  font-size: .92rem;
+}
+
+.flag-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.flag-counter img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
