@@ -1,39 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://misrasoumyadeep.github.io/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://misrasoumyadeep.github.io/research.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://misrasoumyadeep.github.io/teaching.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://misrasoumyadeep.github.io/activities.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://misrasoumyadeep.github.io/notes.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://misrasoumyadeep.github.io/pasca20.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://misrasoumyadeep.github.io/virtual-caags.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-
+  <url><loc>https://misrasoumyadeep.github.io/</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://misrasoumyadeep.github.io/research.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://misrasoumyadeep.github.io/teaching.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://misrasoumyadeep.github.io/activities.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://misrasoumyadeep.github.io/notes.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://misrasoumyadeep.github.io/pasca20.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://misrasoumyadeep.github.io/organizing.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://misrasoumyadeep.github.io/virtual-caags.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://misrasoumyadeep.github.io/ku-student-algebra-seminar.html</loc><changefreq>monthly</changefreq></url>
 </urlset>
