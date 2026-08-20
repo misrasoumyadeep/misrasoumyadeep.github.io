@@ -11,7 +11,7 @@
 
   <meta
     name="description"
-    content="Virtual CAAGS: Commutative Algebra and Algebraic Geometry Seminar talks from the 2025/26 academic year."
+    content="Virtual CAAGS: Commutative Algebra and Algebraic Geometry Seminar talks from the 2025/26 and 2026/27 academic years."
   />
 
   <title>Virtual CAAGS | Soumyadeep Misra</title>
@@ -27,6 +27,49 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
+    .academic-year-stack{
+      display:grid;
+      gap:2rem;
+    }
+
+    .academic-year-card{
+      position:relative;
+      padding:1.45rem;
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:rgba(255,253,250,.82);
+      box-shadow:0 18px 44px rgba(30,37,45,.06);
+      transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        border-color 180ms ease;
+    }
+
+    .academic-year-card:hover{
+      transform:translateY(-3px);
+      border-color:#d2c7b8;
+      box-shadow:0 26px 56px rgba(30,37,45,.09);
+    }
+
+    .academic-year-header{
+      margin-bottom:1.35rem;
+      padding-bottom:1rem;
+      border-bottom:1px solid var(--line);
+    }
+
+    .academic-year-header h2{
+      font-family:var(--serif);
+      font-size:2rem;
+      line-height:1.05;
+      margin:.1rem 0 .45rem;
+    }
+
+    .academic-year-header p{
+      margin:0;
+      color:var(--muted);
+      font-size:.94rem;
+    }
+
     .seminar-list{
       display:grid;
       grid-template-columns:repeat(2,minmax(0,1fr));
@@ -231,6 +274,10 @@
     }
 
     @media(max-width:520px){
+      .academic-year-card{
+        padding:1rem;
+      }
+
       .seminar-card{
         padding:1.1rem;
       }
@@ -338,7 +385,7 @@
 
         <p>
           Commutative Algebra and Algebraic Geometry Seminar. Talks from the
-          2025/26 academic year.
+          2025/26 and 2026/27 academic years.
         </p>
       </div>
     </section>
@@ -351,1214 +398,1343 @@
           </a>
         </p>
 
-        <div class="content-grid">
-          <article class="content-card large">
-            <span class="tag">2025/26 Academic Year</span>
+        <div class="academic-year-stack">
 
-            <h2>Current Seminar Talks</h2>
+          <!-- =====================================================
+               2026/27 ACADEMIC YEAR
+               ===================================================== -->
 
-            <p>
-              This page records speaker information, talk titles, and abstracts
-              for the Virtual CAAGS seminar during the 2025/26 academic year.
-            </p>
-          </article>
+          <article class="academic-year-card">
+            <div class="academic-year-header">
+              <span class="tag">2026/27 Academic Year</span>
 
-          <article class="content-card">
-            <span class="tag">Coming soon</span>
+              <h2>2026/27 Academic Year Talks</h2>
 
-            <h3>Next Academic Year</h3>
-
-            <p>
-              Details for talks for the next academic year are coming soon.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="content" style="padding-top:0;">
-      <div class="shell">
-        <div class="seminar-list">
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">May 16</span>
-              <span class="seminar-year">2025/26</span>
+              <p>
+                Speaker information, talk titles, and abstracts for the
+                2026/27 Virtual CAAGS seminar.
+              </p>
             </div>
 
-            <h2>Symbolic powers of binomial edge ideals</h2>
+            <div class="seminar-list">
 
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://sites.google.com/view/manohar-kumar-pmrf-update/home?authuser=0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Dr. Manohar Kumar
-              </a>
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">Date TBA</span>
+                  <span class="seminar-year">2026/27</span>
+                </div>
 
-              <span>IIT Madras</span>
-            </p>
+                <h2>
+                  Density functions for the epsilon multiplicity of homogeneous ideals
+                </h2>
 
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://ahduni.edu.in/faculty/suprajo-das/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Dr. Suprajo Das
+                  </a>
 
-            <template class="abstract-template">
-              <p>
-                Binomial edge ideals, introduced independently by Herzog, Hibi,
-                Hreinsdóttir, Kahle, and Rauh, and by Ohtani, provide a bridge
-                between graph theory and commutative algebra by associating a
-                binomial ideal to a simple graph G. The binomial edge ideal of G,
-                denoted by J_G, enables the study of combinatorial properties of
-                graphs through algebraic invariants and is closely related to
-                determinantal ideals and conditional independence ideals arising
-                in algebraic statistics. In this talk, we begin by discussing
-                some basic properties of binomial edge ideals and their Gröbner
-                bases. We then present the irreducible decomposition of J_G.
-                Subsequently, we study the symbolic powers of J_G. Finally, we
-                discuss the conjecture of Ene, Rinaldo, and Terai concerning the
-                equality between the symbolic and ordinary powers of J_G, that
-                is, J_G^{(k)} = J_G^k, together with updates related to this
-                conjecture.
-              </p>
-            </template>
+                  <span>Ahmedabad University</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    Let $(R,\mathfrak m)$ be a Noetherian local ring of dimension
+                    $d$, and let $I\subseteq R$ be an ideal. Ulrich and
+                    Validashti defined the $\varepsilon$-multiplicity of $I$ as
+                  </p>
+
+                  \[
+                  \varepsilon(I)
+                  =
+                  \limsup_{n\to\infty}
+                  \frac{
+                    \lambda_R\!\left(
+                      H^0_{\mathfrak m}(R/I^n)
+                    \right)
+                  }{
+                    n^d/d!
+                  }.
+                  \]
+
+                  <p>
+                    This invariant may be viewed as a generalization of the
+                    classical Hilbert--Samuel multiplicity. Cutkosky showed that
+                    the $\limsup$ in this definition can be replaced by an
+                    actual limit when $R$ is analytically unramified. A
+                    surprising example due to Cutkosky, H\`a, Srinivasan, and
+                    Theodorescu demonstrates that this limit can be an
+                    irrational number even when $R$ is a regular local ring.
+                  </p>
+
+                  <p>
+                    In this talk, we shall focus on the case of homogeneous
+                    ideals in a standard graded domain over a field. Motivated
+                    by Trivedi's approach to the Hilbert--Kunz multiplicity via
+                    density functions, we introduce a compactly supported
+                    continuous real-valued function, called the
+                    $\varepsilon$-density function, whose integral recovers the
+                    $\varepsilon$-multiplicity. If time permits, we will present
+                    explicit examples and discuss applications in the context
+                    of integral closures.
+                  </p>
+
+                  <p>
+                    This talk is based on joint works with Roy and Trivedi.
+                  </p>
+                </template>
+              </article>
+
+            </div>
           </article>
 
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">May 3</span>
-              <span class="seminar-year">2025/26</span>
+          <!-- =====================================================
+               2025/26 ACADEMIC YEAR
+               ===================================================== -->
+
+          <article class="academic-year-card">
+            <div class="academic-year-header">
+              <span class="tag">2025/26 Academic Year</span>
+
+              <h2>2025/26 Academic Year Talks</h2>
+
+              <p>
+                Speaker information, talk titles, and abstracts from the
+                2025/26 Virtual CAAGS seminar.
+              </p>
             </div>
 
-            <h2>Bounds on Bass numbers of local cohomology modules</h2>
+            <div class="seminar-list">
 
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://sites.google.com/iitb.ac.in/sayed/home"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Sayed Sadiqul Islam
-              </a>
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">May 16</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
 
-              <span>IIT Bombay</span>
-            </p>
+                <h2>Symbolic powers of binomial edge ideals</h2>
 
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://sites.google.com/view/manohar-kumar-pmrf-update/home?authuser=0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Dr. Manohar Kumar
+                  </a>
 
-            <template class="abstract-template">
-              <p>
-                Introduced in the 1960s in algebraic geometry to study sheaves
-                and their cohomology, local cohomology has become a fundamental
-                tool in commutative algebra. Despite extensive study, its
-                structure remains poorly understood, primarily because these
-                modules are rarely finitely generated. Consequently,
-                investigating their finiteness properties—such as associated
-                primes and Bass numbers—has become a central problem toward
-                understanding their structure. Let R be a polynomial ring over
-                an uncountable algebraically closed field of characteristic
-                zero. In our talk, we investigate upper bounds for the Bass
-                numbers of local cohomology modules of R. Our approach relies
-                on the theory of D-modules, which I will briefly recall for a
-                general audience.
-              </p>
-            </template>
-          </article>
+                  <span>IIT Madras</span>
+                </p>
 
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">April 12</span>
-              <span class="seminar-year">2025/26</span>
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    Binomial edge ideals, introduced independently by Herzog,
+                    Hibi, Hreinsdóttir, Kahle, and Rauh, and by Ohtani, provide
+                    a bridge between graph theory and commutative algebra by
+                    associating a binomial ideal to a simple graph G. The
+                    binomial edge ideal of G, denoted by J_G, enables the study
+                    of combinatorial properties of graphs through algebraic
+                    invariants and is closely related to determinantal ideals
+                    and conditional independence ideals arising in algebraic
+                    statistics. In this talk, we begin by discussing some basic
+                    properties of binomial edge ideals and their Gröbner bases.
+                    We then present the irreducible decomposition of J_G.
+                    Subsequently, we study the symbolic powers of J_G. Finally,
+                    we discuss the conjecture of Ene, Rinaldo, and Terai
+                    concerning the equality between the symbolic and ordinary
+                    powers of J_G, that is, J_G^{(k)} = J_G^k, together with
+                    updates related to this conjecture.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">May 3</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>Bounds on Bass numbers of local cohomology modules</h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://sites.google.com/iitb.ac.in/sayed/home"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Sayed Sadiqul Islam
+                  </a>
+
+                  <span>IIT Bombay</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    Introduced in the 1960s in algebraic geometry to study
+                    sheaves and their cohomology, local cohomology has become a
+                    fundamental tool in commutative algebra. Despite extensive
+                    study, its structure remains poorly understood, primarily
+                    because these modules are rarely finitely generated.
+                    Consequently, investigating their finiteness properties—such
+                    as associated primes and Bass numbers—has become a central
+                    problem toward understanding their structure. Let R be a
+                    polynomial ring over an uncountable algebraically closed
+                    field of characteristic zero. In our talk, we investigate
+                    upper bounds for the Bass numbers of local cohomology
+                    modules of R. Our approach relies on the theory of
+                    D-modules, which I will briefly recall for a general
+                    audience.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">April 12</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>
+                  Free Resolutions of Symmetric Algebras of Ideals with
+                  Deviation Two
+                </h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://sites.google.com/view/chitra-venugopal/home?authuser=3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Dr. Chitra Venugopal
+                  </a>
+
+                  <span>Chennai Mathematical Institute</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    For an ideal I in a ring R, the deviation of I is defined as
+                    the difference between its minimal number of generators and
+                    its grade. This invariant plays a central role in measuring
+                    how far an ideal is from being a complete intersection. In
+                    polynomial rings, ideals of deviation zero and one
+                    correspond to complete intersections and almost complete
+                    intersections, respectively, and their algebraic and
+                    homological properties have been extensively studied. In
+                    this talk, we focus on ideals of higher positive deviation,
+                    where the structure becomes significantly more complex. Our
+                    primary aim is to study certain classes of ideals that arise
+                    naturally in this context and to understand their role in
+                    the construction of free resolutions of symmetric algebras.
+                    The symmetric algebra of an ideal encodes information about
+                    its generators and relations and serves as an approximation
+                    to the Rees algebra. Constructing explicit resolutions for
+                    these algebras is a fundamental problem in commutative
+                    algebra.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">April 5</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>
+                  A sharp upper bound on cohomological dimension in unramified
+                  mixed characteristic
+                </h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://manav77.github.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Manav Batavia
+                  </a>
+
+                  <span>Purdue University</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    Given an ideal I in a regular local ring A, the
+                    cohomological dimension of I in A is the index of the
+                    highest non-vanishing local cohomology of A supported at I.
+                    Determining effective upper bounds on the cohomological
+                    dimension in terms of topological invariants of Spec(A/I)
+                    is a central problem in commutative algebra: foundational
+                    results include the Hartshorne--Lichtenbaum Vanishing
+                    Theorem and the Second Vanishing Theorem. In equal
+                    characteristic, Faltings established in 1980 a general
+                    bound on the cohomological dimension of an ideal in terms
+                    of its “big height”. In this talk, we extend Faltings’
+                    results to the unramified mixed characteristic setting and
+                    show that the resulting bound is sharp.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">March 22</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>Divisors on varieties</h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://math.missouri.edu/people/graduate-student/desai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Muktai Desai
+                  </a>
+
+                  <span>University of Missouri</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    The notion of divisors serves as an important tool for
+                    studying geometry on a variety. In this talk, the concept
+                    of Weil divisors and their relation to fractional ideals
+                    will be introduced. We'll also discuss divisor class groups
+                    and linear systems. If time permits, I would briefly talk
+                    about Kähler differentials on varieties, and the divisor of
+                    a rational n-form on a variety. Prerequisites: A first
+                    course in Algebraic Geometry using the classical approach,
+                    the concept of coherent sheaves discussed previously in
+                    Mifron's talk.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">March 15</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>
+                  Positivity in Algebraic Geometry - nefness of line bundles
+                </h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://sites.google.com/bc.edu/gomathy/home"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Gomathy Ganapathy
+                  </a>
+
+                  <span>Boston College</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    One of the central ways to study projective varieties and
+                    their morphisms is through the positivity properties that
+                    they carry. Positivity can be understood by studying the
+                    line bundles on the varieties - are they nef? big? ample?
+                    pseudo-effective? These questions help understand the
+                    numerical and geometric properties of our variety. In this
+                    talk, we will define these terms, particularly focusing on
+                    the nef cone. We will state some important properties in
+                    this context and see why the nef cone is a useful
+                    enlargement of the ample cone. We will focus on developing
+                    an intuitive understanding via examples of surfaces. The
+                    aim is to give an accessible entry point into the language
+                    of positivity and to show why the nef cone is such a useful
+                    invariant in algebraic geometry.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">March 8</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>
+                  Equations of Kalman Varieties and the Geometric Method
+                </h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://sites.google.com/ucsd.edu/suhas-vadan-gondi/home"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Suhas Vadan Gondi
+                  </a>
+
+                  <span>University of California San Diego</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    The Kalman variety of a linear subspace in a vector space
+                    consists of all endomorphisms that contain an eigenvector in
+                    that subspace. In this talk, I will give some basic
+                    properties of these varieties including giving
+                    set-theoretic equations for them. I will then introduce a
+                    powerful method for computing syzygies, known as the
+                    Kempf-Lascoux-Weyman geometric technique, which I will apply
+                    in our set-up to obtain a minimal free resolution of the
+                    normalisation of the Kalman varieties. Time permitting, I
+                    will briefly talk about how to obtain syzygies of the
+                    Kalman varieties from the syzygies of its normalisation.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">March 1</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>Quasi-Coherent and Coherent Sheaves</h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://math.missouri.edu/people/graduate-student/fernandes"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Mifron Fernandes
+                  </a>
+
+                  <span>University of Missouri</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    In this talk we will first discuss about sheafification of
+                    a module. We will define quasi-coherent and coherent
+                    sheaves and look at various constructions of sheaves from
+                    quasi-coherent coherent sheaves. In the end if there is
+                    time we will look at some theorems about quasi-coherent
+                    coherent sheaves by Serre. Prerequisites: In this talk I
+                    will work with classical affine and projective varieties
+                    (No schemes). I will also assume that everyone knows
+                    definition of presheaves and sheaves.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">February 8 &amp; 22</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>
+                  Codimension-two Varieties 1: Cohomology of Vector Bundles and
+                  Modules
+                </h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://arxiv.org/search/math?query=Subramanian%2C+Abhiram&amp;searchtype=author&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Abhiram Subramanian
+                  </a>
+
+                  <span>Chennai Mathematical Institute</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    In this two-part series, we will look at Hartshorne’s
+                    conjecture and some sufficient conditions under which it
+                    holds.
+                  </p>
+
+                  <p>
+                    In the first session, we will look at the prerequisite
+                    material, namely the cohomology of vector bundles over
+                    projective space and the relation between sheaf cohomology
+                    and local cohomology. We will also look at Serre’s
+                    construction for codimension-two local complete
+                    intersections, and how this gives an equivalent formulation
+                    for Hartshorne’s conjecture.
+                  </p>
+
+                  <p>
+                    In the second session, we will state and prove some
+                    sufficient conditions for Hartshorne’s conjecture. This is
+                    based on a joint work with Manoj Kummini
+                    (arXiv:2511.19962).
+                  </p>
+
+                  <p>
+                    Prerequisites: some basic knowledge of projective varieties
+                    and vector bundles. In particular, sections I.1-I.5,
+                    II.1-II.5, and III.1-III.7 of Hartshorne’s Algebraic
+                    Geometry should be sufficient (also slightly overkill).
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">February 1</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>Numerical Semigroups of Sally Type</h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://sites.google.com/view/srishti-singh-math?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Srishti Singh
+                  </a>
+
+                  <span>University of Missouri</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    A numerical semigroup S is a finitely-generated submonoid of
+                    the natural numbers with a finite complement. Semigroups
+                    appear across many areas of maths, including algebraic
+                    geometry, number theory, integer programming, and even music
+                    theory. They provide a nice combinatorial framework to study
+                    otherwise hard-to-compute algebraic properties. One of these
+                    properties is the betti sequence of a semigroup ring, i.e.,
+                    the sequence of ranks of free modules in a minimal free
+                    resolution. In this talk, we will compute various such
+                    invariants of a class of numerical semigroups called Sally
+                    type semigroups (named after Judith Sally, 1937-2024). In
+                    particular, we will see how Hochster’s combinatorial formula
+                    can be used to get the minimal number of generators for the
+                    defining ideal I of a semigroup ring R/I, where R is a
+                    polynomial ring, by bypassing all ideal-theoretic
+                    complications.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">January 25</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>On invariant rings of permutation groups</h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://aryamanmaithani.github.io/math/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Aryaman Maithani
+                  </a>
+
+                  <span>University of Utah</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    Consider the action of a subgroup G of S_n acting on the
+                    polynomial ring S = k[x_1, ..., x_n] by permuting the
+                    variables. Noting that this action does not really refer to
+                    the base field k, one may ask if the ring of invariants S^G
+                    is also suitably independent of k. For example, the
+                    properties of being Cohen–Macaulay, Gorenstein, a UFD,
+                    F-regular, etc… One may also ask whether suitable numerical
+                    invariants are also independent: the a-invariant, the
+                    Hilbert series of S^G, the Hilbert series of H^n(S)^G and
+                    H^n(S^G). If you would like the answers to these questions,
+                    this talk is for you.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">January 18</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>
+                  Equivalence of strong and weak F-regularity of positively
+                  graded rings
+                </h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://in.linkedin.com/in/aditya-dwivedi-984b591bb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Aditya Dwivedi
+                  </a>
+
+                  <span>IIT Bombay</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    In the study of singularities via positive characteristic
+                    methods, several notions of F-regularity were introduced in
+                    the foundational work of Hochster and Huneke. While these
+                    notions are central to the field, their equivalence remains
+                    an open problem. We will prove the equivalence of these
+                    notions in the case of positively graded rings following the
+                    work of Lyubeznik and Smith. The talk assumes basic
+                    knowledge of Noetherian rings and modules.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">November 22</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>
+                  Sheaf Cohomology via Derived Functors and Čech Cohomology
+                </h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://mathematics.ku.edu/people/anusree-vellathum-padath"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Anusree Vellathum Padath
+                  </a>
+
+                  <span>University of Kansas</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    Sheaf cohomology can be defined abstractly as the right
+                    derived functors of the global section functor, but it can
+                    also be computed concretely using Čech cohomology. In this
+                    talk I will introduce both viewpoints and explain the
+                    mechanism that relates them. After briefly recalling the
+                    derived-functor definition of Hi(X,F), I will define Čech
+                    cohomology using an open cover and then discuss the Leray
+                    condition, under which the Čech complex gives an acyclic
+                    resolution of F, and prove that the two cohomology theories
+                    coincide.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">November 15</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>Algebra Structures and Grade 3 Gorenstein Ideals</h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://math.iitgn.ac.in/phd.php#:~:text=Amit%20phogat%20"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Amit Phogat
+                  </a>
+
+                  <span>IIT Gandhinagar</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    The main aim of the talk is to describe an algebra structure
+                    on the minimal free resolution and, as an application,
+                    obtain a structure theorem for grade 3 Gorenstein ideals.
+                    The talk is based on the 1977 paper of Eisenbud and
+                    Buchsbaum titled: Algebra Structures for Finite Free
+                    Resolutions, and Some Structure Theorems for Ideals of
+                    Codimension 3.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">November 8</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>
+                  The arithmetic rank of residual intersections of a complete
+                  intersection ideal
+                </h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://manav77.github.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Manav Batavia
+                  </a>
+
+                  <span>Purdue University</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    The arithmetic rank of a variety is the minimal number of
+                    equations needed to define it set-theoretically, i.e., the
+                    smallest number of polynomials generating the defining
+                    ideal upto radical. Computing this invariant is notoriously
+                    difficult: the minimal generators up to radical often bear
+                    little relation to the given ideal generators and can vary
+                    unpredictably across characteristics. Residual intersections
+                    provide a natural extension of the classical notion of
+                    algebraic links. We establish a general upper bound for the
+                    arithmetic rank of any residual intersection of a complete
+                    intersection ideal in an arbitrary Noetherian ring, and we
+                    show that this bound is sharp under specific characteristic
+                    assumptions. This work is joint with Kesavan Mohana
+                    Sundaram, Taylor Murray, and Vaibhav Pandey.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">November 1</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>
+                  Set-theoretic Complete Intersection for Curves in Affine
+                  3-folds
+                </h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://arxiv.org/search/math?query=Mandal%2C+Lisa&amp;searchtype=author&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Lisa Mandal
+                  </a>
+
+                  <span>IISER Kolkata</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    Let A be an affine 3-fold over a C_1 field of characteristic
+                    zero. We show any smooth curve with trivial conormal bundle
+                    is a set theoretic complete Intersection provided it's
+                    class in the grothendieck group is torsion.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">October 18</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>
+                  Integral closure of ideals and their
+                  Castelnuovo--Mumford regularity
+                </h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://scholar.google.com/citations?user=Pf9g5dgAAAAJ&amp;hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Dr. Omkar Javadekar
+                  </a>
+
+                  <span>Chennai Mathematical Institute</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    A conjecture due to Kuronya--Pintye states that if I is a
+                    homogeneous ideal of a k[x₁,...,xₙ] and J is its integral
+                    closure, then reg(J) ≤ reg(I). In this talk, we will prove
+                    the conjucture for certain classes of monomial ideals. The
+                    talk is based on the following recent work: A comparison of
+                    the regularity of certain classes of monomial ideals and
+                    their integral closures.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">October 11</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>The Derived Category of a DG Algebra</h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://kesavan-ms.github.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Kesavan Mohana Sundaram
+                  </a>
+
+                  <span>University of Nebraska</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    Derived category of a DG Q-Algebra A, denoted D(A), is
+                    obtained by formally inverting quasi-isomorphisms between
+                    DG A-modules. In this talk, we introduce the notion of
+                    thick subcategory T’ of a triangulated category T. We will
+                    see some examples and its properties. The smallest thick
+                    subcategory generated by an object X in T, is denoted by
+                    Thick(X). By the work of Dwyer-Greenless-Iyengar, we will
+                    also see that, the objects of Thick(R) are exactly the
+                    perfect complexes in D(R).
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">October 4</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>DG-algebras and some applications</h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://sites.google.com/view/gana-math/home?authuser=0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ganapathy K
+                  </a>
+
+                  <span>IIT Madras</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    Differential graded(dg) algebra is a chain complex which is
+                    also a graded algebra, where the differential in the chain
+                    complex is compatible with the product structure. In this
+                    talk, we introduce dg-algebras and give some examples. Then
+                    we discuss situations where the existence of dg-algebra
+                    structures are useful.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">September 27</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>Algebraic invariants and Convex bodies</h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://sse.tulane.edu/math/people/aniketh-sivakumar"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Aniketh Sivakumar
+                  </a>
+
+                  <span>Tulane University</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    The study of the growth of ideals has led to the discovery
+                    of rich families such as symbolic powers and integral
+                    closures, whose behaviour encodes deep algebraic and
+                    geometric information. In recent years, convex-geometric
+                    methods via Newton polyhedra and Newton–Okounkov bodies have
+                    provided powerful tools for understanding these objects. In
+                    this talk, I will introduce these ideas and illustrate how
+                    convex bodies offer a natural framework for studying graded
+                    families of ideals. In particular, I will explain how the
+                    volume of these convex bodies captures various
+                    multiplicities of graded families.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">September 20</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>Componentwise linear ideals from sums</h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://sreehari183.github.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Sreehari Suresh Babu
+                  </a>
+
+                  <span>University of Kansas</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    A componentwise linear ideal in a polynomial ring S is an
+                    ideal I such that the ideal generated by each component of
+                    I has a linear resolution. Given two componentwise linear
+                    ideals I and J, we study necessary and sufficient conditions
+                    for I+J to be componentwise linear. We provide a complete
+                    characterization when dim S=2. As a consequence, we show
+                    that any componentwise linear monomial ideal in k[x,y] has
+                    linear quotients using generators in non-decreasing
+                    degrees. When dim S is arbitrary, we describe how one can
+                    build a componentwise linear ideal from a given collection
+                    of componentwise linear monomial ideals, satisfying some
+                    mild compatibility conditions, using only sum and product
+                    with square-free monomials. This is a joint work with
+                    Prof. Hailong Dao.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">September 13</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>Syzygies of Projective varieties</h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://mathematics.ku.edu/people/agilan-amirthalingam"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Agilan Amirthalingam
+                  </a>
+
+                  <span>University of Kansas</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    This will be an introductory talk on the connections between
+                    the syzygies of projective varieties (of their coordinate
+                    rings) and their geometry. We will see how Koszul cohomology
+                    can be computed using some special vector bundles on the
+                    variety. I will point out some open questions at the end.
+                    This talk will be accessible to anyone who has had a couple
+                    of courses in commutative algebra. I will define all the
+                    geometric terms involved.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">September 6</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>
+                  Symbolic Powers of Edge Ideals and Minh’s Conjecture
+                </h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://misrasoumyadeep.github.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Soumyadeep Misra
+                  </a>
+
+                  <span>University of Kansas</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    We will study symbolic powers of edge ideals and a
+                    conjecture of Minh predicting that their regularity
+                    coincides with that of the ordinary powers. After a brief
+                    review of symbolic powers and their combinatorial
+                    description via vertex covers, I will try to explain a
+                    proof that the conjecture holds for complete graphs. The
+                    key idea is to show that the difference between symbolic
+                    and ordinary powers is small enough to force their
+                    regularities to agree. This talk should be accessible to
+                    anyone who has completed a first course in commutative
+                    algebra and has a basic familiarity with symbolic powers
+                    and regularity.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">August 30</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>
+                  Polynomial invariants of GL₂: Conjugation over finite fields
+                </h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://aryamanmaithani.github.io/math/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Aryaman Maithani
+                  </a>
+
+                  <span>University of Utah</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    Consider the conjugation action of GL2(K) on the polynomial
+                    ring K[X2x2]. When K is an infinite field, the ring of
+                    invariants is a polynomial ring generated by the trace and
+                    the determinant. We describe the ring of invariants when K
+                    is a finite field, and show that it is a hypersurface.
+                  </p>
+                </template>
+              </article>
+
+              <article class="seminar-card">
+                <div class="seminar-card-header">
+                  <span class="seminar-date">August 23</span>
+                  <span class="seminar-year">2025/26</span>
+                </div>
+
+                <h2>Invariant Theory of Commutative Rings</h2>
+
+                <p class="seminar-speaker">
+                  <a
+                    class="text-link"
+                    href="https://aryamanmaithani.github.io/math/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Aryaman Maithani
+                  </a>
+
+                  <span>University of Utah</span>
+                </p>
+
+                <button
+                  class="abstract-button"
+                  type="button"
+                  data-abstract-button
+                  aria-haspopup="dialog"
+                >
+                  Abstract
+                </button>
+
+                <template class="abstract-template">
+                  <p>
+                    Given a group G acting on a ring R, we consider the subring
+                    R^G, the subring of elements fixed by G. It's a natural
+                    question to ask what "good" properties of R are inherited
+                    by R^G. Some of these questions were considered by Hilbert
+                    and Noether, and were a motivation to study noetherian
+                    rings. We will discuss some of these results. This talk
+                    should be accessible to someone who's done a first course
+                    in module.
+                  </p>
+                </template>
+              </article>
+
             </div>
-
-            <h2>
-              Free Resolutions of Symmetric Algebras of Ideals with Deviation Two
-            </h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://sites.google.com/view/chitra-venugopal/home?authuser=3"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Dr. Chitra Venugopal
-              </a>
-
-              <span>Chennai Mathematical Institute</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                For an ideal I in a ring R, the deviation of I is defined as the
-                difference between its minimal number of generators and its
-                grade. This invariant plays a central role in measuring how far
-                an ideal is from being a complete intersection. In polynomial
-                rings, ideals of deviation zero and one correspond to complete
-                intersections and almost complete intersections, respectively,
-                and their algebraic and homological properties have been
-                extensively studied. In this talk, we focus on ideals of higher
-                positive deviation, where the structure becomes significantly
-                more complex. Our primary aim is to study certain classes of
-                ideals that arise naturally in this context and to understand
-                their role in the construction of free resolutions of symmetric
-                algebras. The symmetric algebra of an ideal encodes information
-                about its generators and relations and serves as an approximation
-                to the Rees algebra. Constructing explicit resolutions for these
-                algebras is a fundamental problem in commutative algebra.
-              </p>
-            </template>
           </article>
 
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">April 5</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>
-              A sharp upper bound on cohomological dimension in unramified mixed
-              characteristic
-            </h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://manav77.github.io"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Manav Batavia
-              </a>
-
-              <span>Purdue University</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                Given an ideal I in a regular local ring A, the cohomological
-                dimension of I in A is the index of the highest non-vanishing
-                local cohomology of A supported at I. Determining effective
-                upper bounds on the cohomological dimension in terms of
-                topological invariants of Spec(A/I) is a central problem in
-                commutative algebra: foundational results include the
-                Hartshorne--Lichtenbaum Vanishing Theorem and the Second
-                Vanishing Theorem. In equal characteristic, Faltings established
-                in 1980 a general bound on the cohomological dimension of an
-                ideal in terms of its “big height”. In this talk, we extend
-                Faltings’ results to the unramified mixed characteristic setting
-                and show that the resulting bound is sharp.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">March 22</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>Divisors on varieties</h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://math.missouri.edu/people/graduate-student/desai"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Muktai Desai
-              </a>
-
-              <span>University of Missouri</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                The notion of divisors serves as an important tool for studying
-                geometry on a variety. In this talk, the concept of Weil divisors
-                and their relation to fractional ideals will be introduced.
-                We'll also discuss divisor class groups and linear systems. If
-                time permits, I would briefly talk about Kähler differentials on
-                varieties, and the divisor of a rational n-form on a variety.
-                Prerequisites: A first course in Algebraic Geometry using the
-                classical approach and the concept of coherent sheaves,
-                discussed previously in Mifron's talk.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">March 15</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>
-              Positivity in Algebraic Geometry - nefness of line bundles
-            </h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://sites.google.com/bc.edu/gomathy/home"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Gomathy Ganapathy
-              </a>
-
-              <span>Boston College</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                One of the central ways to study projective varieties and their
-                morphisms is through the positivity properties that they carry.
-                Positivity can be understood by studying the line bundles on the
-                varieties - are they nef? big? ample? pseudo-effective? These
-                questions help understand the numerical and geometric properties
-                of our variety. In this talk, we will define these terms,
-                particularly focusing on the nef cone. We will state some
-                important properties in this context and see why the nef cone is
-                a useful enlargement of the ample cone. We will focus on
-                developing an intuitive understanding via examples of surfaces.
-                The aim is to give an accessible entry point into the language
-                of positivity and to show why the nef cone is such a useful
-                invariant in algebraic geometry.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">March 8</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>Equations of Kalman Varieties and the Geometric Method</h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://sites.google.com/ucsd.edu/suhas-vadan-gondi/home"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Suhas Vadan Gondi
-              </a>
-
-              <span>University of California San Diego</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                The Kalman variety of a linear subspace in a vector space
-                consists of all endomorphisms that contain an eigenvector in
-                that subspace. In this talk, I will give some basic properties
-                of these varieties including giving set-theoretic equations for
-                them. I will then introduce a powerful method for computing
-                syzygies, known as the Kempf-Lascoux-Weyman geometric technique,
-                which I will apply in our set-up to obtain a minimal free
-                resolution of the normalisation of the Kalman varieties. Time
-                permitting, I will briefly talk about how to obtain syzygies of
-                the Kalman varieties from the syzygies of its normalisation.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">March 1</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>Quasi-Coherent and Coherent Sheaves</h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://math.missouri.edu/people/graduate-student/fernandes"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Mifron Fernandes
-              </a>
-
-              <span>University of Missouri</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                In this talk we will first discuss about sheafification of a
-                module. We will define quasi-coherent and coherent sheaves and
-                look at various constructions of sheaves from quasi-coherent
-                coherent sheaves. In the end if there is time we will look at
-                some theorems about quasi-coherent coherent sheaves by Serre.
-                Prerequisites: In this talk I will work with classical affine
-                and projective varieties, not schemes. I will also assume that
-                everyone knows the definition of presheaves and sheaves.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">February 8 &amp; 22</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>
-              Codimension-two Varieties 1: Cohomology of Vector Bundles and
-              Modules
-            </h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://arxiv.org/search/math?query=Subramanian%2C+Abhiram&amp;searchtype=author&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Abhiram Subramanian
-              </a>
-
-              <span>Chennai Mathematical Institute</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                In this two-part series, we will look at Hartshorne’s conjecture
-                and some sufficient conditions under which it holds.
-              </p>
-
-              <p>
-                In the first session, we will look at the prerequisite material,
-                namely the cohomology of vector bundles over projective space
-                and the relation between sheaf cohomology and local cohomology.
-                We will also look at Serre’s construction for codimension-two
-                local complete intersections, and how this gives an equivalent
-                formulation for Hartshorne’s conjecture.
-              </p>
-
-              <p>
-                In the second session, we will state and prove some sufficient
-                conditions for Hartshorne’s conjecture. This is based on a joint
-                work with Manoj Kummini (arXiv:2511.19962).
-              </p>
-
-              <p>
-                Prerequisites: some basic knowledge of projective varieties and
-                vector bundles. In particular, sections I.1-I.5, II.1-II.5,
-                and III.1-III.7 of Hartshorne’s Algebraic Geometry should be
-                sufficient.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">February 1</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>Numerical Semigroups of Sally Type</h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://sites.google.com/view/srishti-singh-math?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Srishti Singh
-              </a>
-
-              <span>University of Missouri</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                A numerical semigroup S is a finitely-generated submonoid of the
-                natural numbers with a finite complement. Semigroups appear
-                across many areas of maths, including algebraic geometry, number
-                theory, integer programming, and even music theory. They provide
-                a nice combinatorial framework to study otherwise hard-to-compute
-                algebraic properties. One of these properties is the Betti
-                sequence of a semigroup ring, i.e., the sequence of ranks of free
-                modules in a minimal free resolution. In this talk, we will
-                compute various such invariants of a class of numerical
-                semigroups called Sally type semigroups. In particular, we will
-                see how Hochster’s combinatorial formula can be used to get the
-                minimal number of generators for the defining ideal I of a
-                semigroup ring R/I, where R is a polynomial ring, by bypassing
-                all ideal-theoretic complications.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">January 25</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>On invariant rings of permutation groups</h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://aryamanmaithani.github.io/math/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Aryaman Maithani
-              </a>
-
-              <span>University of Utah</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                Consider the action of a subgroup G of S_n acting on the
-                polynomial ring S = k[x_1, ..., x_n] by permuting the variables.
-                Noting that this action does not really refer to the base field
-                k, one may ask if the ring of invariants S^G is also suitably
-                independent of k. For example, the properties of being
-                Cohen–Macaulay, Gorenstein, a UFD, F-regular, etc. One may also
-                ask whether suitable numerical invariants are independent: the
-                a-invariant, the Hilbert series of S^G, the Hilbert series of
-                H^n(S)^G and H^n(S^G).
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">January 18</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>
-              Equivalence of strong and weak F-regularity of positively graded
-              rings
-            </h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://in.linkedin.com/in/aditya-dwivedi-984b591bb"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Aditya Dwivedi
-              </a>
-
-              <span>IIT Bombay</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                In the study of singularities via positive characteristic
-                methods, several notions of F-regularity were introduced in the
-                foundational work of Hochster and Huneke. While these notions
-                are central to the field, their equivalence remains an open
-                problem. We will prove the equivalence of these notions in the
-                case of positively graded rings following the work of Lyubeznik
-                and Smith. The talk assumes basic knowledge of Noetherian rings
-                and modules.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">November 22</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>Sheaf Cohomology via Derived Functors and Čech Cohomology</h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://mathematics.ku.edu/people/anusree-vellathum-padath"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Anusree Vellathum Padath
-              </a>
-
-              <span>University of Kansas</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                Sheaf cohomology can be defined abstractly as the right derived
-                functors of the global section functor, but it can also be
-                computed concretely using Čech cohomology. In this talk I will
-                introduce both viewpoints and explain the mechanism that relates
-                them. After briefly recalling the derived-functor definition of
-                Hi(X,F), I will define Čech cohomology using an open cover and
-                then discuss the Leray condition, under which the Čech complex
-                gives an acyclic resolution of F, and prove that the two
-                cohomology theories coincide.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">November 15</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>Algebra Structures and Grade 3 Gorenstein Ideals</h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://math.iitgn.ac.in/phd.php#:~:text=Amit%20phogat%20"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Amit Phogat
-              </a>
-
-              <span>IIT Gandhinagar</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                The main aim of the talk is to describe an algebra structure on
-                the minimal free resolution and, as an application, obtain a
-                structure theorem for grade 3 Gorenstein ideals. The talk is
-                based on the 1977 paper of Eisenbud and Buchsbaum titled:
-                Algebra Structures for Finite Free Resolutions, and Some
-                Structure Theorems for Ideals of Codimension 3.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">November 8</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>
-              The arithmetic rank of residual intersections of a complete
-              intersection ideal
-            </h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://manav77.github.io"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Manav Batavia
-              </a>
-
-              <span>Purdue University</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                The arithmetic rank of a variety is the minimal number of
-                equations needed to define it set-theoretically, i.e., the
-                smallest number of polynomials generating the defining ideal up
-                to radical. Computing this invariant is notoriously difficult:
-                the minimal generators up to radical often bear little relation
-                to the given ideal generators and can vary unpredictably across
-                characteristics. Residual intersections provide a natural
-                extension of the classical notion of algebraic links. We
-                establish a general upper bound for the arithmetic rank of any
-                residual intersection of a complete intersection ideal in an
-                arbitrary Noetherian ring, and we show that this bound is sharp
-                under specific characteristic assumptions. This work is joint
-                with Kesavan Mohana Sundaram, Taylor Murray, and Vaibhav Pandey.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">November 1</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>
-              Set-theoretic Complete Intersection for Curves in Affine 3-folds
-            </h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://arxiv.org/search/math?query=Mandal%2C+Lisa&amp;searchtype=author&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Lisa Mandal
-              </a>
-
-              <span>IISER Kolkata</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                Let A be an affine 3-fold over a C_1 field of characteristic
-                zero. We show any smooth curve with trivial conormal bundle is
-                a set theoretic complete intersection provided its class in the
-                Grothendieck group is torsion.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">October 18</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>
-              Integral closure of ideals and their Castelnuovo--Mumford
-              regularity
-            </h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://scholar.google.com/citations?user=Pf9g5dgAAAAJ&amp;hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Dr. Omkar Javadekar
-              </a>
-
-              <span>Chennai Mathematical Institute</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                A conjecture due to Kuronya--Pintye states that if I is a
-                homogeneous ideal of k[x₁,...,xₙ] and J is its integral closure,
-                then reg(J) ≤ reg(I). In this talk, we will prove the conjecture
-                for certain classes of monomial ideals. The talk is based on the
-                recent work: A comparison of the regularity of certain classes
-                of monomial ideals and their integral closures.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">October 11</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>The Derived Category of a DG Algebra</h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://kesavan-ms.github.io"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Kesavan Mohana Sundaram
-              </a>
-
-              <span>University of Nebraska</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                Derived category of a DG Q-Algebra A, denoted D(A), is obtained
-                by formally inverting quasi-isomorphisms between DG A-modules.
-                In this talk, we introduce the notion of thick subcategory T’
-                of a triangulated category T. We will see some examples and its
-                properties. The smallest thick subcategory generated by an
-                object X in T is denoted by Thick(X). By the work of
-                Dwyer-Greenless-Iyengar, we will also see that the objects of
-                Thick(R) are exactly the perfect complexes in D(R).
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">October 4</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>DG-algebras and some applications</h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://sites.google.com/view/gana-math/home?authuser=0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Ganapathy K
-              </a>
-
-              <span>IIT Madras</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                Differential graded algebra is a chain complex which is also a
-                graded algebra, where the differential in the chain complex is
-                compatible with the product structure. In this talk, we
-                introduce dg-algebras and give some examples. Then we discuss
-                situations where the existence of dg-algebra structures are
-                useful.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">September 27</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>Algebraic invariants and Convex bodies</h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://sse.tulane.edu/math/people/aniketh-sivakumar"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Aniketh Sivakumar
-              </a>
-
-              <span>Tulane University</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                The study of the growth of ideals has led to the discovery of
-                rich families such as symbolic powers and integral closures,
-                whose behaviour encodes deep algebraic and geometric information.
-                In recent years, convex-geometric methods via Newton polyhedra
-                and Newton–Okounkov bodies have provided powerful tools for
-                understanding these objects. In this talk, I will introduce
-                these ideas and illustrate how convex bodies offer a natural
-                framework for studying graded families of ideals. In particular,
-                I will explain how the volume of these convex bodies captures
-                various multiplicities of graded families.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">September 20</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>Componentwise linear ideals from sums</h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://sreehari183.github.io"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Sreehari Suresh Babu
-              </a>
-
-              <span>University of Kansas</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                A componentwise linear ideal in a polynomial ring S is an ideal
-                I such that the ideal generated by each component of I has a
-                linear resolution. Given two componentwise linear ideals I and
-                J, we study necessary and sufficient conditions for I+J to be
-                componentwise linear. We provide a complete characterization
-                when dim S=2. As a consequence, we show that any componentwise
-                linear monomial ideal in k[x,y] has linear quotients using
-                generators in non-decreasing degrees. When dim S is arbitrary,
-                we describe how one can build a componentwise linear ideal from
-                a given collection of componentwise linear monomial ideals,
-                satisfying some mild compatibility conditions, using only sum
-                and product with square-free monomials. This is a joint work
-                with Prof. Hailong Dao.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">September 13</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>Syzygies of Projective varieties</h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://mathematics.ku.edu/people/agilan-amirthalingam"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Agilan Amirthalingam
-              </a>
-
-              <span>University of Kansas</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                This will be an introductory talk on the connections between the
-                syzygies of projective varieties, of their coordinate rings,
-                and their geometry. We will see how Koszul cohomology can be
-                computed using some special vector bundles on the variety. I
-                will point out some open questions at the end. This talk will
-                be accessible to anyone who has had a couple of courses in
-                commutative algebra. I will define all the geometric terms
-                involved.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">September 6</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>Symbolic Powers of Edge Ideals and Minh’s Conjecture</h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://misrasoumyadeep.github.io"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Soumyadeep Misra
-              </a>
-
-              <span>University of Kansas</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                We will study symbolic powers of edge ideals and a conjecture of
-                Minh predicting that their regularity coincides with that of the
-                ordinary powers. After a brief review of symbolic powers and
-                their combinatorial description via vertex covers, I will try
-                to explain a proof that the conjecture holds for complete graphs.
-                The key idea is to show that the difference between symbolic and
-                ordinary powers is small enough to force their regularities to
-                agree. This talk should be accessible to anyone who has completed
-                a first course in commutative algebra and has a basic familiarity
-                with symbolic powers and regularity.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">August 30</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>
-              Polynomial invariants of GL<sub>2</sub>: Conjugation over finite
-              fields
-            </h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://aryamanmaithani.github.io/math/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Aryaman Maithani
-              </a>
-
-              <span>University of Utah</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                Consider the conjugation action of GL2(K) on the polynomial ring
-                K[X2x2]. When K is an infinite field, the ring of invariants is
-                a polynomial ring generated by the trace and the determinant.
-                We describe the ring of invariants when K is a finite field, and
-                show that it is a hypersurface.
-              </p>
-            </template>
-          </article>
-
-          <article class="seminar-card">
-            <div class="seminar-card-header">
-              <span class="seminar-date">August 23</span>
-              <span class="seminar-year">2025/26</span>
-            </div>
-
-            <h2>Invariant Theory of Commutative Rings</h2>
-
-            <p class="seminar-speaker">
-              <a
-                class="text-link"
-                href="https://aryamanmaithani.github.io/math/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Aryaman Maithani
-              </a>
-
-              <span>University of Utah</span>
-            </p>
-
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
-
-            <template class="abstract-template">
-              <p>
-                Given a group G acting on a ring R, we consider the subring R^G,
-                the subring of elements fixed by G. It's a natural question to
-                ask what good properties of R are inherited by R^G. Some of
-                these questions were considered by Hilbert and Noether, and were
-                a motivation to study Noetherian rings. We will discuss some of
-                these results. This talk should be accessible to someone who has
-                done a first course in modules.
-              </p>
-            </template>
-          </article>
         </div>
       </div>
     </section>
@@ -1640,25 +1816,49 @@
       document.querySelectorAll('[data-abstract-button]').forEach((button) => {
         button.addEventListener('click', () => {
           const card = button.closest('.seminar-card');
-          const title = card.querySelector('h2').textContent.trim();
-          const date = card.querySelector('.seminar-date').textContent.trim();
+
+          const title = card
+            .querySelector('h2')
+            .textContent
+            .trim();
+
+          const date = card
+            .querySelector('.seminar-date')
+            .textContent
+            .trim();
+
           const speaker = card
             .querySelector('.seminar-speaker a')
             .textContent
             .trim();
+
           const affiliation = card
             .querySelector('.seminar-speaker span')
             .textContent
             .trim();
+
           const template = card.querySelector('.abstract-template');
 
           lastFocusedElement = button;
 
           modalTitle.textContent = title;
+
           modalMeta.textContent =
             `${date} · ${speaker} · ${affiliation}`;
 
           modalBody.innerHTML = template.innerHTML;
+
+          /*
+           * The abstract is inserted dynamically.
+           * This call ensures that LaTeX in the new 2026/27 abstract
+           * is rendered by MathJax inside the popup.
+           */
+          if (
+            window.MathJax &&
+            typeof MathJax.typesetPromise === 'function'
+          ) {
+            MathJax.typesetPromise([modalBody]);
+          }
 
           modal.showModal();
           document.body.classList.add('modal-open');
