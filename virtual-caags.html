@@ -29,7 +29,7 @@
   <style>
 
     /* =========================================================
-       ACADEMIC-YEAR FLOATING CARDS
+       ACADEMIC YEAR FLOATING CARDS
        ========================================================= */
 
     .academic-year-stack{
@@ -160,7 +160,7 @@
 
 
     /* =========================================================
-       ABSTRACT + LECTURE NOTES BUTTONS
+       BUTTONS
        ========================================================= */
 
     .talk-actions{
@@ -354,7 +354,13 @@
       font-size:.88rem;
     }
 
+
+    /* IMPORTANT:
+       Loading indicator is now an overlay.
+       It no longer pushes the PDF pages downward. */
+
     .notes-modal-body{
+      position:relative;
       flex:1;
       min-height:0;
       overflow-y:auto;
@@ -365,13 +371,22 @@
     }
 
     .pdf-status{
-      min-height:100%;
-      display:grid;
-      place-items:center;
+      position:absolute;
+      inset:0;
+      z-index:10;
+      display:flex;
+      align-items:center;
+      justify-content:center;
       padding:2rem;
+      background:#202124;
       color:#e8eaed;
       text-align:center;
       font-size:.95rem;
+      pointer-events:none;
+    }
+
+    .pdf-status[hidden]{
+      display:none !important;
     }
 
     .pdf-pages{
@@ -382,10 +397,15 @@
       width:100%;
     }
 
+    .pdf-pages[hidden]{
+      display:none !important;
+    }
+
     .pdf-page-wrap{
       width:100%;
       display:flex;
       justify-content:center;
+      flex:0 0 auto;
     }
 
     .pdf-page-canvas{
@@ -395,6 +415,11 @@
       background:#fff;
       box-shadow:0 2px 10px rgba(0,0,0,.35);
     }
+
+
+    /* =========================================================
+       NOTES FOOTER
+       ========================================================= */
 
     .notes-modal-footer{
       flex:0 0 auto;
@@ -496,6 +521,9 @@
 
   </style>
 
+
+  <!-- MathJax -->
+
   <script>
     window.MathJax = {
       tex: {
@@ -519,7 +547,9 @@
 
 <body>
 
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main">
+    Skip to content
+  </a>
 
 
   <!-- =========================================================
@@ -530,25 +560,42 @@
 
     <div class="shell navbar">
 
-      <a class="brand" href="index.html">
+      <a
+        class="brand"
+        href="index.html"
+      >
         Soumyadeep Misra
-        <small>Mathematics · University of Kansas</small>
+
+        <small>
+          Mathematics · University of Kansas
+        </small>
       </a>
 
 
-      <nav class="nav-links" aria-label="Main navigation">
+      <nav
+        class="nav-links"
+        aria-label="Main navigation"
+      >
 
-        <a href="index.html">Home</a>
+        <a href="index.html">
+          Home
+        </a>
 
-        <a href="research.html">Research</a>
+        <a href="research.html">
+          Research
+        </a>
 
-        <a href="teaching.html">Teaching</a>
+        <a href="teaching.html">
+          Teaching
+        </a>
 
         <a href="activities.html">
           Talks &amp; Conferences
         </a>
 
-        <a href="notes.html">Notes</a>
+        <a href="notes.html">
+          Notes
+        </a>
 
         <a
           href="organizing.html"
@@ -588,17 +635,25 @@
       data-mobile-panel
     >
 
-      <a href="index.html">Home</a>
+      <a href="index.html">
+        Home
+      </a>
 
-      <a href="research.html">Research</a>
+      <a href="research.html">
+        Research
+      </a>
 
-      <a href="teaching.html">Teaching</a>
+      <a href="teaching.html">
+        Teaching
+      </a>
 
       <a href="activities.html">
         Talks &amp; Conferences
       </a>
 
-      <a href="notes.html">Notes</a>
+      <a href="notes.html">
+        Notes
+      </a>
 
       <a
         href="organizing.html"
@@ -606,7 +661,6 @@
       >
         Organizing
       </a>
-
 
       <a
         class="cv-button"
@@ -638,7 +692,7 @@
         src="assets/img/cover-conferences.jpeg"
         alt=""
         aria-hidden="true"
-      />
+      >
 
       <div class="shell">
 
@@ -661,11 +715,14 @@
 
 
 
-    <!-- ACADEMIC YEAR CARDS -->
+    <!-- =========================================================
+         ACADEMIC YEAR CARDS
+         ========================================================= -->
 
     <section class="content">
 
       <div class="shell">
+
 
         <p>
           <a
@@ -685,6 +742,7 @@
                ===================================================== -->
 
           <article class="academic-year-card">
+
 
             <div class="academic-year-header">
 
@@ -711,6 +769,7 @@
               <!-- SUPRAJO DAS -->
 
               <article class="seminar-card">
+
 
                 <div class="seminar-card-header">
 
@@ -751,6 +810,7 @@
 
                 <div class="talk-actions">
 
+
                   <button
                     class="abstract-button"
                     type="button"
@@ -770,6 +830,7 @@
                   >
                     Lecture Notes
                   </button>
+
 
                 </div>
 
@@ -829,9 +890,12 @@
 
                 </template>
 
+
               </article>
 
+
             </div>
+
 
           </article>
 
@@ -842,6 +906,7 @@
                ===================================================== -->
 
           <article class="academic-year-card">
+
 
             <div class="academic-year-header">
 
@@ -864,13 +929,20 @@
             <div class="seminar-list">
 
 
-              <!-- MANOHAR -->
+              <!-- MANOHAR KUMAR -->
 
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">May 16</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    May 16
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -888,7 +960,9 @@
                     Dr. Manohar Kumar
                   </a>
 
-                  <span>IIT Madras</span>
+                  <span>
+                    IIT Madras
+                  </span>
 
                 </p>
 
@@ -902,6 +976,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     Binomial edge ideals, introduced independently by Herzog,
                     Hibi, Hreinsdóttir, Kahle, and Rauh, and by Ohtani, provide
@@ -920,6 +995,7 @@
                     powers of J_G, that is, J_G^{(k)} = J_G^k, together with
                     updates related to this conjecture.
                   </p>
+
                 </template>
 
               </article>
@@ -931,8 +1007,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">May 3</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    May 3
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -950,7 +1033,9 @@
                     Sayed Sadiqul Islam
                   </a>
 
-                  <span>IIT Bombay</span>
+                  <span>
+                    IIT Bombay
+                  </span>
 
                 </p>
 
@@ -964,22 +1049,24 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     Introduced in the 1960s in algebraic geometry to study
                     sheaves and their cohomology, local cohomology has become
-                    a fundamental tool in commutative algebra. Despite
-                    extensive study, its structure remains poorly understood,
-                    primarily because these modules are rarely finitely
-                    generated. Consequently, investigating their finiteness
-                    properties—such as associated primes and Bass numbers—has
-                    become a central problem toward understanding their
-                    structure. Let R be a polynomial ring over an uncountable
-                    algebraically closed field of characteristic zero. In our
-                    talk, we investigate upper bounds for the Bass numbers of
-                    local cohomology modules of R. Our approach relies on the
-                    theory of D-modules, which I will briefly recall for a
-                    general audience.
+                    a fundamental tool in commutative algebra. Despite extensive
+                    study, its structure remains poorly understood, primarily
+                    because these modules are rarely finitely generated.
+                    Consequently, investigating their finiteness properties—such
+                    as associated primes and Bass numbers—has become a central
+                    problem toward understanding their structure. Let R be a
+                    polynomial ring over an uncountable algebraically closed
+                    field of characteristic zero. In our talk, we investigate
+                    upper bounds for the Bass numbers of local cohomology
+                    modules of R. Our approach relies on the theory of
+                    D-modules, which I will briefly recall for a general
+                    audience.
                   </p>
+
                 </template>
 
               </article>
@@ -991,8 +1078,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">April 12</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    April 12
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1011,7 +1105,9 @@
                     Dr. Chitra Venugopal
                   </a>
 
-                  <span>Chennai Mathematical Institute</span>
+                  <span>
+                    Chennai Mathematical Institute
+                  </span>
 
                 </p>
 
@@ -1025,6 +1121,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     For an ideal I in a ring R, the deviation of I is defined
                     as the difference between its minimal number of generators
@@ -1045,6 +1142,7 @@
                     algebra. Constructing explicit resolutions for these
                     algebras is a fundamental problem in commutative algebra.
                   </p>
+
                 </template>
 
               </article>
@@ -1056,8 +1154,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">April 5</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    April 5
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1076,7 +1181,9 @@
                     Manav Batavia
                   </a>
 
-                  <span>Purdue University</span>
+                  <span>
+                    Purdue University
+                  </span>
 
                 </p>
 
@@ -1090,11 +1197,12 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     Given an ideal I in a regular local ring A, the
                     cohomological dimension of I in A is the index of the
-                    highest non-vanishing local cohomology of A supported at
-                    I. Determining effective upper bounds on the cohomological
+                    highest non-vanishing local cohomology of A supported at I.
+                    Determining effective upper bounds on the cohomological
                     dimension in terms of topological invariants of Spec(A/I)
                     is a central problem in commutative algebra: foundational
                     results include the Hartshorne--Lichtenbaum Vanishing
@@ -1105,6 +1213,7 @@
                     results to the unramified mixed characteristic setting and
                     show that the resulting bound is sharp.
                   </p>
+
                 </template>
 
               </article>
@@ -1116,11 +1225,20 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">March 22</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    March 22
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
-                <h2>Divisors on varieties</h2>
+                <h2>
+                  Divisors on varieties
+                </h2>
 
                 <p class="seminar-speaker">
 
@@ -1133,7 +1251,9 @@
                     Muktai Desai
                   </a>
 
-                  <span>University of Missouri</span>
+                  <span>
+                    University of Missouri
+                  </span>
 
                 </p>
 
@@ -1147,6 +1267,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     The notion of divisors serves as an important tool for
                     studying geometry on a variety. In this talk, the concept
@@ -1159,6 +1280,7 @@
                     and the concept of coherent sheaves discussed previously
                     in Mifron's talk.
                   </p>
+
                 </template>
 
               </article>
@@ -1170,8 +1292,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">March 15</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    March 15
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1189,7 +1318,9 @@
                     Gomathy Ganapathy
                   </a>
 
-                  <span>Boston College</span>
+                  <span>
+                    Boston College
+                  </span>
 
                 </p>
 
@@ -1203,6 +1334,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     One of the central ways to study projective varieties and
                     their morphisms is through the positivity properties that
@@ -1219,6 +1351,7 @@
                     of positivity and to show why the nef cone is such a useful
                     invariant in algebraic geometry.
                   </p>
+
                 </template>
 
               </article>
@@ -1230,8 +1363,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">March 8</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    March 8
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1249,7 +1389,9 @@
                     Suhas Vadan Gondi
                   </a>
 
-                  <span>University of California San Diego</span>
+                  <span>
+                    University of California San Diego
+                  </span>
 
                 </p>
 
@@ -1263,6 +1405,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     The Kalman variety of a linear subspace in a vector space
                     consists of all endomorphisms that contain an eigenvector
@@ -1276,6 +1419,7 @@
                     about how to obtain syzygies of the Kalman varieties from
                     the syzygies of its normalisation.
                   </p>
+
                 </template>
 
               </article>
@@ -1287,8 +1431,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">March 1</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    March 1
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1306,7 +1457,9 @@
                     Mifron Fernandes
                   </a>
 
-                  <span>University of Missouri</span>
+                  <span>
+                    University of Missouri
+                  </span>
 
                 </p>
 
@@ -1320,6 +1473,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     In this talk we will first discuss about sheafification of
                     a module. We will define quasi-coherent and coherent sheaves
@@ -1331,6 +1485,7 @@
                     (No schemes). I will also assume that everyone knows
                     definition of presheaves and sheaves.
                   </p>
+
                 </template>
 
               </article>
@@ -1342,8 +1497,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">February 8 &amp; 22</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    February 8 &amp; 22
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1362,7 +1524,9 @@
                     Abhiram Subramanian
                   </a>
 
-                  <span>Chennai Mathematical Institute</span>
+                  <span>
+                    Chennai Mathematical Institute
+                  </span>
 
                 </p>
 
@@ -1418,8 +1582,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">February 1</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    February 1
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1437,7 +1608,9 @@
                     Srishti Singh
                   </a>
 
-                  <span>University of Missouri</span>
+                  <span>
+                    University of Missouri
+                  </span>
 
                 </p>
 
@@ -1451,6 +1624,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     A numerical semigroup S is a finitely-generated submonoid
                     of the natural numbers with a finite complement. Semigroups
@@ -1468,6 +1642,7 @@
                     semigroup ring R/I, where R is a polynomial ring, by
                     bypassing all ideal-theoretic complications.
                   </p>
+
                 </template>
 
               </article>
@@ -1479,8 +1654,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">January 25</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    January 25
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1498,7 +1680,9 @@
                     Aryaman Maithani
                   </a>
 
-                  <span>University of Utah</span>
+                  <span>
+                    University of Utah
+                  </span>
 
                 </p>
 
@@ -1512,6 +1696,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     Consider the action of a subgroup G of S_n acting on the
                     polynomial ring S = k[x_1, ..., x_n] by permuting the
@@ -1524,6 +1709,7 @@
                     series of S^G, the Hilbert series of H^n(S)^G and
                     H^n(S^G).
                   </p>
+
                 </template>
 
               </article>
@@ -1535,8 +1721,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">January 18</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    January 18
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1555,7 +1748,9 @@
                     Aditya Dwivedi
                   </a>
 
-                  <span>IIT Bombay</span>
+                  <span>
+                    IIT Bombay
+                  </span>
 
                 </p>
 
@@ -1569,6 +1764,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     In the study of singularities via positive characteristic
                     methods, several notions of F-regularity were introduced
@@ -1579,6 +1775,7 @@
                     following the work of Lyubeznik and Smith. The talk assumes
                     basic knowledge of Noetherian rings and modules.
                   </p>
+
                 </template>
 
               </article>
@@ -1590,8 +1787,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">November 22</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    November 22
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1609,7 +1813,9 @@
                     Anusree Vellathum Padath
                   </a>
 
-                  <span>University of Kansas</span>
+                  <span>
+                    University of Kansas
+                  </span>
 
                 </p>
 
@@ -1623,6 +1829,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     Sheaf cohomology can be defined abstractly as the right
                     derived functors of the global section functor, but it can
@@ -1635,6 +1842,7 @@
                     resolution of F, and prove that the two cohomology theories
                     coincide.
                   </p>
+
                 </template>
 
               </article>
@@ -1646,8 +1854,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">November 15</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    November 15
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1665,7 +1880,9 @@
                     Amit Phogat
                   </a>
 
-                  <span>IIT Gandhinagar</span>
+                  <span>
+                    IIT Gandhinagar
+                  </span>
 
                 </p>
 
@@ -1679,6 +1896,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     The main aim of the talk is to describe an algebra
                     structure on the minimal free resolution and, as an
@@ -1688,19 +1906,27 @@
                     Finite Free Resolutions, and Some Structure Theorems for
                     Ideals of Codimension 3.
                   </p>
+
                 </template>
 
               </article>
 
 
 
-              <!-- MANAV NOV -->
+              <!-- MANAV NOV 8 -->
 
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">November 8</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    November 8
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1719,7 +1945,9 @@
                     Manav Batavia
                   </a>
 
-                  <span>Purdue University</span>
+                  <span>
+                    Purdue University
+                  </span>
 
                 </p>
 
@@ -1733,6 +1961,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     The arithmetic rank of a variety is the minimal number of
                     equations needed to define it set-theoretically, i.e., the
@@ -1750,6 +1979,7 @@
                     work is joint with Kesavan Mohana Sundaram, Taylor Murray,
                     and Vaibhav Pandey.
                   </p>
+
                 </template>
 
               </article>
@@ -1761,8 +1991,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">November 1</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    November 1
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1781,7 +2018,9 @@
                     Lisa Mandal
                   </a>
 
-                  <span>IISER Kolkata</span>
+                  <span>
+                    IISER Kolkata
+                  </span>
 
                 </p>
 
@@ -1795,12 +2034,14 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     Let A be an affine 3-fold over a C_1 field of
                     characteristic zero. We show any smooth curve with trivial
                     conormal bundle is a set theoretic complete intersection
                     provided its class in the Grothendieck group is torsion.
                   </p>
+
                 </template>
 
               </article>
@@ -1812,8 +2053,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">October 18</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    October 18
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1832,7 +2080,9 @@
                     Dr. Omkar Javadekar
                   </a>
 
-                  <span>Chennai Mathematical Institute</span>
+                  <span>
+                    Chennai Mathematical Institute
+                  </span>
 
                 </p>
 
@@ -1846,15 +2096,17 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     A conjecture due to Kuronya--Pintye states that if I is a
                     homogeneous ideal of k[x₁,...,xₙ] and J is its integral
                     closure, then reg(J) ≤ reg(I). In this talk, we will prove
-                    the conjecture for certain classes of monomial ideals. The
-                    talk is based on the recent work: A comparison of the
+                    the conjecture for certain classes of monomial ideals.
+                    The talk is based on the recent work: A comparison of the
                     regularity of certain classes of monomial ideals and their
                     integral closures.
                   </p>
+
                 </template>
 
               </article>
@@ -1866,8 +2118,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">October 11</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    October 11
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1885,7 +2144,9 @@
                     Kesavan Mohana Sundaram
                   </a>
 
-                  <span>University of Nebraska</span>
+                  <span>
+                    University of Nebraska
+                  </span>
 
                 </p>
 
@@ -1899,6 +2160,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     Derived category of a DG Q-Algebra A, denoted D(A), is
                     obtained by formally inverting quasi-isomorphisms between
@@ -1910,6 +2172,7 @@
                     also see that the objects of Thick(R) are exactly the
                     perfect complexes in D(R).
                   </p>
+
                 </template>
 
               </article>
@@ -1921,8 +2184,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">October 4</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    October 4
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1940,7 +2210,9 @@
                     Ganapathy K
                   </a>
 
-                  <span>IIT Madras</span>
+                  <span>
+                    IIT Madras
+                  </span>
 
                 </p>
 
@@ -1954,14 +2226,16 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     Differential graded algebra is a chain complex which is
                     also a graded algebra, where the differential in the chain
                     complex is compatible with the product structure. In this
                     talk, we introduce dg-algebras and give some examples.
-                    Then we discuss situations where the existence of dg-algebra
-                    structures are useful.
+                    Then we discuss situations where the existence of
+                    dg-algebra structures are useful.
                   </p>
+
                 </template>
 
               </article>
@@ -1973,8 +2247,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">September 27</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    September 27
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -1992,7 +2273,9 @@
                     Aniketh Sivakumar
                   </a>
 
-                  <span>Tulane University</span>
+                  <span>
+                    Tulane University
+                  </span>
 
                 </p>
 
@@ -2006,6 +2289,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     The study of the growth of ideals has led to the discovery
                     of rich families such as symbolic powers and integral
@@ -2019,6 +2303,7 @@
                     how the volume of these convex bodies captures various
                     multiplicities of graded families.
                   </p>
+
                 </template>
 
               </article>
@@ -2030,8 +2315,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">September 20</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    September 20
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -2049,7 +2341,9 @@
                     Sreehari Suresh Babu
                   </a>
 
-                  <span>University of Kansas</span>
+                  <span>
+                    University of Kansas
+                  </span>
 
                 </p>
 
@@ -2063,6 +2357,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     A componentwise linear ideal in a polynomial ring S is an
                     ideal I such that the ideal generated by each component of
@@ -2079,6 +2374,7 @@
                     with square-free monomials. This is a joint work with
                     Prof. Hailong Dao.
                   </p>
+
                 </template>
 
               </article>
@@ -2090,8 +2386,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">September 13</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    September 13
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -2109,7 +2412,9 @@
                     Agilan Amirthalingam
                   </a>
 
-                  <span>University of Kansas</span>
+                  <span>
+                    University of Kansas
+                  </span>
 
                 </p>
 
@@ -2123,16 +2428,18 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     This will be an introductory talk on the connections
                     between the syzygies of projective varieties and their
                     geometry. We will see how Koszul cohomology can be computed
                     using some special vector bundles on the variety. I will
-                    point out some open questions at the end. This talk will be
-                    accessible to anyone who has had a couple of courses in
-                    commutative algebra. I will define all the geometric terms
-                    involved.
+                    point out some open questions at the end. This talk will
+                    be accessible to anyone who has had a couple of courses
+                    in commutative algebra. I will define all the geometric
+                    terms involved.
                   </p>
+
                 </template>
 
               </article>
@@ -2144,8 +2451,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">September 6</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    September 6
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -2163,7 +2477,9 @@
                     Soumyadeep Misra
                   </a>
 
-                  <span>University of Kansas</span>
+                  <span>
+                    University of Kansas
+                  </span>
 
                 </p>
 
@@ -2177,6 +2493,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     We will study symbolic powers of edge ideals and a
                     conjecture of Minh predicting that their regularity
@@ -2191,6 +2508,7 @@
                     algebra and has a basic familiarity with symbolic powers
                     and regularity.
                   </p>
+
                 </template>
 
               </article>
@@ -2202,8 +2520,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">August 30</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    August 30
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -2221,7 +2546,9 @@
                     Aryaman Maithani
                   </a>
 
-                  <span>University of Utah</span>
+                  <span>
+                    University of Utah
+                  </span>
 
                 </p>
 
@@ -2235,6 +2562,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     Consider the conjugation action of GL2(K) on the polynomial
                     ring K[X2x2]. When K is an infinite field, the ring of
@@ -2242,6 +2570,7 @@
                     the determinant. We describe the ring of invariants when K
                     is a finite field, and show that it is a hypersurface.
                   </p>
+
                 </template>
 
               </article>
@@ -2253,8 +2582,15 @@
               <article class="seminar-card">
 
                 <div class="seminar-card-header">
-                  <span class="seminar-date">August 23</span>
-                  <span class="seminar-year">2025/26</span>
+
+                  <span class="seminar-date">
+                    August 23
+                  </span>
+
+                  <span class="seminar-year">
+                    2025/26
+                  </span>
+
                 </div>
 
                 <h2>
@@ -2272,7 +2608,9 @@
                     Aryaman Maithani
                   </a>
 
-                  <span>University of Utah</span>
+                  <span>
+                    University of Utah
+                  </span>
 
                 </p>
 
@@ -2286,6 +2624,7 @@
                 </button>
 
                 <template class="abstract-template">
+
                   <p>
                     Given a group G acting on a ring R, we consider the subring
                     R^G, the subring of elements fixed by G. It's a natural
@@ -2296,6 +2635,7 @@
                     accessible to someone who has done a first course in
                     modules.
                   </p>
+
                 </template>
 
               </article>
@@ -2303,21 +2643,24 @@
 
             </div>
 
+
           </article>
 
 
         </div>
 
+
       </div>
 
     </section>
+
 
   </main>
 
 
 
   <!-- =========================================================
-       ABSTRACT POPUP
+       ABSTRACT MODAL
        ========================================================= -->
 
   <dialog
@@ -2343,6 +2686,7 @@
 
         </div>
 
+
         <button
           class="modal-close"
           type="button"
@@ -2367,7 +2711,7 @@
 
 
   <!-- =========================================================
-       LECTURE NOTES POPUP
+       LECTURE NOTES MODAL
        ========================================================= -->
 
   <dialog
@@ -2418,6 +2762,7 @@
         >
           Loading lecture notes…
         </div>
+
 
         <div
           class="pdf-pages"
@@ -2471,9 +2816,7 @@
 
 
 
-  <!-- =========================================================
-       INVISIBLE VISITOR COUNTER
-       ========================================================= -->
+  <!-- Invisible visitor counter -->
 
   <a
     href="https://info.flagcounter.com/Uzr2"
@@ -2553,7 +2896,9 @@
         .querySelectorAll('[data-abstract-button]')
         .forEach((button) => {
 
+
           button.addEventListener('click', () => {
+
 
             const card =
               button.closest('.seminar-card');
@@ -2615,11 +2960,6 @@
               .add('modal-open');
 
 
-            /*
-             * The abstract is inserted dynamically.
-             * Render its LaTeX after insertion.
-             */
-
             if(
               window.MathJax &&
               typeof MathJax.typesetPromise === 'function'
@@ -2636,9 +2976,12 @@
 
             abstractClose.focus();
 
+
           });
 
+
         });
+
 
 
       abstractClose.addEventListener(
@@ -2649,6 +2992,7 @@
 
         }
       );
+
 
 
       abstractModal.addEventListener(
@@ -2665,6 +3009,7 @@
       );
 
 
+
       abstractModal.addEventListener(
         'close',
         () => {
@@ -2674,7 +3019,8 @@
             .remove('modal-open');
 
 
-          abstractBody.innerHTML = '';
+          abstractBody.innerHTML =
+            '';
 
 
           if(lastFocusedElement){
@@ -2702,7 +3048,7 @@
 
 
       /* =======================================================
-         LECTURE NOTES POPUP
+         LECTURE NOTES VIEWER
          ======================================================= */
 
       const notesModal =
@@ -2730,23 +3076,145 @@
         notesModal.querySelector('[data-notes-close]');
 
 
-      let activePdfUrl = '';
+      let activePdfUrl =
+        '';
 
-      let renderVersion = 0;
+      let renderVersion =
+        0;
 
-      let resizeTimer = null;
-
-
-
-      const clearPdfPages = () => {
-
-        pdfPages.innerHTML = '';
-
-      };
+      let resizeTimer =
+        null;
 
 
 
-      const renderPdf = async (pdfUrl) => {
+      function clearPdfPages(){
+
+        pdfPages.innerHTML =
+          '';
+
+      }
+
+
+
+      async function renderPage(
+        pdf,
+        pageNumber,
+        availableWidth,
+        dpr,
+        thisRender
+      ){
+
+        if(thisRender !== renderVersion){
+
+          return false;
+
+        }
+
+
+        const page =
+          await pdf.getPage(pageNumber);
+
+
+        if(thisRender !== renderVersion){
+
+          return false;
+
+        }
+
+
+        const baseViewport =
+          page.getViewport({
+            scale:1
+          });
+
+
+        const cssScale =
+          availableWidth /
+          baseViewport.width;
+
+
+        const renderViewport =
+          page.getViewport({
+            scale:cssScale * dpr
+          });
+
+
+        const wrap =
+          document.createElement('div');
+
+
+        wrap.className =
+          'pdf-page-wrap';
+
+
+        const canvas =
+          document.createElement('canvas');
+
+
+        canvas.className =
+          'pdf-page-canvas';
+
+
+        canvas.width =
+          Math.ceil(
+            renderViewport.width
+          );
+
+
+        canvas.height =
+          Math.ceil(
+            renderViewport.height
+          );
+
+
+        canvas.style.width =
+          `${Math.floor(
+            baseViewport.width *
+            cssScale
+          )}px`;
+
+
+        canvas.style.height =
+          `${Math.floor(
+            baseViewport.height *
+            cssScale
+          )}px`;
+
+
+        wrap.appendChild(canvas);
+
+
+        pdfPages.appendChild(wrap);
+
+
+        const context =
+          canvas.getContext(
+            '2d',
+            {
+              alpha:false
+            }
+          );
+
+
+        await page.render({
+
+          canvasContext:context,
+
+          viewport:renderViewport,
+
+          background:'#ffffff'
+
+        }).promise;
+
+
+        return true;
+
+      }
+
+
+
+      async function renderPdf(pdfUrl){
+
 
         const thisRender =
           ++renderVersion;
@@ -2755,10 +3223,16 @@
         clearPdfPages();
 
 
-        pdfPages.hidden = true;
+        notesBody.scrollTop =
+          0;
 
 
-        pdfStatus.hidden = false;
+        pdfPages.hidden =
+          true;
+
+
+        pdfStatus.hidden =
+          false;
 
 
         pdfStatus.textContent =
@@ -2778,7 +3252,9 @@
 
 
           const loadingTask =
-            pdfjsLib.getDocument(pdfUrl);
+            pdfjsLib.getDocument({
+              url:pdfUrl
+            });
 
 
           const pdf =
@@ -2792,42 +3268,91 @@
           }
 
 
-          pdfStatus.textContent =
-            `Rendering ${pdf.numPages} pages…`;
+          /*
+           * Reveal the pages container BEFORE rendering.
+           */
 
-
-          pdfPages.hidden = false;
-
+          pdfPages.hidden =
+            false;
 
 
           /*
-           * Width available for each PDF page.
+           * Width inside the dark PDF viewing area.
            */
 
           const availableWidth =
             Math.max(
-              260,
+              240,
               notesBody.clientWidth - 28
             );
 
 
-
           /*
-           * Use increased canvas resolution on
-           * Retina/high-density phones, but cap it
-           * to avoid excessive memory use.
+           * 1.5 is sufficiently sharp on phones but considerably
+           * faster than rendering every page at full 2x density.
            */
 
           const dpr =
             Math.min(
               window.devicePixelRatio || 1,
-              2
+              1.5
             );
 
 
+          /* =====================================================
+             RENDER PAGE 1 FIRST
+             ===================================================== */
+
+          pdfStatus.textContent =
+            'Loading first page…';
+
+
+          const firstPageRendered =
+            await renderPage(
+              pdf,
+              1,
+              availableWidth,
+              dpr,
+              thisRender
+            );
+
+
+          if(
+            !firstPageRendered ||
+            thisRender !== renderVersion
+          ){
+
+            return;
+
+          }
+
+
+          /*
+           * THIS IS THE IMPORTANT FIX.
+           *
+           * As soon as page 1 is rendered, remove the loading
+           * overlay immediately.
+           */
+
+          pdfStatus.hidden =
+            true;
+
+
+          /*
+           * Force the viewport to the beginning of page 1.
+           */
+
+          notesBody.scrollTop =
+            0;
+
+
+
+          /* =====================================================
+             RENDER REMAINING PAGES AFTER PAGE 1 IS VISIBLE
+             ===================================================== */
 
           for(
-            let pageNumber = 1;
+            let pageNumber = 2;
             pageNumber <= pdf.numPages;
             pageNumber++
           ){
@@ -2840,109 +3365,33 @@
             }
 
 
-            const page =
-              await pdf.getPage(pageNumber);
-
-
-            const baseViewport =
-              page.getViewport({
-                scale:1
-              });
-
-
-            const cssScale =
-              availableWidth /
-              baseViewport.width;
-
-
-            const viewport =
-              page.getViewport({
-                scale:cssScale * dpr
-              });
-
-
-            const wrap =
-              document.createElement('div');
-
-
-            wrap.className =
-              'pdf-page-wrap';
-
-
-            const canvas =
-              document.createElement('canvas');
-
-
-            canvas.className =
-              'pdf-page-canvas';
-
-
-            canvas.width =
-              Math.floor(
-                viewport.width
-              );
-
-
-            canvas.height =
-              Math.floor(
-                viewport.height
-              );
-
-
             /*
-             * The canvas pixel dimensions stay sharp,
-             * while its CSS dimensions fit the popup.
+             * Give the browser a frame between pages.
+             * This prevents the UI from freezing on mobile.
              */
 
-            canvas.style.width =
-              `${Math.floor(
-                baseViewport.width * cssScale
-              )}px`;
+            await new Promise(
+              resolve =>
+                requestAnimationFrame(resolve)
+            );
 
 
-            canvas.style.height =
-              `${Math.floor(
-                baseViewport.height * cssScale
-              )}px`;
+            await renderPage(
+              pdf,
+              pageNumber,
+              availableWidth,
+              dpr,
+              thisRender
+            );
 
-
-            wrap.appendChild(canvas);
-
-
-            pdfPages.appendChild(wrap);
-
-
-            const context =
-              canvas.getContext(
-                '2d',
-                {
-                  alpha:false
-                }
-              );
-
-
-            await page.render({
-
-              canvasContext:context,
-
-              viewport:viewport,
-
-              background:'#ffffff'
-
-            }).promise;
 
           }
 
-
-          if(thisRender === renderVersion){
-
-            pdfStatus.hidden = true;
-
-          }
 
         }
 
         catch(error){
+
 
           console.error(
             'PDF rendering error:',
@@ -2950,21 +3399,32 @@
           );
 
 
-          pdfPages.hidden = true;
+          clearPdfPages();
 
 
-          pdfStatus.hidden = false;
+          pdfPages.hidden =
+            true;
+
+
+          pdfStatus.hidden =
+            false;
 
 
           pdfStatus.innerHTML =
             'The inline lecture-notes viewer could not load.<br>' +
             'Please use “Open PDF in new tab” below.';
 
+
         }
 
-      };
+
+      }
 
 
+
+      /* =======================================================
+         OPEN LECTURE NOTES
+         ======================================================= */
 
       document
         .querySelectorAll('[data-notes-button]')
@@ -3033,29 +3493,50 @@
                 .add('modal-open');
 
 
+              /*
+               * Ensure viewer always begins at the top.
+               */
+
+              notesBody.scrollTop =
+                0;
+
+
               notesClose.focus();
 
 
-
               /*
-               * Wait until the modal is visible so its
-               * correct width can be measured.
+               * Wait until the dialog has been laid out before
+               * measuring its width.
                */
 
               requestAnimationFrame(
                 () => {
 
-                  renderPdf(pdfUrl);
+                  requestAnimationFrame(
+                    () => {
+
+                      renderPdf(
+                        pdfUrl
+                      );
+
+                    }
+                  );
 
                 }
               );
 
+
             }
           );
+
 
         });
 
 
+
+      /* =======================================================
+         CLOSE NOTES
+         ======================================================= */
 
       notesClose.addEventListener(
         'click',
@@ -3094,26 +3575,33 @@
 
 
           /*
-           * Invalidate any current rendering task.
+           * Stop any active rendering from being used.
            */
 
           renderVersion++;
 
 
-          activePdfUrl = '';
+          activePdfUrl =
+            '';
 
 
           clearPdfPages();
 
 
-          pdfPages.hidden = true;
+          pdfPages.hidden =
+            true;
 
 
-          pdfStatus.hidden = false;
+          pdfStatus.hidden =
+            false;
 
 
           pdfStatus.textContent =
             'Loading lecture notes…';
+
+
+          notesBody.scrollTop =
+            0;
 
 
           if(lastFocusedElement){
@@ -3122,16 +3610,15 @@
 
           }
 
+
         }
       );
 
 
 
-      /*
-       * If the phone rotates or the browser width changes
-       * while the lecture notes are open, redraw the PDF
-       * at the new width.
-       */
+      /* =======================================================
+         PHONE ROTATION / RESIZE
+         ======================================================= */
 
       window.addEventListener(
         'resize',
@@ -3162,8 +3649,9 @@
                 );
 
               },
-              180
+              250
             );
+
 
         }
       );
