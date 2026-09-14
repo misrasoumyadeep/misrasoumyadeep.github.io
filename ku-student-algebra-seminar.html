@@ -47,7 +47,7 @@
       display:flex;
       flex-direction:column;
 
-      min-height:190px;
+      min-height:225px;
 
       padding:1.35rem;
 
@@ -150,6 +150,11 @@
     }
 
 
+    .seminar-card.has-abstract .seminar-speaker{
+      margin:0 0 1.2rem;
+    }
+
+
 
     /* =========================================================
        SEMESTER HEADINGS
@@ -173,15 +178,6 @@
       line-height:1.05;
 
       margin:0;
-    }
-
-
-    .semester-heading p{
-      margin:.65rem 0 0;
-
-      color:var(--muted);
-
-      font-size:.95rem;
     }
 
 
@@ -218,6 +214,187 @@
       color:var(--accent);
 
       font-weight:800;
+    }
+
+
+
+    /* =========================================================
+       ABSTRACT BUTTON
+       ========================================================= */
+
+    .abstract-button{
+      align-self:flex-start;
+
+      margin-top:auto;
+
+      border:1px solid var(--accent);
+      border-radius:999px;
+
+      background:transparent;
+
+      color:var(--accent);
+
+      padding:.55rem .9rem;
+
+      font:inherit;
+      font-size:.84rem;
+      font-weight:800;
+
+      cursor:pointer;
+
+      transition:
+        background-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+    }
+
+
+    .abstract-button:hover,
+    .abstract-button:focus-visible{
+      background:var(--accent);
+
+      color:#fff;
+
+      transform:translateY(-1px);
+    }
+
+
+    .abstract-button:focus-visible{
+      outline:3px solid rgba(36,77,63,.22);
+
+      outline-offset:3px;
+    }
+
+
+
+    /* =========================================================
+       ABSTRACT POPUP
+       ========================================================= */
+
+    .abstract-modal{
+      width:min(760px,calc(100% - 32px));
+
+      max-height:min(82vh,760px);
+
+      padding:0;
+
+      border:0;
+      border-radius:20px;
+
+      background:var(--surface);
+
+      color:var(--ink);
+
+      box-shadow:
+        0 30px 90px rgba(15,30,25,.28);
+
+      overflow:hidden;
+    }
+
+
+    .abstract-modal::backdrop{
+      background:rgba(19,30,27,.62);
+
+      backdrop-filter:blur(4px);
+    }
+
+
+    .abstract-modal-inner{
+      display:flex;
+      flex-direction:column;
+
+      max-height:min(82vh,760px);
+    }
+
+
+    .abstract-modal-header{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+
+      gap:1rem;
+
+      padding:1.25rem 1.35rem;
+
+      border-bottom:1px solid var(--line);
+
+      background:var(--surface-2);
+    }
+
+
+    .abstract-modal-header h2{
+      font-family:var(--serif);
+
+      font-size:1.65rem;
+
+      line-height:1.08;
+
+      margin:0;
+    }
+
+
+    .abstract-modal-meta{
+      margin:.35rem 0 0;
+
+      color:var(--muted);
+
+      font-size:.88rem;
+    }
+
+
+    .modal-close{
+      flex:0 0 auto;
+
+      width:38px;
+      height:38px;
+
+      display:grid;
+      place-items:center;
+
+      border:1px solid var(--line);
+      border-radius:50%;
+
+      background:var(--surface);
+
+      color:var(--ink);
+
+      font-size:1.25rem;
+
+      cursor:pointer;
+    }
+
+
+    .modal-close:hover,
+    .modal-close:focus-visible{
+      border-color:var(--accent);
+
+      color:var(--accent);
+    }
+
+
+    .abstract-modal-body{
+      overflow-y:auto;
+
+      padding:1.35rem;
+    }
+
+
+    .abstract-modal-body p{
+      margin:0 0 1rem;
+
+      color:#3f4852;
+
+      line-height:1.75;
+    }
+
+
+    .abstract-modal-body p:last-child{
+      margin-bottom:0;
+    }
+
+
+    body.modal-open{
+      overflow:hidden;
     }
 
 
@@ -261,6 +438,12 @@
         margin-top:.9rem;
       }
 
+
+      .abstract-modal-header,
+      .abstract-modal-body{
+        padding:1.05rem;
+      }
+
     }
 
   </style>
@@ -273,12 +456,12 @@
 
       tex: {
 
-        inlineMath: [
+        inlineMath:[
           ['$', '$'],
           ['\\(', '\\)']
         ],
 
-        displayMath: [
+        displayMath:[
           ['$$','$$'],
           ['\\[','\\]']
         ],
@@ -599,89 +782,98 @@
           </h2>
 
 
-          <p>
-            Wednesdays, 3:00–4:00 PM · Snow Hall 564
-          </p>
-
-
         </div>
 
 
 
         <div class="seminar-list">
 
-<!-- =================================================
-     SEPTEMBER 16 — RAHUL AJIT
-     ================================================= -->
-
-<article class="seminar-card">
-
-  <div class="seminar-card-header">
-
-    <span class="seminar-date">
-      September 16
-    </span>
-
-    <span class="seminar-year">
-      Fall 2026
-    </span>
-
-  </div>
 
 
-  <h2>
-    (F-) Jumping Numbers Can Be Indiscrete and Irrational
-  </h2>
+          <!-- =================================================
+               SEPTEMBER 16 — RAHUL AJIT
+               ================================================= -->
+
+          <article class="seminar-card has-abstract">
 
 
-  <p class="seminar-speaker">
-
-    <a
-      class="text-link"
-      href="https://mathematics.ku.edu/people/rahul-ajit"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Rahul Ajit
-    </a>
-
-    <span>
-      University of Kansas
-    </span>
-
-  </p>
+            <div class="seminar-card-header">
 
 
-  <p
-    style="
-      margin:1rem 0 0;
-      padding-top:1rem;
-      border-top:1px solid var(--line);
-      color:#3f4852;
-      font-size:.92rem;
-      line-height:1.65;
-    "
-  >
-    After introducing the protagonists (multiplier and test ideals,
-    MMP, and F-singularities), I will explore how they are
-    “tightly” connected with each other, even though they belong
-    to seemingly different worlds. I will end the story by
-    answering two questions asked by many experts in both fields.
-  </p>
+              <span class="seminar-date">
+                September 16
+              </span>
 
 
-  <p
-    style="
-      margin:.85rem 0 0;
-      color:var(--muted);
-      font-size:.84rem;
-      font-weight:650;
-    "
-  >
-    Wednesday, 3:00–4:00 PM · Snow Hall 564
-  </p>
+              <span class="seminar-year">
+                Fall 2026
+              </span>
 
-</article>
+
+            </div>
+
+
+
+            <h2>
+              (F-) Jumping Numbers Can Be Indiscrete and Irrational
+            </h2>
+
+
+
+            <p class="seminar-speaker">
+
+
+              <a
+                class="text-link"
+                href="https://mathematics.ku.edu/people/rahul-ajit"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Rahul Ajit
+              </a>
+
+
+              <span>
+                University of Kansas
+              </span>
+
+
+            </p>
+
+
+
+            <button
+              class="abstract-button"
+              type="button"
+              data-abstract-button
+              aria-haspopup="dialog"
+            >
+              Abstract
+            </button>
+
+
+
+            <template class="abstract-template">
+
+              <p>
+                After introducing the protagonists (multiplier and test ideals,
+                MMP, and F-singularities), I will explore how they are
+                “tightly” connected with each other, even though they belong
+                to seemingly different worlds.
+              </p>
+
+              <p>
+                I will end the story by answering two questions asked by many
+                experts in both fields.
+              </p>
+
+            </template>
+
+
+          </article>
+
+
+
 
           <!-- =================================================
                SEPTEMBER 23 — SREEHARI SURESH BABU
@@ -1138,15 +1330,19 @@
 
             <div class="seminar-card-header">
 
+
               <span class="seminar-date">
                 February 11
               </span>
+
 
               <span class="seminar-year">
                 Spring 2026
               </span>
 
+
             </div>
+
 
 
             <h2>
@@ -1154,7 +1350,9 @@
             </h2>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1164,6 +1362,7 @@
               >
                 Chris Wong
               </a>
+
 
             </p>
 
@@ -1180,15 +1379,19 @@
 
             <div class="seminar-card-header">
 
+
               <span class="seminar-date">
                 February 18
               </span>
+
 
               <span class="seminar-year">
                 Spring 2026
               </span>
 
+
             </div>
+
 
 
             <h2>
@@ -1196,7 +1399,9 @@
             </h2>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1206,6 +1411,7 @@
               >
                 Lei Yu
               </a>
+
 
             </p>
 
@@ -1222,15 +1428,19 @@
 
             <div class="seminar-card-header">
 
+
               <span class="seminar-date">
                 February 25
               </span>
+
 
               <span class="seminar-year">
                 Spring 2026
               </span>
 
+
             </div>
+
 
 
             <h2>
@@ -1238,7 +1448,9 @@
             </h2>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1248,6 +1460,7 @@
               >
                 Ryan Hunter
               </a>
+
 
             </p>
 
@@ -1264,15 +1477,19 @@
 
             <div class="seminar-card-header">
 
+
               <span class="seminar-date">
                 March 11
               </span>
+
 
               <span class="seminar-year">
                 Spring 2026
               </span>
 
+
             </div>
+
 
 
             <h2>
@@ -1280,7 +1497,9 @@
             </h2>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1290,6 +1509,7 @@
               >
                 Sreehari Suresh Babu
               </a>
+
 
             </p>
 
@@ -1306,15 +1526,19 @@
 
             <div class="seminar-card-header">
 
+
               <span class="seminar-date">
                 March 25
               </span>
+
 
               <span class="seminar-year">
                 Spring 2026
               </span>
 
+
             </div>
+
 
 
             <h2>
@@ -1323,7 +1547,9 @@
             </h2>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1333,6 +1559,7 @@
               >
                 Soumyadeep Misra
               </a>
+
 
             </p>
 
@@ -1349,15 +1576,19 @@
 
             <div class="seminar-card-header">
 
+
               <span class="seminar-date">
                 April 1
               </span>
+
 
               <span class="seminar-year">
                 Spring 2026
               </span>
 
+
             </div>
+
 
 
             <h2>
@@ -1366,7 +1597,9 @@
             </h2>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1376,6 +1609,7 @@
               >
                 David Carlip
               </a>
+
 
             </p>
 
@@ -1392,15 +1626,19 @@
 
             <div class="seminar-card-header">
 
+
               <span class="seminar-date">
                 April 8
               </span>
+
 
               <span class="seminar-year">
                 Spring 2026
               </span>
 
+
             </div>
+
 
 
             <h2>
@@ -1409,7 +1647,9 @@
             </h2>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1419,6 +1659,7 @@
               >
                 Andrés Molina
               </a>
+
 
             </p>
 
@@ -1435,15 +1676,19 @@
 
             <div class="seminar-card-header">
 
+
               <span class="seminar-date">
                 April 22
               </span>
+
 
               <span class="seminar-year">
                 Spring 2026
               </span>
 
+
             </div>
+
 
 
             <h2>
@@ -1452,7 +1697,9 @@
             </h2>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1462,6 +1709,7 @@
               >
                 Lei Yu
               </a>
+
 
             </p>
 
@@ -1478,15 +1726,19 @@
 
             <div class="seminar-card-header">
 
+
               <span class="seminar-date">
                 April 29
               </span>
+
 
               <span class="seminar-year">
                 Spring 2026
               </span>
 
+
             </div>
+
 
 
             <h2>
@@ -1495,7 +1747,9 @@
             </h2>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1505,6 +1759,7 @@
               >
                 Lei Yu
               </a>
+
 
             </p>
 
@@ -1519,6 +1774,69 @@
 
 
     </section>
+
+
+
+
+    <!-- =========================================================
+         ABSTRACT POPUP
+         ========================================================= -->
+
+    <dialog
+      class="abstract-modal"
+      id="abstract-modal"
+      aria-labelledby="abstract-modal-title"
+    >
+
+
+      <div class="abstract-modal-inner">
+
+
+        <header class="abstract-modal-header">
+
+
+          <div>
+
+
+            <h2 id="abstract-modal-title">
+              Talk Abstract
+            </h2>
+
+
+            <p
+              class="abstract-modal-meta"
+              id="abstract-modal-meta"
+            ></p>
+
+
+          </div>
+
+
+
+          <button
+            class="modal-close"
+            type="button"
+            aria-label="Close abstract"
+            data-modal-close
+          >
+            ×
+          </button>
+
+
+        </header>
+
+
+
+        <div
+          class="abstract-modal-body"
+          id="abstract-modal-body"
+        ></div>
+
+
+      </div>
+
+
+    </dialog>
 
 
   </main>
@@ -1591,6 +1909,199 @@
 
 
   <script src="assets/js/main.js"></script>
+
+
+
+  <!-- =========================================================
+       ABSTRACT POPUP SCRIPT
+       ========================================================= -->
+
+  <script>
+
+    (() => {
+
+
+      const modal =
+        document.getElementById('abstract-modal');
+
+
+      const modalTitle =
+        document.getElementById('abstract-modal-title');
+
+
+      const modalMeta =
+        document.getElementById('abstract-modal-meta');
+
+
+      const modalBody =
+        document.getElementById('abstract-modal-body');
+
+
+      const closeButton =
+        modal.querySelector('[data-modal-close]');
+
+
+      let lastFocusedElement = null;
+
+
+
+      const closeModal = () => {
+
+        modal.close();
+
+      };
+
+
+
+      document
+        .querySelectorAll('[data-abstract-button]')
+        .forEach((button) => {
+
+
+          button.addEventListener('click', () => {
+
+
+            const card =
+              button.closest('.seminar-card');
+
+
+            const title =
+              card.querySelector('h2')
+                .textContent
+                .trim();
+
+
+            const date =
+              card.querySelector('.seminar-date')
+                .textContent
+                .trim();
+
+
+            const speaker =
+              card.querySelector('.seminar-speaker a')
+                .textContent
+                .trim();
+
+
+            const affiliationElement =
+              card.querySelector('.seminar-speaker span');
+
+
+            const affiliation =
+              affiliationElement
+                ? affiliationElement.textContent.trim()
+                : '';
+
+
+            const template =
+              card.querySelector('.abstract-template');
+
+
+            lastFocusedElement =
+              button;
+
+
+
+            modalTitle.textContent =
+              title;
+
+
+
+            modalMeta.textContent =
+              affiliation
+                ? `${date} · ${speaker} · ${affiliation}`
+                : `${date} · ${speaker}`;
+
+
+
+            modalBody.innerHTML =
+              template.innerHTML;
+
+
+
+            if(
+              window.MathJax &&
+              typeof MathJax.typesetPromise === 'function'
+            ){
+
+              MathJax.typesetPromise(
+                [modalBody]
+              );
+
+            }
+
+
+
+            modal.showModal();
+
+
+            document.body.classList.add(
+              'modal-open'
+            );
+
+
+            closeButton.focus();
+
+
+          });
+
+
+        });
+
+
+
+      closeButton.addEventListener(
+        'click',
+        closeModal
+      );
+
+
+
+      modal.addEventListener(
+        'click',
+        (event) => {
+
+
+          if(event.target === modal){
+
+            closeModal();
+
+          }
+
+
+        }
+      );
+
+
+
+      modal.addEventListener(
+        'close',
+        () => {
+
+
+          document.body.classList.remove(
+            'modal-open'
+          );
+
+
+          modalBody.innerHTML =
+            '';
+
+
+          if(lastFocusedElement){
+
+            lastFocusedElement.focus();
+
+          }
+
+
+        }
+      );
+
+
+    })();
+
+  </script>
 
 
 </body>
