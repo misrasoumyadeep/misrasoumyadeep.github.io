@@ -150,7 +150,7 @@
     }
 
 
-    .seminar-card.has-abstract .seminar-speaker{
+    .seminar-card.has-actions .seminar-speaker{
       margin:0 0 1.2rem;
     }
 
@@ -219,13 +219,22 @@
 
 
     /* =========================================================
-       ABSTRACT BUTTON
+       TALK ACTION BUTTONS
        ========================================================= */
 
-    .abstract-button{
-      align-self:flex-start;
+    .talk-actions{
+      display:flex;
+      flex-wrap:wrap;
+
+      gap:.65rem;
 
       margin-top:auto;
+    }
+
+
+    .abstract-button,
+    .notes-button{
+      align-self:flex-start;
 
       border:1px solid var(--accent);
       border-radius:999px;
@@ -250,7 +259,9 @@
 
 
     .abstract-button:hover,
-    .abstract-button:focus-visible{
+    .abstract-button:focus-visible,
+    .notes-button:hover,
+    .notes-button:focus-visible{
       background:var(--accent);
 
       color:#fff;
@@ -259,7 +270,8 @@
     }
 
 
-    .abstract-button:focus-visible{
+    .abstract-button:focus-visible,
+    .notes-button:focus-visible{
       outline:3px solid rgba(36,77,63,.22);
 
       outline-offset:3px;
@@ -393,6 +405,152 @@
     }
 
 
+
+    /* =========================================================
+       LECTURE NOTES POPUP
+       ========================================================= */
+
+    .notes-modal{
+      width:min(1000px,calc(100% - 32px));
+
+      height:min(90vh,900px);
+
+      padding:0;
+
+      border:0;
+      border-radius:20px;
+
+      background:var(--surface);
+
+      color:var(--ink);
+
+      box-shadow:
+        0 30px 90px rgba(15,30,25,.30);
+
+      overflow:hidden;
+    }
+
+
+    .notes-modal::backdrop{
+      background:rgba(19,30,27,.68);
+
+      backdrop-filter:blur(4px);
+    }
+
+
+    .notes-modal-inner{
+      display:flex;
+      flex-direction:column;
+
+      height:100%;
+    }
+
+
+    .notes-modal-header{
+      flex:0 0 auto;
+
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+
+      gap:1rem;
+
+      padding:1.15rem 1.3rem;
+
+      border-bottom:1px solid var(--line);
+
+      background:var(--surface-2);
+    }
+
+
+    .notes-modal-header h2{
+      margin:0;
+
+      font-family:var(--serif);
+
+      font-size:1.65rem;
+
+      line-height:1.08;
+    }
+
+
+    .notes-modal-meta{
+      margin:.35rem 0 0;
+
+      color:var(--muted);
+
+      font-size:.88rem;
+    }
+
+
+    .notes-modal-body{
+      position:relative;
+
+      flex:1;
+
+      min-height:0;
+
+      background:#d9ddda;
+    }
+
+
+    .notes-frame{
+      display:block;
+
+      width:100%;
+      height:100%;
+
+      border:0;
+
+      background:#fff;
+    }
+
+
+    .notes-modal-footer{
+      flex:0 0 auto;
+
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+
+      padding:.8rem 1.15rem;
+
+      border-top:1px solid var(--line);
+
+      background:var(--surface);
+    }
+
+
+    .notes-open-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+
+      padding:.55rem .9rem;
+
+      border-radius:999px;
+
+      border:1px solid var(--accent);
+
+      color:var(--accent);
+
+      font-size:.84rem;
+      font-weight:800;
+
+      transition:
+        background-color 180ms ease,
+        color 180ms ease;
+    }
+
+
+    .notes-open-link:hover,
+    .notes-open-link:focus-visible{
+      background:var(--accent);
+
+      color:#fff;
+    }
+
+
     body.modal-open{
       overflow:hidden;
     }
@@ -442,6 +600,30 @@
       .abstract-modal-header,
       .abstract-modal-body{
         padding:1.05rem;
+      }
+
+
+      .notes-modal{
+        width:calc(100% - 16px);
+
+        height:94vh;
+
+        border-radius:16px;
+      }
+
+
+      .notes-modal-header{
+        padding:1.05rem;
+      }
+
+
+      .notes-modal-header h2{
+        font-size:1.38rem;
+      }
+
+
+      .notes-modal-footer{
+        padding:.7rem .85rem;
       }
 
     }
@@ -794,7 +976,7 @@
                SEPTEMBER 16 — RAHUL AJIT
                ================================================= -->
 
-          <article class="seminar-card has-abstract">
+          <article class="seminar-card has-actions">
 
 
             <div class="seminar-card-header">
@@ -842,14 +1024,32 @@
 
 
 
-            <button
-              class="abstract-button"
-              type="button"
-              data-abstract-button
-              aria-haspopup="dialog"
-            >
-              Abstract
-            </button>
+            <div class="talk-actions">
+
+
+              <button
+                class="abstract-button"
+                type="button"
+                data-abstract-button
+                aria-haspopup="dialog"
+              >
+                Abstract
+              </button>
+
+
+
+              <button
+                class="notes-button"
+                type="button"
+                data-notes-button
+                data-pdf="https://arxiv.org/pdf/2605.26354"
+                aria-haspopup="dialog"
+              >
+                Lecture Notes
+              </button>
+
+
+            </div>
 
 
 
@@ -1323,36 +1523,25 @@
 
 
 
-          <!-- FEBRUARY 11 -->
-
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 February 11
               </span>
 
-
               <span class="seminar-year">
                 Spring 2026
               </span>
 
-
             </div>
-
-
 
             <h2>
               Kunz Polyhedra
             </h2>
 
-
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1363,45 +1552,32 @@
                 Chris Wong
               </a>
 
-
             </p>
-
 
           </article>
 
 
 
 
-          <!-- FEBRUARY 18 -->
-
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 February 18
               </span>
 
-
               <span class="seminar-year">
                 Spring 2026
               </span>
 
-
             </div>
-
-
 
             <h2>
               Does AI Truly Understand Algebraic Varieties?
             </h2>
 
-
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1412,45 +1588,32 @@
                 Lei Yu
               </a>
 
-
             </p>
-
 
           </article>
 
 
 
 
-          <!-- FEBRUARY 25 -->
-
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 February 25
               </span>
 
-
               <span class="seminar-year">
                 Spring 2026
               </span>
 
-
             </div>
-
-
 
             <h2>
               Gorenstein Rings in Context
             </h2>
 
-
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1461,45 +1624,32 @@
                 Ryan Hunter
               </a>
 
-
             </p>
-
 
           </article>
 
 
 
 
-          <!-- MARCH 11 -->
-
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 March 11
               </span>
 
-
               <span class="seminar-year">
                 Spring 2026
               </span>
 
-
             </div>
-
-
 
             <h2>
               The Projective Dimension of Three-Generated Ideals
             </h2>
 
-
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1510,46 +1660,33 @@
                 Sreehari Suresh Babu
               </a>
 
-
             </p>
-
 
           </article>
 
 
 
 
-          <!-- MARCH 25 -->
-
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 March 25
               </span>
 
-
               <span class="seminar-year">
                 Spring 2026
               </span>
 
-
             </div>
-
-
 
             <h2>
               Componentwise Linear Ideals and the
               Herzog-Hibi-Ohsugi Conjecture
             </h2>
 
-
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1560,46 +1697,33 @@
                 Soumyadeep Misra
               </a>
 
-
             </p>
-
 
           </article>
 
 
 
 
-          <!-- APRIL 1 -->
-
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 April 1
               </span>
 
-
               <span class="seminar-year">
                 Spring 2026
               </span>
 
-
             </div>
-
-
 
             <h2>
               An Introduction to Symbolic Powers and
               the Containment Problem
             </h2>
 
-
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1610,46 +1734,33 @@
                 David Carlip
               </a>
 
-
             </p>
-
 
           </article>
 
 
 
 
-          <!-- APRIL 8 -->
-
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 April 8
               </span>
 
-
               <span class="seminar-year">
                 Spring 2026
               </span>
 
-
             </div>
-
-
 
             <h2>
               Piecewise Polynomials on Simplicial Fans
               and Stanley-Reisner Rings
             </h2>
 
-
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1660,46 +1771,33 @@
                 Andrés Molina
               </a>
 
-
             </p>
-
 
           </article>
 
 
 
 
-          <!-- APRIL 22 -->
-
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 April 22
               </span>
 
-
               <span class="seminar-year">
                 Spring 2026
               </span>
 
-
             </div>
-
-
 
             <h2>
               Prismatic Cohomology in Characteristic 0
               and Characteristic p: An Introduction
             </h2>
 
-
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1710,46 +1808,33 @@
                 Lei Yu
               </a>
 
-
             </p>
-
 
           </article>
 
 
 
 
-          <!-- APRIL 29 -->
-
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 April 29
               </span>
 
-
               <span class="seminar-year">
                 Spring 2026
               </span>
 
-
             </div>
-
-
 
             <h2>
               Prismatic Cohomology in Characteristic 0
               and Characteristic p: An Introduction, II
             </h2>
 
-
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1760,9 +1845,7 @@
                 Lei Yu
               </a>
 
-
             </p>
-
 
           </article>
 
@@ -1788,7 +1871,6 @@
       aria-labelledby="abstract-modal-title"
     >
 
-
       <div class="abstract-modal-inner">
 
 
@@ -1797,20 +1879,16 @@
 
           <div>
 
-
             <h2 id="abstract-modal-title">
               Talk Abstract
             </h2>
-
 
             <p
               class="abstract-modal-meta"
               id="abstract-modal-meta"
             ></p>
 
-
           </div>
-
 
 
           <button
@@ -1826,11 +1904,90 @@
         </header>
 
 
-
         <div
           class="abstract-modal-body"
           id="abstract-modal-body"
         ></div>
+
+
+      </div>
+
+
+    </dialog>
+
+
+
+
+    <!-- =========================================================
+         LECTURE NOTES POPUP
+         ========================================================= -->
+
+    <dialog
+      class="notes-modal"
+      id="notes-modal"
+      aria-labelledby="notes-modal-title"
+    >
+
+
+      <div class="notes-modal-inner">
+
+
+        <header class="notes-modal-header">
+
+
+          <div>
+
+            <h2 id="notes-modal-title">
+              Lecture Notes
+            </h2>
+
+            <p
+              class="notes-modal-meta"
+              id="notes-modal-meta"
+            ></p>
+
+          </div>
+
+
+          <button
+            class="modal-close"
+            type="button"
+            aria-label="Close lecture notes"
+            data-notes-close
+          >
+            ×
+          </button>
+
+
+        </header>
+
+
+
+        <div class="notes-modal-body">
+
+          <iframe
+            class="notes-frame"
+            id="notes-frame"
+            title="Lecture notes PDF"
+          ></iframe>
+
+        </div>
+
+
+
+        <footer class="notes-modal-footer">
+
+          <a
+            class="notes-open-link"
+            id="notes-open-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open PDF in new tab
+          </a>
+
+        </footer>
 
 
       </div>
@@ -2091,6 +2248,185 @@
           if(lastFocusedElement){
 
             lastFocusedElement.focus();
+
+          }
+
+
+        }
+      );
+
+
+    })();
+
+  </script>
+
+
+
+  <!-- =========================================================
+       LECTURE NOTES POPUP SCRIPT
+       ========================================================= -->
+
+  <script>
+
+    (() => {
+
+
+      const notesModal =
+        document.getElementById('notes-modal');
+
+
+      const notesTitle =
+        document.getElementById('notes-modal-title');
+
+
+      const notesMeta =
+        document.getElementById('notes-modal-meta');
+
+
+      const notesFrame =
+        document.getElementById('notes-frame');
+
+
+      const notesOpenLink =
+        document.getElementById('notes-open-link');
+
+
+      const notesClose =
+        notesModal.querySelector('[data-notes-close]');
+
+
+      let lastFocusedNotesButton = null;
+
+
+
+      document
+        .querySelectorAll('[data-notes-button]')
+        .forEach((button) => {
+
+
+          button.addEventListener('click', () => {
+
+
+            const card =
+              button.closest('.seminar-card');
+
+
+            const title =
+              card.querySelector('h2')
+                .textContent
+                .trim();
+
+
+            const speaker =
+              card.querySelector('.seminar-speaker a')
+                .textContent
+                .trim();
+
+
+            const affiliationElement =
+              card.querySelector('.seminar-speaker span');
+
+
+            const affiliation =
+              affiliationElement
+                ? affiliationElement.textContent.trim()
+                : '';
+
+
+            const pdfUrl =
+              button.dataset.pdf;
+
+
+            lastFocusedNotesButton =
+              button;
+
+
+
+            notesTitle.textContent =
+              title;
+
+
+
+            notesMeta.textContent =
+              affiliation
+                ? `Lecture notes · ${speaker} · ${affiliation}`
+                : `Lecture notes · ${speaker}`;
+
+
+
+            notesFrame.src =
+              pdfUrl;
+
+
+
+            notesOpenLink.href =
+              pdfUrl;
+
+
+
+            notesModal.showModal();
+
+
+            document.body.classList.add(
+              'modal-open'
+            );
+
+
+            notesClose.focus();
+
+
+          });
+
+
+        });
+
+
+
+      notesClose.addEventListener(
+        'click',
+        () => {
+
+          notesModal.close();
+
+        }
+      );
+
+
+
+      notesModal.addEventListener(
+        'click',
+        (event) => {
+
+
+          if(event.target === notesModal){
+
+            notesModal.close();
+
+          }
+
+
+        }
+      );
+
+
+
+      notesModal.addEventListener(
+        'close',
+        () => {
+
+
+          document.body.classList.remove(
+            'modal-open'
+          );
+
+
+          notesFrame.src =
+            '';
+
+
+          if(lastFocusedNotesButton){
+
+            lastFocusedNotesButton.focus();
 
           }
 
