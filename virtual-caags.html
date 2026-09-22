@@ -65,7 +65,6 @@
       border-radius:20px;
       background:rgba(255,253,250,.82);
       box-shadow:0 18px 44px rgba(30,37,45,.06);
-
       transition:
         transform 180ms ease,
         box-shadow 180ms ease,
@@ -119,7 +118,6 @@
       border-radius:18px;
       background:rgba(255,253,250,.9);
       box-shadow:0 14px 34px rgba(30,37,45,.055);
-
       transition:
         transform 180ms ease,
         box-shadow 180ms ease,
@@ -185,7 +183,7 @@
 
 
     /* =========================================================
-       UPCOMING TALK CARDS
+       UPCOMING TALKS
        ========================================================= */
 
     .upcoming-talk{
@@ -239,7 +237,6 @@
       font-size:.84rem;
       font-weight:800;
       cursor:pointer;
-
       transition:
         background-color 180ms ease,
         color 180ms ease,
@@ -492,7 +489,6 @@
       color:var(--accent);
       font-size:.84rem;
       font-weight:800;
-
       transition:
         background-color 180ms ease,
         color 180ms ease;
@@ -883,11 +879,6 @@
             <div class="seminar-list">
 
 
-
-              <!-- =================================================
-                   SEPTEMBER 27 — KESAVAN MOHANA SUNDARAM
-                   ================================================= -->
-
               <article class="seminar-card upcoming-talk">
 
                 <div class="seminar-card-header">
@@ -924,10 +915,6 @@
 
 
 
-
-              <!-- =================================================
-                   OCTOBER 4 — SUDESHNA ROY
-                   ================================================= -->
 
               <article class="seminar-card upcoming-talk">
 
@@ -966,10 +953,6 @@
 
 
 
-              <!-- =================================================
-                   OCTOBER 18 — MANAV BATAVIA
-                   ================================================= -->
-
               <article class="seminar-card upcoming-talk">
 
                 <div class="seminar-card-header">
@@ -1006,10 +989,6 @@
 
 
 
-
-              <!-- =================================================
-                   OCTOBER 25 — ADITYA DWIVEDI
-                   ================================================= -->
 
               <article class="seminar-card upcoming-talk">
 
@@ -1048,10 +1027,6 @@
 
 
 
-              <!-- =================================================
-                   NOVEMBER 1 — AMIT PHOGAT
-                   ================================================= -->
-
               <article class="seminar-card upcoming-talk">
 
                 <div class="seminar-card-header">
@@ -1089,10 +1064,6 @@
 
 
 
-              <!-- =================================================
-                   NOVEMBER 22 — DIVYASREE
-                   ================================================= -->
-
               <article class="seminar-card upcoming-talk">
 
                 <div class="seminar-card-header">
@@ -1116,11 +1087,9 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Divyasree C R
+                    Divyasree
                   </a>
-                  <span>
-                 IISER Pune
-                  </span>
+
                 </p>
 
               </article>
@@ -1134,7 +1103,7 @@
 
 
           <!-- =================================================
-               2026/27 ACADEMIC YEAR TALKS
+               2026/27 ACADEMIC YEAR
                ================================================= -->
 
           <article class="academic-year-card">
@@ -1162,9 +1131,7 @@
 
 
 
-              <!-- =================================================
-                   DINESH LIMBU — SEPTEMBER 20
-                   ================================================= -->
+              <!-- DINESH LIMBU -->
 
               <article class="seminar-card">
 
@@ -1232,7 +1199,7 @@
 
 
               <!-- =================================================
-                   POOJA JOSHI — SEPTEMBER 13
+                   POOJA JOSHI
                    ================================================= -->
 
               <article class="seminar-card">
@@ -1273,14 +1240,29 @@
                 </p>
 
 
-                <button
-                  class="abstract-button"
-                  type="button"
-                  data-abstract-button
-                  aria-haspopup="dialog"
-                >
-                  Abstract
-                </button>
+                <div class="talk-actions">
+
+                  <button
+                    class="abstract-button"
+                    type="button"
+                    data-abstract-button
+                    aria-haspopup="dialog"
+                  >
+                    Abstract
+                  </button>
+
+
+                  <button
+                    class="notes-button"
+                    type="button"
+                    data-notes-button
+                    data-pdf="assets/files/CAAGS_Pooja.pdf"
+                    aria-haspopup="dialog"
+                  >
+                    Lecture Notes
+                  </button>
+
+                </div>
 
 
                 <template class="abstract-template">
@@ -1313,9 +1295,7 @@
 
 
 
-              <!-- =================================================
-                   ARYAMAN MAITHANI — SEPTEMBER 6
-                   ================================================= -->
+              <!-- ARYAMAN MAITHANI -->
 
               <article class="seminar-card">
 
@@ -1367,6 +1347,7 @@
                     Abstract
                   </button>
 
+
                   <button
                     class="notes-button"
                     type="button"
@@ -1383,23 +1364,23 @@
                 <template class="abstract-template">
 
                   <p>
-                    I will talk about the computations of congruence
-                    modules and Wiles defects for determinantal rings
-                    $\mathcal{O}[X]/I_t(X)$, where $\mathcal{O}$ is a
-                    DVR and $X$ is a matrix of indeterminates of size
+                    I will talk about the computations of congruence modules
+                    and Wiles defects for determinantal rings
+                    $\mathcal{O}[X]/I_t(X)$, where $\mathcal{O}$ is a DVR
+                    and $X$ is a matrix of indeterminates of size
                     $t \times n$.
                   </p>
 
                   <p>
-                    The objects were introduced by Khare, Iyengar, and
-                    Manning as higher codimension analogues of some things
-                    that are relevant in number theory.
+                    The objects were introduced by Khare, Iyengar, and Manning
+                    as higher codimension analogues of some things that are
+                    relevant in number theory.
                   </p>
 
                   <p>
-                    In my talk, I will not focus on the number theory
-                    aspects but rather the commutative algebra behind
-                    these computations.
+                    In my talk, I will not focus on the number theory aspects
+                    but rather the commutative algebra behind these
+                    computations.
                   </p>
 
                   <p>
@@ -1413,9 +1394,7 @@
 
 
 
-              <!-- =================================================
-                   SUPRAJO DAS — AUGUST 23
-                   ================================================= -->
+              <!-- SUPRAJO DAS -->
 
               <article class="seminar-card">
 
@@ -1466,6 +1445,7 @@
                   >
                     Abstract
                   </button>
+
 
                   <button
                     class="notes-button"
@@ -1647,7 +1627,7 @@
 
 
 
-              <!-- SAYED SADIQUL ISLAM -->
+              <!-- SAYED -->
 
               <article class="seminar-card">
 
@@ -1719,7 +1699,7 @@
 
 
 
-              <!-- CHITRA VENUGOPAL -->
+              <!-- CHITRA -->
 
               <article class="seminar-card">
 
@@ -1796,7 +1776,7 @@
 
 
 
-              <!-- MANAV BATAVIA -->
+              <!-- MANAV APRIL -->
 
               <article class="seminar-card">
 
@@ -1868,7 +1848,7 @@
 
 
 
-              <!-- MUKTAI DESAI -->
+              <!-- MUKTAI -->
 
               <article class="seminar-card">
 
@@ -1936,7 +1916,7 @@
 
 
 
-              <!-- GOMATHY GANAPATHY -->
+              <!-- GOMATHY -->
 
               <article class="seminar-card">
 
@@ -2008,7 +1988,7 @@
 
 
 
-              <!-- SUHAS VADAN GONDI -->
+              <!-- SUHAS -->
 
               <article class="seminar-card">
 
@@ -2077,7 +2057,7 @@
 
 
 
-              <!-- MIFRON FERNANDES -->
+              <!-- MIFRON -->
 
               <article class="seminar-card">
 
@@ -2144,7 +2124,7 @@
 
 
 
-              <!-- ABHIRAM SUBRAMANIAN -->
+              <!-- ABHIRAM -->
 
               <article class="seminar-card">
 
@@ -2230,7 +2210,7 @@
 
 
 
-              <!-- SRISHTI SINGH -->
+              <!-- SRISHTI -->
 
               <article class="seminar-card">
 
@@ -2303,7 +2283,7 @@
 
 
 
-              <!-- ARYAMAN MAITHANI — JANUARY 25 -->
+              <!-- ARYAMAN JANUARY -->
 
               <article class="seminar-card">
 
@@ -2371,7 +2351,7 @@
 
 
 
-              <!-- ADITYA DWIVEDI -->
+              <!-- ADITYA -->
 
               <article class="seminar-card">
 
@@ -2388,8 +2368,8 @@
                 </div>
 
                 <h2>
-                  Equivalence of strong and weak F-regularity of positively
-                  graded rings
+                  Equivalence of strong and weak F-regularity
+                  of positively graded rings
                 </h2>
 
                 <p class="seminar-speaker">
@@ -2438,7 +2418,7 @@
 
 
 
-              <!-- ANUSREE VELLATHUM PADATH -->
+              <!-- ANUSREE -->
 
               <article class="seminar-card">
 
@@ -2506,7 +2486,7 @@
 
 
 
-              <!-- AMIT PHOGAT -->
+              <!-- AMIT -->
 
               <article class="seminar-card">
 
@@ -2571,7 +2551,7 @@
 
 
 
-              <!-- MANAV BATAVIA — NOVEMBER 8 -->
+              <!-- MANAV NOVEMBER -->
 
               <article class="seminar-card">
 
@@ -2645,7 +2625,7 @@
 
 
 
-              <!-- LISA MANDAL -->
+              <!-- LISA -->
 
               <article class="seminar-card">
 
@@ -2662,8 +2642,8 @@
                 </div>
 
                 <h2>
-                  Set-theoretic Complete Intersection for Curves in Affine
-                  3-folds
+                  Set-theoretic Complete Intersection for Curves
+                  in Affine 3-folds
                 </h2>
 
                 <p class="seminar-speaker">
@@ -2708,7 +2688,7 @@
 
 
 
-              <!-- OMKAR JAVADEKAR -->
+              <!-- OMKAR -->
 
               <article class="seminar-card">
 
@@ -2774,7 +2754,7 @@
 
 
 
-              <!-- KESAVAN MOHANA SUNDARAM -->
+              <!-- KESAVAN -->
 
               <article class="seminar-card">
 
@@ -2841,7 +2821,7 @@
 
 
 
-              <!-- GANAPATHY K -->
+              <!-- GANAPATHY -->
 
               <article class="seminar-card">
 
@@ -2905,7 +2885,7 @@
 
 
 
-              <!-- ANIKETH SIVAKUMAR -->
+              <!-- ANIKETH -->
 
               <article class="seminar-card">
 
@@ -2974,7 +2954,7 @@
 
 
 
-              <!-- SREEHARI SURESH BABU -->
+              <!-- SREEHARI -->
 
               <article class="seminar-card">
 
@@ -3046,7 +3026,7 @@
 
 
 
-              <!-- AGILAN AMIRTHALINGAM -->
+              <!-- AGILAN -->
 
               <article class="seminar-card">
 
@@ -3112,7 +3092,7 @@
 
 
 
-              <!-- SOUMYADEEP MISRA -->
+              <!-- SOUMYADEEP -->
 
               <article class="seminar-card">
 
@@ -3182,7 +3162,7 @@
 
 
 
-              <!-- ARYAMAN MAITHANI — AUGUST 30 -->
+              <!-- ARYAMAN AUGUST 30 -->
 
               <article class="seminar-card">
 
@@ -3246,7 +3226,7 @@
 
 
 
-              <!-- ARYAMAN MAITHANI — AUGUST 23 -->
+              <!-- ARYAMAN AUGUST 23 -->
 
               <article class="seminar-card">
 
@@ -3812,11 +3792,9 @@
           );
 
         await page.render({
-
           canvasContext:context,
           viewport:renderViewport,
           background:'#ffffff'
-
         }).promise;
 
         return true;
