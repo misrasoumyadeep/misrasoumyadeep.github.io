@@ -409,9 +409,17 @@
       position:relative;
       flex:1;
       min-height:0;
-      background:#d9ddda;
+      overflow-y:auto;
+      overscroll-behavior:contain;
+      background:#202124;
+      -webkit-overflow-scrolling:touch;
     }
 
+
+
+    /* =========================================================
+       DESKTOP / NORMAL PDF IFRAME
+       ========================================================= */
 
     .notes-frame{
       display:block;
@@ -421,6 +429,72 @@
       background:#fff;
     }
 
+
+    .notes-frame[hidden]{
+      display:none !important;
+    }
+
+
+
+    /* =========================================================
+       PDF.JS MOBILE-SAFE VIEWER
+       ========================================================= */
+
+    .pdf-status{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:2rem;
+      color:#e8eaed;
+      text-align:center;
+      line-height:1.6;
+      background:#202124;
+    }
+
+
+    .pdf-status[hidden]{
+      display:none !important;
+    }
+
+
+    .pdf-pages{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:14px;
+      width:100%;
+      padding:14px;
+      box-sizing:border-box;
+      background:#202124;
+    }
+
+
+    .pdf-pages[hidden]{
+      display:none !important;
+    }
+
+
+    .pdf-page-wrap{
+      display:flex;
+      justify-content:center;
+      width:100%;
+    }
+
+
+    .pdf-page-canvas{
+      display:block;
+      max-width:100%;
+      height:auto;
+      background:#fff;
+      box-shadow:0 2px 12px rgba(0,0,0,.38);
+    }
+
+
+
+    /* =========================================================
+       NOTES FOOTER
+       ========================================================= */
 
     .notes-modal-footer{
       flex:0 0 auto;
@@ -473,8 +547,14 @@
         grid-template-columns:1fr;
       }
 
+
       .seminar-card{
         min-height:0;
+      }
+
+
+      .notes-modal{
+        height:92vh;
       }
 
     }
@@ -486,9 +566,11 @@
         padding:1.1rem;
       }
 
+
       .seminar-card h2{
         font-size:1.38rem;
       }
+
 
       .seminar-meeting-info{
         flex-direction:column;
@@ -497,10 +579,12 @@
         margin-top:.9rem;
       }
 
+
       .abstract-modal-header,
       .abstract-modal-body{
         padding:1.05rem;
       }
+
 
       .notes-modal{
         width:calc(100% - 16px);
@@ -508,16 +592,25 @@
         border-radius:16px;
       }
 
+
       .notes-modal-header{
         padding:1.05rem;
       }
+
 
       .notes-modal-header h2{
         font-size:1.38rem;
       }
 
+
       .notes-modal-footer{
         padding:.7rem .85rem;
+      }
+
+
+      .pdf-pages{
+        padding:8px;
+        gap:8px;
       }
 
     }
@@ -586,7 +679,9 @@
 
   <header class="site-header">
 
+
     <div class="shell navbar">
+
 
       <a
         class="brand"
@@ -602,6 +697,7 @@
       </a>
 
 
+
       <nav
         class="nav-links"
         aria-label="Main navigation"
@@ -611,17 +707,21 @@
           Home
         </a>
 
+
         <a href="research.html">
           Research
         </a>
+
 
         <a href="teaching.html">
           Teaching
         </a>
 
+
         <a href="notes.html">
           Notes
         </a>
+
 
         <a
           href="organizing.html"
@@ -631,6 +731,7 @@
         </a>
 
       </nav>
+
 
 
       <a
@@ -643,6 +744,7 @@
       </a>
 
 
+
       <button
         class="menu-button"
         type="button"
@@ -653,7 +755,9 @@
         ☰
       </button>
 
+
     </div>
+
 
 
     <div
@@ -661,21 +765,26 @@
       data-mobile-panel
     >
 
+
       <a href="index.html">
         Home
       </a>
+
 
       <a href="research.html">
         Research
       </a>
 
+
       <a href="teaching.html">
         Teaching
       </a>
 
+
       <a href="notes.html">
         Notes
       </a>
+
 
       <a
         href="organizing.html"
@@ -683,6 +792,7 @@
       >
         Organizing
       </a>
+
 
       <a
         class="cv-button"
@@ -693,7 +803,9 @@
         ↓ CV / Resume
       </a>
 
+
     </div>
+
 
   </header>
 
@@ -714,6 +826,7 @@
 
     <section class="page-hero">
 
+
       <img
         src="assets/img/cover-conferences.jpeg"
         alt=""
@@ -723,13 +836,16 @@
 
       <div class="shell">
 
+
         <p class="kicker">
           University of Kansas
         </p>
 
+
         <h1>
           KU Student Algebra Seminar
         </h1>
+
 
         <p>
           Speaker information and announcements for the
@@ -738,6 +854,7 @@
 
 
         <div class="seminar-meeting-info">
+
 
           <span class="seminar-meeting-item">
 
@@ -760,9 +877,12 @@
 
           </span>
 
+
         </div>
 
+
       </div>
+
 
     </section>
 
@@ -775,7 +895,9 @@
 
     <section class="content">
 
+
       <div class="shell">
+
 
         <p>
 
@@ -788,7 +910,9 @@
 
         </p>
 
+
       </div>
+
 
     </section>
 
@@ -804,17 +928,22 @@
       style="padding-top:0;"
     >
 
+
       <div class="shell">
 
+
         <div class="semester-heading">
+
 
           <span class="tag">
             Fall 2026
           </span>
 
+
           <h2>
             Speaker Schedule
           </h2>
+
 
         </div>
 
@@ -830,17 +959,22 @@
 
           <article class="seminar-card has-actions">
 
+
             <div class="seminar-card-header">
+
 
               <span class="seminar-date">
                 September 16
               </span>
 
+
               <span class="seminar-year">
                 Fall 2026
               </span>
 
+
             </div>
+
 
 
             <h2>
@@ -848,7 +982,9 @@
             </h2>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -859,14 +995,18 @@
                 Rahul Ajit
               </a>
 
+
               <span>
                 University of Kansas
               </span>
 
+
             </p>
 
 
+
             <div class="talk-actions">
+
 
               <button
                 class="abstract-button"
@@ -878,17 +1018,21 @@
               </button>
 
 
+
               <button
                 class="notes-button"
                 type="button"
                 data-notes-button
+                data-notes-mode="iframe"
                 data-pdf="https://arxiv.org/pdf/2605.26354"
                 aria-haspopup="dialog"
               >
                 Lecture Notes
               </button>
 
+
             </div>
+
 
 
             <template class="abstract-template">
@@ -907,98 +1051,119 @@
 
             </template>
 
+
           </article>
 
 
 
 
           <!-- =================================================
-     SEPTEMBER 23 — SREEHARI SURESH BABU
-     ================================================= -->
+               SEPTEMBER 23 — SREEHARI SURESH BABU
+               ================================================= -->
 
-<article class="seminar-card has-actions">
-
-  <div class="seminar-card-header">
-
-    <span class="seminar-date">
-      September 23
-    </span>
-
-    <span class="seminar-year">
-      Fall 2026
-    </span>
-
-  </div>
+          <article class="seminar-card has-actions">
 
 
-  <h2>
-    Conductor of a ring
-  </h2>
+            <div class="seminar-card-header">
 
 
-  <p class="seminar-speaker">
-
-    <a
-      class="text-link"
-      href="https://sreehari183.github.io/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Sreehari Suresh Babu
-    </a>
-
-    <span>
-      University of Kansas
-    </span>
-
-  </p>
+              <span class="seminar-date">
+                September 23
+              </span>
 
 
-  <div class="talk-actions">
-
-    <button
-      class="abstract-button"
-      type="button"
-      data-abstract-button
-      aria-haspopup="dialog"
-    >
-      Abstract
-    </button>
+              <span class="seminar-year">
+                Fall 2026
+              </span>
 
 
-    <button
-      class="notes-button"
-      type="button"
-      data-notes-button
-      data-pdf="assets/files/SwansonHuneke.pdf#page=257"
-      data-notes-reference="Please refer to Chapter 12, “The conductor,” of Swanson–Huneke, Integral Closure of Ideals, Rings, and Modules."
-      data-notes-open-label="Open Swanson–Huneke in new tab"
-      aria-haspopup="dialog"
-    >
-      Lecture Notes
-    </button>
-
-  </div>
+            </div>
 
 
-  <template class="abstract-template">
 
-    <p>
-      This talk introduced the conductor of a ring and some of its
-      basic properties. It then discussed the connection between
-      the conductor, integral closure, and normalization.
-    </p>
+            <h2>
+              Conductor of a ring
+            </h2>
 
-    <p>
-      The talk concluded with the one-dimensional Cohen–Macaulay
-      case, including invariants such as the length of
-      $\overline{R}/R$, which give a way to measure how far a ring
-      is from being integrally closed.
-    </p>
 
-  </template>
 
-</article>
+            <p class="seminar-speaker">
+
+
+              <a
+                class="text-link"
+                href="https://sreehari183.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Sreehari Suresh Babu
+              </a>
+
+
+              <span>
+                University of Kansas
+              </span>
+
+
+            </p>
+
+
+
+            <div class="talk-actions">
+
+
+              <button
+                class="abstract-button"
+                type="button"
+                data-abstract-button
+                aria-haspopup="dialog"
+              >
+                Abstract
+              </button>
+
+
+
+              <button
+                class="notes-button"
+                type="button"
+                data-notes-button
+                data-notes-mode="pdfjs"
+                data-pdf="assets/files/SwansonHuneke.pdf"
+                data-open-url="assets/files/SwansonHuneke.pdf#page=257"
+                data-start-page="257"
+                data-end-page="266"
+                data-notes-reference="Please refer to Chapter 12, “The conductor,” of Swanson–Huneke, Integral Closure of Ideals, Rings, and Modules."
+                data-notes-open-label="Open full book in new tab"
+                aria-haspopup="dialog"
+              >
+                Lecture Notes
+              </button>
+
+
+            </div>
+
+
+
+            <template class="abstract-template">
+
+              <p>
+                This talk introduced the conductor of a ring and some of its
+                basic properties. It then discussed the connection between
+                the conductor, integral closure, and normalization.
+              </p>
+
+              <p>
+                The talk concluded with the one-dimensional Cohen–Macaulay
+                case, including invariants such as the length of
+                $\overline{R}/R$, which give a way to measure how far a ring
+                is from being integrally closed.
+              </p>
+
+            </template>
+
+
+          </article>
+
 
 
 
@@ -1008,20 +1173,26 @@
 
           <article class="seminar-card">
 
+
             <div class="seminar-card-header">
+
 
               <span class="seminar-date">
                 October 7
               </span>
 
+
               <span class="seminar-year">
                 Fall 2026
               </span>
 
+
             </div>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1032,7 +1203,9 @@
                 Soumyadeep Misra
               </a>
 
+
             </p>
+
 
           </article>
 
@@ -1045,20 +1218,26 @@
 
           <article class="seminar-card">
 
+
             <div class="seminar-card-header">
+
 
               <span class="seminar-date">
                 October 14
               </span>
 
+
               <span class="seminar-year">
                 Fall 2026
               </span>
 
+
             </div>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1069,7 +1248,9 @@
                 Ryan Hunter
               </a>
 
+
             </p>
+
 
           </article>
 
@@ -1082,20 +1263,26 @@
 
           <article class="seminar-card">
 
+
             <div class="seminar-card-header">
+
 
               <span class="seminar-date">
                 October 21
               </span>
 
+
               <span class="seminar-year">
                 Fall 2026
               </span>
 
+
             </div>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1106,7 +1293,9 @@
                 Andrés Molina
               </a>
 
+
             </p>
+
 
           </article>
 
@@ -1119,20 +1308,26 @@
 
           <article class="seminar-card">
 
+
             <div class="seminar-card-header">
+
 
               <span class="seminar-date">
                 October 28
               </span>
 
+
               <span class="seminar-year">
                 Fall 2026
               </span>
 
+
             </div>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1143,7 +1338,9 @@
                 David Carlip
               </a>
 
+
             </p>
+
 
           </article>
 
@@ -1156,20 +1353,26 @@
 
           <article class="seminar-card">
 
+
             <div class="seminar-card-header">
+
 
               <span class="seminar-date">
                 November 11
               </span>
 
+
               <span class="seminar-year">
                 Fall 2026
               </span>
 
+
             </div>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1180,7 +1383,9 @@
                 Anusree Vellathum Padath
               </a>
 
+
             </p>
+
 
           </article>
 
@@ -1193,20 +1398,26 @@
 
           <article class="seminar-card">
 
+
             <div class="seminar-card-header">
+
 
               <span class="seminar-date">
                 November 18
               </span>
 
+
               <span class="seminar-year">
                 Fall 2026
               </span>
 
+
             </div>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1217,7 +1428,9 @@
                 Chris Wong
               </a>
 
+
             </p>
+
 
           </article>
 
@@ -1230,20 +1443,26 @@
 
           <article class="seminar-card">
 
+
             <div class="seminar-card-header">
+
 
               <span class="seminar-date">
                 December 2
               </span>
 
+
               <span class="seminar-year">
                 Fall 2026
               </span>
 
+
             </div>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1254,7 +1473,9 @@
                 Agilan Amirthalingam
               </a>
 
+
             </p>
+
 
           </article>
 
@@ -1267,20 +1488,26 @@
 
           <article class="seminar-card">
 
+
             <div class="seminar-card-header">
+
 
               <span class="seminar-date">
                 December 9
               </span>
 
+
               <span class="seminar-year">
                 Fall 2026
               </span>
 
+
             </div>
 
 
+
             <p class="seminar-speaker">
+
 
               <a
                 class="text-link"
@@ -1291,14 +1518,18 @@
                 Ryan Hunter
               </a>
 
+
             </p>
+
 
           </article>
 
 
         </div>
 
+
       </div>
+
 
     </section>
 
@@ -1314,17 +1545,22 @@
       style="padding-top:0;"
     >
 
+
       <div class="shell">
 
+
         <div class="semester-heading">
+
 
           <span class="tag">
             Spring 2026
           </span>
 
+
           <h2>
             Speaker Schedule
           </h2>
+
 
         </div>
 
@@ -1333,8 +1569,6 @@
         <div class="seminar-list">
 
 
-
-          <!-- FEBRUARY 11 -->
 
           <article class="seminar-card">
 
@@ -1374,8 +1608,6 @@
 
 
 
-          <!-- FEBRUARY 18 -->
-
           <article class="seminar-card">
 
             <div class="seminar-card-header">
@@ -1413,8 +1645,6 @@
 
 
 
-
-          <!-- FEBRUARY 25 -->
 
           <article class="seminar-card">
 
@@ -1454,8 +1684,6 @@
 
 
 
-          <!-- MARCH 11 -->
-
           <article class="seminar-card">
 
             <div class="seminar-card-header">
@@ -1493,8 +1721,6 @@
 
 
 
-
-          <!-- MARCH 25 -->
 
           <article class="seminar-card">
 
@@ -1535,8 +1761,6 @@
 
 
 
-          <!-- APRIL 1 -->
-
           <article class="seminar-card">
 
             <div class="seminar-card-header">
@@ -1575,8 +1799,6 @@
 
 
 
-
-          <!-- APRIL 8 -->
 
           <article class="seminar-card">
 
@@ -1617,8 +1839,6 @@
 
 
 
-          <!-- APRIL 22 -->
-
           <article class="seminar-card">
 
             <div class="seminar-card-header">
@@ -1657,8 +1877,6 @@
 
 
 
-
-          <!-- APRIL 29 -->
 
           <article class="seminar-card">
 
@@ -1699,7 +1917,9 @@
 
         </div>
 
+
       </div>
+
 
     </section>
 
@@ -1716,9 +1936,12 @@
       aria-labelledby="abstract-modal-title"
     >
 
+
       <div class="abstract-modal-inner">
 
+
         <header class="abstract-modal-header">
+
 
           <div>
 
@@ -1743,6 +1966,7 @@
             ×
           </button>
 
+
         </header>
 
 
@@ -1751,7 +1975,9 @@
           id="abstract-modal-body"
         ></div>
 
+
       </div>
+
 
     </dialog>
 
@@ -1768,9 +1994,12 @@
       aria-labelledby="notes-modal-title"
     >
 
+
       <div class="notes-modal-inner">
 
+
         <header class="notes-modal-header">
+
 
           <div>
 
@@ -1795,21 +2024,52 @@
             ×
           </button>
 
+
         </header>
 
 
-        <div class="notes-modal-body">
+
+        <div
+          class="notes-modal-body"
+          id="notes-modal-body"
+        >
+
+
+          <!-- Normal iframe viewer for ordinary external PDFs -->
 
           <iframe
             class="notes-frame"
             id="notes-frame"
             title="Lecture notes PDF"
+            hidden
           ></iframe>
+
+
+
+          <!-- PDF.js viewer for mobile-safe local PDFs -->
+
+          <div
+            class="pdf-status"
+            id="pdf-status"
+            hidden
+          >
+            Loading lecture notes…
+          </div>
+
+
+          <div
+            class="pdf-pages"
+            id="pdf-pages"
+            hidden
+          ></div>
+
 
         </div>
 
 
+
         <footer class="notes-modal-footer">
+
 
           <a
             class="notes-open-link"
@@ -1821,9 +2081,12 @@
             Open PDF in new tab
           </a>
 
+
         </footer>
 
+
       </div>
+
 
     </dialog>
 
@@ -1839,17 +2102,22 @@
 
   <footer class="footer">
 
+
     <div class="shell footer-inner">
+
 
       <span>
         © 2026 Soumyadeep Misra.
       </span>
 
+
       <span>
         Department of Mathematics · University of Kansas · Snow Hall 562
       </span>
 
+
     </div>
+
 
   </footer>
 
@@ -1892,7 +2160,19 @@
 
 
 
+  <!-- =========================================================
+       SCRIPTS
+       ========================================================= -->
+
   <script src="assets/js/main.js"></script>
+
+
+  <!-- PDF.js -->
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"
+  ></script>
+
 
 
 
@@ -1904,74 +2184,96 @@
 
     (() => {
 
+
       const modal =
         document.getElementById('abstract-modal');
+
 
       const modalTitle =
         document.getElementById('abstract-modal-title');
 
+
       const modalMeta =
         document.getElementById('abstract-modal-meta');
+
 
       const modalBody =
         document.getElementById('abstract-modal-body');
 
+
       const closeButton =
         modal.querySelector('[data-modal-close]');
+
 
       let lastFocusedElement = null;
 
 
+
       const closeModal = () => {
+
         modal.close();
+
       };
+
 
 
       document
         .querySelectorAll('[data-abstract-button]')
         .forEach((button) => {
 
+
           button.addEventListener('click', () => {
+
 
             const card =
               button.closest('.seminar-card');
+
 
             const title =
               card.querySelector('h2')
                 .textContent
                 .trim();
 
+
             const date =
               card.querySelector('.seminar-date')
                 .textContent
                 .trim();
+
 
             const speaker =
               card.querySelector('.seminar-speaker a')
                 .textContent
                 .trim();
 
+
             const affiliationElement =
               card.querySelector('.seminar-speaker span');
+
 
             const affiliation =
               affiliationElement
                 ? affiliationElement.textContent.trim()
                 : '';
 
+
             const template =
               card.querySelector('.abstract-template');
+
 
             lastFocusedElement =
               button;
 
+
             modalTitle.textContent =
               title;
+
 
             modalMeta.textContent =
               affiliation
                 ? `${date} · ${speaker} · ${affiliation}`
                 : `${date} · ${speaker}`;
+
 
             modalBody.innerHTML =
               template.innerHTML;
@@ -1991,15 +2293,20 @@
 
             modal.showModal();
 
+
             document.body.classList.add(
               'modal-open'
             );
 
+
             closeButton.focus();
+
 
           });
 
+
         });
+
 
 
       closeButton.addEventListener(
@@ -2008,39 +2315,53 @@
       );
 
 
+
       modal.addEventListener(
         'click',
         (event) => {
 
+
           if(event.target === modal){
+
             closeModal();
+
           }
+
 
         }
       );
+
 
 
       modal.addEventListener(
         'close',
         () => {
 
+
           document.body.classList.remove(
             'modal-open'
           );
 
+
           modalBody.innerHTML =
             '';
 
+
           if(lastFocusedElement){
+
             lastFocusedElement.focus();
+
           }
+
 
         }
       );
 
+
     })();
 
   </script>
+
 
 
 
@@ -2052,114 +2373,725 @@
 
     (() => {
 
+
+      /* =======================================================
+         PDF.JS CONFIGURATION
+         ======================================================= */
+
+      if(window.pdfjsLib){
+
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+          'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+      }
+
+
+
       const notesModal =
         document.getElementById('notes-modal');
+
 
       const notesTitle =
         document.getElementById('notes-modal-title');
 
+
       const notesMeta =
         document.getElementById('notes-modal-meta');
+
+
+      const notesBody =
+        document.getElementById('notes-modal-body');
+
 
       const notesFrame =
         document.getElementById('notes-frame');
 
+
+      const pdfStatus =
+        document.getElementById('pdf-status');
+
+
+      const pdfPages =
+        document.getElementById('pdf-pages');
+
+
       const notesOpenLink =
         document.getElementById('notes-open-link');
+
 
       const notesClose =
         notesModal.querySelector('[data-notes-close]');
 
-      let lastFocusedNotesButton = null;
+
+      let lastFocusedNotesButton =
+        null;
 
 
-      document
-        .querySelectorAll('[data-notes-button]')
-        .forEach((button) => {
-
-          button.addEventListener('click', () => {
-
-            const card =
-              button.closest('.seminar-card');
-
-            const title =
-              card.querySelector('h2')
-                .textContent
-                .trim();
-
-            const speaker =
-              card.querySelector('.seminar-speaker a')
-                .textContent
-                .trim();
-
-            const affiliationElement =
-              card.querySelector('.seminar-speaker span');
-
-            const affiliation =
-              affiliationElement
-                ? affiliationElement.textContent.trim()
-                : '';
-
-            const pdfUrl =
-              button.dataset.pdf;
-
-            const customReference =
-              button.dataset.notesReference || '';
-
-            const customOpenLabel =
-              button.dataset.notesOpenLabel || '';
-
-            lastFocusedNotesButton =
-              button;
+      let activeMode =
+        '';
 
 
-            notesTitle.textContent =
-              title;
+      let activePdfUrl =
+        '';
 
 
-            if(customReference){
-
-              notesMeta.textContent =
-                customReference;
-
-            }
-            else{
-
-              notesMeta.textContent =
-                affiliation
-                  ? `Lecture notes · ${speaker} · ${affiliation}`
-                  : `Lecture notes · ${speaker}`;
-
-            }
+      let activeStartPage =
+        1;
 
 
-            notesFrame.src =
-              pdfUrl;
+      let activeEndPage =
+        1;
 
 
-            notesOpenLink.href =
-              pdfUrl;
+      let renderVersion =
+        0;
 
 
-            notesOpenLink.textContent =
-              customOpenLabel ||
-              'Open PDF in new tab';
+      let resizeTimer =
+        null;
 
 
-            notesModal.showModal();
+
+      /* =======================================================
+         CLEAR PDF.JS VIEWER
+         ======================================================= */
+
+      const clearPdfPages = () => {
+
+        pdfPages.innerHTML =
+          '';
+
+      };
 
 
-            document.body.classList.add(
-              'modal-open'
-            );
+
+      /* =======================================================
+         RENDER ONE PDF PAGE
+         ======================================================= */
+
+      async function renderPdfPage(
+        pdf,
+        pageNumber,
+        availableWidth,
+        deviceScale,
+        thisRender
+      ){
 
 
-            notesClose.focus();
+        if(
+          thisRender !==
+          renderVersion
+        ){
+
+          return false;
+
+        }
+
+
+        const page =
+          await pdf.getPage(
+            pageNumber
+          );
+
+
+        if(
+          thisRender !==
+          renderVersion
+        ){
+
+          return false;
+
+        }
+
+
+        const baseViewport =
+          page.getViewport({
+            scale:1
+          });
+
+
+        const cssScale =
+          availableWidth /
+          baseViewport.width;
+
+
+        const renderViewport =
+          page.getViewport({
+
+            scale:
+              cssScale *
+              deviceScale
 
           });
 
+
+        const wrap =
+          document.createElement(
+            'div'
+          );
+
+
+        wrap.className =
+          'pdf-page-wrap';
+
+
+        const canvas =
+          document.createElement(
+            'canvas'
+          );
+
+
+        canvas.className =
+          'pdf-page-canvas';
+
+
+        canvas.width =
+          Math.ceil(
+            renderViewport.width
+          );
+
+
+        canvas.height =
+          Math.ceil(
+            renderViewport.height
+          );
+
+
+        canvas.style.width =
+          `${Math.floor(
+            baseViewport.width *
+            cssScale
+          )}px`;
+
+
+        canvas.style.height =
+          `${Math.floor(
+            baseViewport.height *
+            cssScale
+          )}px`;
+
+
+        wrap.appendChild(
+          canvas
+        );
+
+
+        pdfPages.appendChild(
+          wrap
+        );
+
+
+        const context =
+          canvas.getContext(
+            '2d',
+            {
+              alpha:false
+            }
+          );
+
+
+        await page.render({
+
+          canvasContext:
+            context,
+
+          viewport:
+            renderViewport,
+
+          background:
+            '#ffffff'
+
+        }).promise;
+
+
+        return true;
+
+
+      }
+
+
+
+      /* =======================================================
+         RENDER CHAPTER / PAGE RANGE
+         ======================================================= */
+
+      async function renderPdfRange(
+        pdfUrl,
+        startPage,
+        endPage
+      ){
+
+
+        const thisRender =
+          ++renderVersion;
+
+
+        clearPdfPages();
+
+
+        notesBody.scrollTop =
+          0;
+
+
+        notesFrame.hidden =
+          true;
+
+
+        notesFrame.src =
+          '';
+
+
+        pdfPages.hidden =
+          true;
+
+
+        pdfStatus.hidden =
+          false;
+
+
+        pdfStatus.textContent =
+          'Loading Chapter 12…';
+
+
+
+        try{
+
+
+          if(
+            !window.pdfjsLib
+          ){
+
+            throw new Error(
+              'PDF.js did not load.'
+            );
+
+          }
+
+
+          const loadingTask =
+            pdfjsLib.getDocument({
+              url:pdfUrl
+            });
+
+
+          const pdf =
+            await loadingTask.promise;
+
+
+          if(
+            thisRender !==
+            renderVersion
+          ){
+
+            return;
+
+          }
+
+
+          const safeStart =
+            Math.max(
+              1,
+              Math.min(
+                startPage,
+                pdf.numPages
+              )
+            );
+
+
+          const safeEnd =
+            Math.max(
+              safeStart,
+              Math.min(
+                endPage,
+                pdf.numPages
+              )
+            );
+
+
+          const availableWidth =
+            Math.max(
+              240,
+              notesBody.clientWidth -
+              28
+            );
+
+
+          const deviceScale =
+            Math.min(
+              window.devicePixelRatio ||
+              1,
+              1.5
+            );
+
+
+          pdfPages.hidden =
+            false;
+
+
+          for(
+            let pageNumber =
+              safeStart;
+
+            pageNumber <=
+              safeEnd;
+
+            pageNumber++
+          ){
+
+
+            if(
+              thisRender !==
+              renderVersion
+            ){
+
+              return;
+
+            }
+
+
+            pdfStatus.textContent =
+              `Loading Chapter 12 · page ${
+                pageNumber - safeStart + 1
+              } of ${
+                safeEnd - safeStart + 1
+              }…`;
+
+
+            const rendered =
+              await renderPdfPage(
+                pdf,
+                pageNumber,
+                availableWidth,
+                deviceScale,
+                thisRender
+              );
+
+
+            if(
+              !rendered ||
+              thisRender !==
+              renderVersion
+            ){
+
+              return;
+
+            }
+
+
+            /*
+             * As soon as the first page is ready,
+             * show the chapter instead of keeping
+             * the loading screen over it.
+             */
+
+            if(
+              pageNumber ===
+              safeStart
+            ){
+
+              pdfStatus.hidden =
+                true;
+
+
+              notesBody.scrollTop =
+                0;
+
+            }
+
+
+            /*
+             * Yield between pages so mobile browsers
+             * do not freeze while rendering.
+             */
+
+            await new Promise(
+              resolve =>
+                requestAnimationFrame(
+                  resolve
+                )
+            );
+
+
+          }
+
+
+          pdfStatus.hidden =
+            true;
+
+
+        }
+        catch(error){
+
+
+          console.error(
+            'PDF rendering error:',
+            error
+          );
+
+
+          clearPdfPages();
+
+
+          pdfPages.hidden =
+            true;
+
+
+          pdfStatus.hidden =
+            false;
+
+
+          pdfStatus.innerHTML =
+            'The chapter preview could not be rendered.<br>' +
+            'Please use the “Open full book in new tab” button below.';
+
+
+        }
+
+
+      }
+
+
+
+      /* =======================================================
+         OPEN LECTURE NOTES
+         ======================================================= */
+
+      document
+        .querySelectorAll(
+          '[data-notes-button]'
+        )
+        .forEach((button) => {
+
+
+          button.addEventListener(
+            'click',
+            () => {
+
+
+              const card =
+                button.closest(
+                  '.seminar-card'
+                );
+
+
+              const title =
+                card
+                  .querySelector('h2')
+                  .textContent
+                  .trim();
+
+
+              const speaker =
+                card
+                  .querySelector(
+                    '.seminar-speaker a'
+                  )
+                  .textContent
+                  .trim();
+
+
+              const affiliationElement =
+                card.querySelector(
+                  '.seminar-speaker span'
+                );
+
+
+              const affiliation =
+                affiliationElement
+                  ? affiliationElement.textContent.trim()
+                  : '';
+
+
+              const pdfUrl =
+                button.dataset.pdf;
+
+
+              const openUrl =
+                button.dataset.openUrl ||
+                pdfUrl;
+
+
+              const customReference =
+                button.dataset.notesReference ||
+                '';
+
+
+              const customOpenLabel =
+                button.dataset.notesOpenLabel ||
+                'Open PDF in new tab';
+
+
+              const mode =
+                button.dataset.notesMode ||
+                'iframe';
+
+
+              const startPage =
+                parseInt(
+                  button.dataset.startPage ||
+                  '1',
+                  10
+                );
+
+
+              const endPage =
+                parseInt(
+                  button.dataset.endPage ||
+                  button.dataset.startPage ||
+                  '1',
+                  10
+                );
+
+
+              lastFocusedNotesButton =
+                button;
+
+
+              activeMode =
+                mode;
+
+
+              activePdfUrl =
+                pdfUrl;
+
+
+              activeStartPage =
+                startPage;
+
+
+              activeEndPage =
+                endPage;
+
+
+              notesTitle.textContent =
+                title;
+
+
+              if(customReference){
+
+                notesMeta.textContent =
+                  customReference;
+
+              }
+              else{
+
+                notesMeta.textContent =
+                  affiliation
+                    ? `Lecture notes · ${speaker} · ${affiliation}`
+                    : `Lecture notes · ${speaker}`;
+
+              }
+
+
+              notesOpenLink.href =
+                openUrl;
+
+
+              notesOpenLink.textContent =
+                customOpenLabel;
+
+
+              notesModal.showModal();
+
+
+              document.body.classList.add(
+                'modal-open'
+              );
+
+
+              notesClose.focus();
+
+
+
+              /*
+               * PDF.js mode:
+               * used for Sreehari's Chapter 12.
+               */
+
+              if(
+                mode ===
+                'pdfjs'
+              ){
+
+
+                notesFrame.hidden =
+                  true;
+
+
+                notesFrame.src =
+                  '';
+
+
+                requestAnimationFrame(
+                  () => {
+
+
+                    requestAnimationFrame(
+                      () => {
+
+
+                        renderPdfRange(
+                          pdfUrl,
+                          startPage,
+                          endPage
+                        );
+
+
+                      }
+                    );
+
+
+                  }
+                );
+
+
+              }
+
+
+              /*
+               * Normal iframe mode:
+               * retained for Rahul's arXiv notes.
+               */
+
+              else{
+
+
+                renderVersion++;
+
+
+                clearPdfPages();
+
+
+                pdfPages.hidden =
+                  true;
+
+
+                pdfStatus.hidden =
+                  true;
+
+
+                notesFrame.hidden =
+                  false;
+
+
+                notesFrame.src =
+                  pdfUrl;
+
+
+              }
+
+
+            }
+          );
+
+
         });
 
+
+
+      /* =======================================================
+         CLOSE NOTES
+         ======================================================= */
 
       notesClose.addEventListener(
         'click',
@@ -2175,8 +3107,13 @@
         'click',
         (event) => {
 
-          if(event.target === notesModal){
+          if(
+            event.target ===
+            notesModal
+          ){
+
             notesModal.close();
+
           }
 
         }
@@ -2187,28 +3124,118 @@
         'close',
         () => {
 
+
           document.body.classList.remove(
             'modal-open'
           );
 
+
+          renderVersion++;
+
+
           notesFrame.src =
             '';
+
+
+          notesFrame.hidden =
+            true;
+
+
+          clearPdfPages();
+
+
+          pdfPages.hidden =
+            true;
+
+
+          pdfStatus.hidden =
+            true;
+
 
           notesOpenLink.href =
             '#';
 
+
           notesOpenLink.textContent =
             'Open PDF in new tab';
+
 
           notesMeta.textContent =
             '';
 
-          if(lastFocusedNotesButton){
+
+          activeMode =
+            '';
+
+
+          activePdfUrl =
+            '';
+
+
+          notesBody.scrollTop =
+            0;
+
+
+          if(
+            lastFocusedNotesButton
+          ){
+
             lastFocusedNotesButton.focus();
+
           }
+
 
         }
       );
+
+
+
+      /* =======================================================
+         RESIZE / PHONE ROTATION
+         ======================================================= */
+
+      window.addEventListener(
+        'resize',
+        () => {
+
+
+          if(
+            !notesModal.open ||
+            activeMode !==
+              'pdfjs' ||
+            !activePdfUrl
+          ){
+
+            return;
+
+          }
+
+
+          clearTimeout(
+            resizeTimer
+          );
+
+
+          resizeTimer =
+            setTimeout(
+              () => {
+
+
+                renderPdfRange(
+                  activePdfUrl,
+                  activeStartPage,
+                  activeEndPage
+                );
+
+
+              },
+              300
+            );
+
+
+        }
+      );
+
 
     })();
 
