@@ -24,7 +24,6 @@
     KU Student Algebra Seminar | Soumyadeep Misra
   </title>
 
-
   <link
     rel="preconnect"
     href="https://fonts.googleapis.com"
@@ -59,7 +58,6 @@
       gap:1.25rem;
     }
 
-
     .seminar-card{
       position:relative;
       display:flex;
@@ -77,13 +75,11 @@
         border-color 180ms ease;
     }
 
-
     .seminar-card:hover{
       transform:translateY(-5px);
       border-color:#d2c7b8;
       box-shadow:0 24px 48px rgba(30,37,45,.1);
     }
-
 
     .seminar-card-header{
       display:flex;
@@ -92,7 +88,6 @@
       gap:1rem;
       margin-bottom:.9rem;
     }
-
 
     .seminar-date{
       display:inline-flex;
@@ -109,13 +104,11 @@
       text-transform:uppercase;
     }
 
-
     .seminar-year{
       color:var(--muted);
       font-size:.78rem;
       font-weight:700;
     }
-
 
     .seminar-card h2{
       font-family:var(--serif);
@@ -123,7 +116,6 @@
       line-height:1.08;
       margin:0 0 .85rem;
     }
-
 
     .seminar-speaker{
       display:flex;
@@ -135,11 +127,9 @@
       font-size:.92rem;
     }
 
-
     .seminar-speaker .text-link{
       font-size:.96rem;
     }
-
 
     .seminar-card.has-actions .seminar-speaker{
       margin:0 0 1.2rem;
@@ -155,11 +145,9 @@
       margin:0 0 1.2rem;
     }
 
-
     .semester-heading .tag{
       margin-bottom:.75rem;
     }
-
 
     .semester-heading h2{
       font-family:var(--serif);
@@ -182,7 +170,6 @@
       margin-top:1.1rem;
     }
 
-
     .seminar-meeting-item{
       display:inline-flex;
       align-items:center;
@@ -191,7 +178,6 @@
       font-size:.94rem;
       font-weight:650;
     }
-
 
     .seminar-meeting-label{
       color:var(--accent);
@@ -210,7 +196,6 @@
       gap:.65rem;
       margin-top:auto;
     }
-
 
     .abstract-button,
     .notes-button{
@@ -231,7 +216,6 @@
         transform 180ms ease;
     }
 
-
     .abstract-button:hover,
     .abstract-button:focus-visible,
     .notes-button:hover,
@@ -240,7 +224,6 @@
       color:#fff;
       transform:translateY(-1px);
     }
-
 
     .abstract-button:focus-visible,
     .notes-button:focus-visible{
@@ -266,19 +249,16 @@
       overflow:hidden;
     }
 
-
     .abstract-modal::backdrop{
       background:rgba(19,30,27,.62);
       backdrop-filter:blur(4px);
     }
-
 
     .abstract-modal-inner{
       display:flex;
       flex-direction:column;
       max-height:min(82vh,760px);
     }
-
 
     .abstract-modal-header{
       display:flex;
@@ -290,7 +270,6 @@
       background:var(--surface-2);
     }
 
-
     .abstract-modal-header h2{
       font-family:var(--serif);
       font-size:1.65rem;
@@ -298,13 +277,11 @@
       margin:0;
     }
 
-
     .abstract-modal-meta{
       margin:.35rem 0 0;
       color:var(--muted);
       font-size:.88rem;
     }
-
 
     .modal-close{
       flex:0 0 auto;
@@ -320,26 +297,22 @@
       cursor:pointer;
     }
 
-
     .modal-close:hover,
     .modal-close:focus-visible{
       border-color:var(--accent);
       color:var(--accent);
     }
 
-
     .abstract-modal-body{
       overflow-y:auto;
       padding:1.35rem;
     }
-
 
     .abstract-modal-body p{
       margin:0 0 1rem;
       color:#3f4852;
       line-height:1.75;
     }
-
 
     .abstract-modal-body p:last-child{
       margin-bottom:0;
@@ -363,19 +336,16 @@
       overflow:hidden;
     }
 
-
     .notes-modal::backdrop{
       background:rgba(19,30,27,.68);
       backdrop-filter:blur(4px);
     }
-
 
     .notes-modal-inner{
       display:flex;
       flex-direction:column;
       height:100%;
     }
-
 
     .notes-modal-header{
       flex:0 0 auto;
@@ -388,7 +358,6 @@
       background:var(--surface-2);
     }
 
-
     .notes-modal-header h2{
       margin:0;
       font-family:var(--serif);
@@ -396,14 +365,12 @@
       line-height:1.08;
     }
 
-
     .notes-modal-meta{
       margin:.35rem 0 0;
       color:var(--muted);
       font-size:.88rem;
       line-height:1.5;
     }
-
 
     .notes-modal-body{
       position:relative;
@@ -429,7 +396,6 @@
       background:#fff;
     }
 
-
     .notes-frame[hidden]{
       display:none !important;
     }
@@ -452,11 +418,9 @@
       background:#202124;
     }
 
-
     .pdf-status[hidden]{
       display:none !important;
     }
-
 
     .pdf-pages{
       display:flex;
@@ -469,18 +433,15 @@
       background:#202124;
     }
 
-
     .pdf-pages[hidden]{
       display:none !important;
     }
-
 
     .pdf-page-wrap{
       display:flex;
       justify-content:center;
       width:100%;
     }
-
 
     .pdf-page-canvas{
       display:block;
@@ -506,7 +467,6 @@
       background:var(--surface);
     }
 
-
     .notes-open-link{
       display:inline-flex;
       align-items:center;
@@ -523,13 +483,11 @@
         color 180ms ease;
     }
 
-
     .notes-open-link:hover,
     .notes-open-link:focus-visible{
       background:var(--accent);
       color:#fff;
     }
-
 
     body.modal-open{
       overflow:hidden;
@@ -547,11 +505,9 @@
         grid-template-columns:1fr;
       }
 
-
       .seminar-card{
         min-height:0;
       }
-
 
       .notes-modal{
         height:92vh;
@@ -559,18 +515,15 @@
 
     }
 
-
     @media(max-width:520px){
 
       .seminar-card{
         padding:1.1rem;
       }
 
-
       .seminar-card h2{
         font-size:1.38rem;
       }
-
 
       .seminar-meeting-info{
         flex-direction:column;
@@ -579,12 +532,10 @@
         margin-top:.9rem;
       }
 
-
       .abstract-modal-header,
       .abstract-modal-body{
         padding:1.05rem;
       }
-
 
       .notes-modal{
         width:calc(100% - 16px);
@@ -592,21 +543,17 @@
         border-radius:16px;
       }
 
-
       .notes-modal-header{
         padding:1.05rem;
       }
-
 
       .notes-modal-header h2{
         font-size:1.38rem;
       }
 
-
       .notes-modal-footer{
         padding:.7rem .85rem;
       }
-
 
       .pdf-pages{
         padding:8px;
@@ -651,7 +598,6 @@
 
   </script>
 
-
   <script
     async
     src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"
@@ -679,9 +625,7 @@
 
   <header class="site-header">
 
-
     <div class="shell navbar">
-
 
       <a
         class="brand"
@@ -697,7 +641,6 @@
       </a>
 
 
-
       <nav
         class="nav-links"
         aria-label="Main navigation"
@@ -707,21 +650,17 @@
           Home
         </a>
 
-
         <a href="research.html">
           Research
         </a>
-
 
         <a href="teaching.html">
           Teaching
         </a>
 
-
         <a href="notes.html">
           Notes
         </a>
-
 
         <a
           href="organizing.html"
@@ -731,7 +670,6 @@
         </a>
 
       </nav>
-
 
 
       <a
@@ -744,7 +682,6 @@
       </a>
 
 
-
       <button
         class="menu-button"
         type="button"
@@ -755,9 +692,7 @@
         ☰
       </button>
 
-
     </div>
-
 
 
     <div
@@ -765,26 +700,21 @@
       data-mobile-panel
     >
 
-
       <a href="index.html">
         Home
       </a>
-
 
       <a href="research.html">
         Research
       </a>
 
-
       <a href="teaching.html">
         Teaching
       </a>
 
-
       <a href="notes.html">
         Notes
       </a>
-
 
       <a
         href="organizing.html"
@@ -792,7 +722,6 @@
       >
         Organizing
       </a>
-
 
       <a
         class="cv-button"
@@ -803,9 +732,7 @@
         ↓ CV / Resume
       </a>
 
-
     </div>
-
 
   </header>
 
@@ -826,7 +753,6 @@
 
     <section class="page-hero">
 
-
       <img
         src="assets/img/cover-conferences.jpeg"
         alt=""
@@ -835,7 +761,6 @@
 
 
       <div class="shell">
-
 
         <p class="kicker">
           University of Kansas
@@ -854,7 +779,6 @@
 
 
         <div class="seminar-meeting-info">
-
 
           <span class="seminar-meeting-item">
 
@@ -877,12 +801,9 @@
 
           </span>
 
-
         </div>
 
-
       </div>
-
 
     </section>
 
@@ -895,9 +816,7 @@
 
     <section class="content">
 
-
       <div class="shell">
-
 
         <p>
 
@@ -910,9 +829,7 @@
 
         </p>
 
-
       </div>
-
 
     </section>
 
@@ -928,22 +845,17 @@
       style="padding-top:0;"
     >
 
-
       <div class="shell">
 
-
         <div class="semester-heading">
-
 
           <span class="tag">
             Fall 2026
           </span>
 
-
           <h2>
             Speaker Schedule
           </h2>
-
 
         </div>
 
@@ -959,22 +871,17 @@
 
           <article class="seminar-card has-actions">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 September 16
               </span>
 
-
               <span class="seminar-year">
                 Fall 2026
               </span>
 
-
             </div>
-
 
 
             <h2>
@@ -982,9 +889,7 @@
             </h2>
 
 
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -995,18 +900,14 @@
                 Rahul Ajit
               </a>
 
-
               <span>
                 University of Kansas
               </span>
 
-
             </p>
 
 
-
             <div class="talk-actions">
-
 
               <button
                 class="abstract-button"
@@ -1016,7 +917,6 @@
               >
                 Abstract
               </button>
-
 
 
               <button
@@ -1030,9 +930,7 @@
                 Lecture Notes
               </button>
 
-
             </div>
-
 
 
             <template class="abstract-template">
@@ -1051,7 +949,6 @@
 
             </template>
 
-
           </article>
 
 
@@ -1063,22 +960,17 @@
 
           <article class="seminar-card has-actions">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 September 23
               </span>
 
-
               <span class="seminar-year">
                 Fall 2026
               </span>
 
-
             </div>
-
 
 
             <h2>
@@ -1086,9 +978,7 @@
             </h2>
 
 
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1099,18 +989,14 @@
                 Sreehari Suresh Babu
               </a>
 
-
               <span>
                 University of Kansas
               </span>
 
-
             </p>
 
 
-
             <div class="talk-actions">
-
 
               <button
                 class="abstract-button"
@@ -1120,7 +1006,6 @@
               >
                 Abstract
               </button>
-
 
 
               <button
@@ -1139,9 +1024,7 @@
                 Lecture Notes
               </button>
 
-
             </div>
-
 
 
             <template class="abstract-template">
@@ -1161,7 +1044,6 @@
 
             </template>
 
-
           </article>
 
 
@@ -1171,28 +1053,27 @@
                OCTOBER 7 — SOUMYADEEP MISRA
                ================================================= -->
 
-          <article class="seminar-card">
-
+          <article class="seminar-card has-actions">
 
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 October 7
               </span>
 
-
               <span class="seminar-year">
                 Fall 2026
               </span>
 
-
             </div>
 
 
+            <h2>
+              Regularity under Integral Closure and the Kuronya-Pintye Conjecture
+            </h2>
+
 
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1203,9 +1084,38 @@
                 Soumyadeep Misra
               </a>
 
+              <span>
+                University of Kansas
+              </span>
 
             </p>
 
+
+            <div class="talk-actions">
+
+              <button
+                class="abstract-button"
+                type="button"
+                data-abstract-button
+                aria-haspopup="dialog"
+              >
+                Abstract
+              </button>
+
+            </div>
+
+
+            <template class="abstract-template">
+
+              <p>
+                We will discuss the behavior of Castelnuovo–Mumford
+                regularity under integral closure. In particular, we
+                present a counterexample to a conjecture showing that
+                integral closure can increase regularity, together with
+                related positive results in low dimension.
+              </p>
+
+            </template>
 
           </article>
 
@@ -1218,26 +1128,20 @@
 
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 October 14
               </span>
 
-
               <span class="seminar-year">
                 Fall 2026
               </span>
 
-
             </div>
 
 
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1248,9 +1152,7 @@
                 Ryan Hunter
               </a>
 
-
             </p>
-
 
           </article>
 
@@ -1263,26 +1165,20 @@
 
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 October 21
               </span>
 
-
               <span class="seminar-year">
                 Fall 2026
               </span>
 
-
             </div>
 
 
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1293,9 +1189,7 @@
                 Andrés Molina
               </a>
 
-
             </p>
-
 
           </article>
 
@@ -1308,26 +1202,20 @@
 
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 October 28
               </span>
 
-
               <span class="seminar-year">
                 Fall 2026
               </span>
 
-
             </div>
 
 
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1338,9 +1226,7 @@
                 David Carlip
               </a>
 
-
             </p>
-
 
           </article>
 
@@ -1353,26 +1239,20 @@
 
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 November 11
               </span>
 
-
               <span class="seminar-year">
                 Fall 2026
               </span>
 
-
             </div>
 
 
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1383,9 +1263,7 @@
                 Anusree Vellathum Padath
               </a>
 
-
             </p>
-
 
           </article>
 
@@ -1398,26 +1276,20 @@
 
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 November 18
               </span>
 
-
               <span class="seminar-year">
                 Fall 2026
               </span>
 
-
             </div>
 
 
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1428,9 +1300,7 @@
                 Chris Wong
               </a>
 
-
             </p>
-
 
           </article>
 
@@ -1443,26 +1313,20 @@
 
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 December 2
               </span>
 
-
               <span class="seminar-year">
                 Fall 2026
               </span>
 
-
             </div>
 
 
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1473,9 +1337,7 @@
                 Agilan Amirthalingam
               </a>
 
-
             </p>
-
 
           </article>
 
@@ -1488,26 +1350,20 @@
 
           <article class="seminar-card">
 
-
             <div class="seminar-card-header">
-
 
               <span class="seminar-date">
                 December 9
               </span>
 
-
               <span class="seminar-year">
                 Fall 2026
               </span>
 
-
             </div>
 
 
-
             <p class="seminar-speaker">
-
 
               <a
                 class="text-link"
@@ -1518,18 +1374,14 @@
                 Ryan Hunter
               </a>
 
-
             </p>
-
 
           </article>
 
 
         </div>
 
-
       </div>
-
 
     </section>
 
@@ -1545,22 +1397,17 @@
       style="padding-top:0;"
     >
 
-
       <div class="shell">
 
-
         <div class="semester-heading">
-
 
           <span class="tag">
             Spring 2026
           </span>
 
-
           <h2>
             Speaker Schedule
           </h2>
-
 
         </div>
 
@@ -1917,9 +1764,7 @@
 
         </div>
 
-
       </div>
-
 
     </section>
 
@@ -1936,12 +1781,9 @@
       aria-labelledby="abstract-modal-title"
     >
 
-
       <div class="abstract-modal-inner">
 
-
         <header class="abstract-modal-header">
-
 
           <div>
 
@@ -1966,7 +1808,6 @@
             ×
           </button>
 
-
         </header>
 
 
@@ -1975,9 +1816,7 @@
           id="abstract-modal-body"
         ></div>
 
-
       </div>
-
 
     </dialog>
 
@@ -1994,12 +1833,9 @@
       aria-labelledby="notes-modal-title"
     >
 
-
       <div class="notes-modal-inner">
 
-
         <header class="notes-modal-header">
-
 
           <div>
 
@@ -2024,18 +1860,13 @@
             ×
           </button>
 
-
         </header>
-
 
 
         <div
           class="notes-modal-body"
           id="notes-modal-body"
         >
-
-
-          <!-- Normal iframe viewer for ordinary external PDFs -->
 
           <iframe
             class="notes-frame"
@@ -2044,9 +1875,6 @@
             hidden
           ></iframe>
 
-
-
-          <!-- PDF.js viewer for mobile-safe local PDFs -->
 
           <div
             class="pdf-status"
@@ -2063,13 +1891,10 @@
             hidden
           ></div>
 
-
         </div>
 
 
-
         <footer class="notes-modal-footer">
-
 
           <a
             class="notes-open-link"
@@ -2081,12 +1906,9 @@
             Open PDF in new tab
           </a>
 
-
         </footer>
 
-
       </div>
-
 
     </dialog>
 
@@ -2102,22 +1924,17 @@
 
   <footer class="footer">
 
-
     <div class="shell footer-inner">
-
 
       <span>
         © 2026 Soumyadeep Misra.
       </span>
 
-
       <span>
         Department of Mathematics · University of Kansas · Snow Hall 562
       </span>
 
-
     </div>
-
 
   </footer>
 
@@ -2167,8 +1984,6 @@
   <script src="assets/js/main.js"></script>
 
 
-  <!-- PDF.js -->
-
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"
   ></script>
@@ -2184,29 +1999,22 @@
 
     (() => {
 
-
       const modal =
         document.getElementById('abstract-modal');
-
 
       const modalTitle =
         document.getElementById('abstract-modal-title');
 
-
       const modalMeta =
         document.getElementById('abstract-modal-meta');
-
 
       const modalBody =
         document.getElementById('abstract-modal-body');
 
-
       const closeButton =
         modal.querySelector('[data-modal-close]');
 
-
       let lastFocusedElement = null;
-
 
 
       const closeModal = () => {
@@ -2216,64 +2024,51 @@
       };
 
 
-
       document
         .querySelectorAll('[data-abstract-button]')
         .forEach((button) => {
 
-
           button.addEventListener('click', () => {
-
 
             const card =
               button.closest('.seminar-card');
-
 
             const title =
               card.querySelector('h2')
                 .textContent
                 .trim();
 
-
             const date =
               card.querySelector('.seminar-date')
                 .textContent
                 .trim();
-
 
             const speaker =
               card.querySelector('.seminar-speaker a')
                 .textContent
                 .trim();
 
-
             const affiliationElement =
               card.querySelector('.seminar-speaker span');
-
 
             const affiliation =
               affiliationElement
                 ? affiliationElement.textContent.trim()
                 : '';
 
-
             const template =
               card.querySelector('.abstract-template');
-
 
             lastFocusedElement =
               button;
 
-
             modalTitle.textContent =
               title;
-
 
             modalMeta.textContent =
               affiliation
                 ? `${date} · ${speaker} · ${affiliation}`
                 : `${date} · ${speaker}`;
-
 
             modalBody.innerHTML =
               template.innerHTML;
@@ -2293,20 +2088,15 @@
 
             modal.showModal();
 
-
             document.body.classList.add(
               'modal-open'
             );
 
-
             closeButton.focus();
-
 
           });
 
-
         });
-
 
 
       closeButton.addEventListener(
@@ -2315,11 +2105,9 @@
       );
 
 
-
       modal.addEventListener(
         'click',
         (event) => {
-
 
           if(event.target === modal){
 
@@ -2327,32 +2115,26 @@
 
           }
 
-
         }
       );
-
 
 
       modal.addEventListener(
         'close',
         () => {
 
-
           document.body.classList.remove(
             'modal-open'
           );
 
-
           modalBody.innerHTML =
             '';
-
 
           if(lastFocusedElement){
 
             lastFocusedElement.focus();
 
           }
-
 
         }
       );
@@ -2386,38 +2168,29 @@
       }
 
 
-
       const notesModal =
         document.getElementById('notes-modal');
-
 
       const notesTitle =
         document.getElementById('notes-modal-title');
 
-
       const notesMeta =
         document.getElementById('notes-modal-meta');
-
 
       const notesBody =
         document.getElementById('notes-modal-body');
 
-
       const notesFrame =
         document.getElementById('notes-frame');
-
 
       const pdfStatus =
         document.getElementById('pdf-status');
 
-
       const pdfPages =
         document.getElementById('pdf-pages');
 
-
       const notesOpenLink =
         document.getElementById('notes-open-link');
-
 
       const notesClose =
         notesModal.querySelector('[data-notes-close]');
@@ -2426,26 +2199,20 @@
       let lastFocusedNotesButton =
         null;
 
-
       let activeMode =
         '';
-
 
       let activePdfUrl =
         '';
 
-
       let activeStartPage =
         1;
-
 
       let activeEndPage =
         1;
 
-
       let renderVersion =
         0;
-
 
       let resizeTimer =
         null;
@@ -2476,7 +2243,6 @@
         deviceScale,
         thisRender
       ){
-
 
         if(
           thisRender !==
@@ -2530,7 +2296,6 @@
             'div'
           );
 
-
         wrap.className =
           'pdf-page-wrap';
 
@@ -2540,7 +2305,6 @@
             'canvas'
           );
 
-
         canvas.className =
           'pdf-page-canvas';
 
@@ -2549,7 +2313,6 @@
           Math.ceil(
             renderViewport.width
           );
-
 
         canvas.height =
           Math.ceil(
@@ -2563,7 +2326,6 @@
             cssScale
           )}px`;
 
-
         canvas.style.height =
           `${Math.floor(
             baseViewport.height *
@@ -2574,7 +2336,6 @@
         wrap.appendChild(
           canvas
         );
-
 
         pdfPages.appendChild(
           wrap
@@ -2606,7 +2367,6 @@
 
         return true;
 
-
       }
 
 
@@ -2621,41 +2381,32 @@
         endPage
       ){
 
-
         const thisRender =
           ++renderVersion;
 
 
         clearPdfPages();
 
-
         notesBody.scrollTop =
           0;
-
 
         notesFrame.hidden =
           true;
 
-
         notesFrame.src =
           '';
-
 
         pdfPages.hidden =
           true;
 
-
         pdfStatus.hidden =
           false;
-
 
         pdfStatus.textContent =
           'Loading Chapter 12…';
 
 
-
         try{
-
 
           if(
             !window.pdfjsLib
@@ -2738,7 +2489,6 @@
             pageNumber++
           ){
 
-
             if(
               thisRender !==
               renderVersion
@@ -2778,12 +2528,6 @@
             }
 
 
-            /*
-             * As soon as the first page is ready,
-             * show the chapter instead of keeping
-             * the loading screen over it.
-             */
-
             if(
               pageNumber ===
               safeStart
@@ -2792,17 +2536,11 @@
               pdfStatus.hidden =
                 true;
 
-
               notesBody.scrollTop =
                 0;
 
             }
 
-
-            /*
-             * Yield between pages so mobile browsers
-             * do not freeze while rendering.
-             */
 
             await new Promise(
               resolve =>
@@ -2810,7 +2548,6 @@
                   resolve
                 )
             );
-
 
           }
 
@@ -2822,31 +2559,24 @@
         }
         catch(error){
 
-
           console.error(
             'PDF rendering error:',
             error
           );
 
-
           clearPdfPages();
-
 
           pdfPages.hidden =
             true;
 
-
           pdfStatus.hidden =
             false;
-
 
           pdfStatus.innerHTML =
             'The chapter preview could not be rendered.<br>' +
             'Please use the “Open full book in new tab” button below.';
 
-
         }
-
 
       }
 
@@ -2862,24 +2592,20 @@
         )
         .forEach((button) => {
 
-
           button.addEventListener(
             'click',
             () => {
-
 
               const card =
                 button.closest(
                   '.seminar-card'
                 );
 
-
               const title =
                 card
                   .querySelector('h2')
                   .textContent
                   .trim();
-
 
               const speaker =
                 card
@@ -2889,42 +2615,34 @@
                   .textContent
                   .trim();
 
-
               const affiliationElement =
                 card.querySelector(
                   '.seminar-speaker span'
                 );
-
 
               const affiliation =
                 affiliationElement
                   ? affiliationElement.textContent.trim()
                   : '';
 
-
               const pdfUrl =
                 button.dataset.pdf;
-
 
               const openUrl =
                 button.dataset.openUrl ||
                 pdfUrl;
 
-
               const customReference =
                 button.dataset.notesReference ||
                 '';
-
 
               const customOpenLabel =
                 button.dataset.notesOpenLabel ||
                 'Open PDF in new tab';
 
-
               const mode =
                 button.dataset.notesMode ||
                 'iframe';
-
 
               const startPage =
                 parseInt(
@@ -2932,7 +2650,6 @@
                   '1',
                   10
                 );
-
 
               const endPage =
                 parseInt(
@@ -2946,18 +2663,14 @@
               lastFocusedNotesButton =
                 button;
 
-
               activeMode =
                 mode;
-
 
               activePdfUrl =
                 pdfUrl;
 
-
               activeStartPage =
                 startPage;
-
 
               activeEndPage =
                 endPage;
@@ -2986,37 +2699,27 @@
               notesOpenLink.href =
                 openUrl;
 
-
               notesOpenLink.textContent =
                 customOpenLabel;
 
 
               notesModal.showModal();
 
-
               document.body.classList.add(
                 'modal-open'
               );
 
-
               notesClose.focus();
 
 
-
-              /*
-               * PDF.js mode:
-               * used for Sreehari's Chapter 12.
-               */
 
               if(
                 mode ===
                 'pdfjs'
               ){
 
-
                 notesFrame.hidden =
                   true;
-
 
                 notesFrame.src =
                   '';
@@ -3025,10 +2728,8 @@
                 requestAnimationFrame(
                   () => {
 
-
                     requestAnimationFrame(
                       () => {
-
 
                         renderPdfRange(
                           pdfUrl,
@@ -3036,54 +2737,37 @@
                           endPage
                         );
 
-
                       }
                     );
-
 
                   }
                 );
 
-
               }
 
 
-              /*
-               * Normal iframe mode:
-               * retained for Rahul's arXiv notes.
-               */
-
               else{
-
 
                 renderVersion++;
 
-
                 clearPdfPages();
-
 
                 pdfPages.hidden =
                   true;
 
-
                 pdfStatus.hidden =
                   true;
-
 
                 notesFrame.hidden =
                   false;
 
-
                 notesFrame.src =
                   pdfUrl;
 
-
               }
-
 
             }
           );
-
 
         });
 
@@ -3124,53 +2808,40 @@
         'close',
         () => {
 
-
           document.body.classList.remove(
             'modal-open'
           );
 
-
           renderVersion++;
-
 
           notesFrame.src =
             '';
 
-
           notesFrame.hidden =
             true;
 
-
           clearPdfPages();
-
 
           pdfPages.hidden =
             true;
 
-
           pdfStatus.hidden =
             true;
-
 
           notesOpenLink.href =
             '#';
 
-
           notesOpenLink.textContent =
             'Open PDF in new tab';
-
 
           notesMeta.textContent =
             '';
 
-
           activeMode =
             '';
 
-
           activePdfUrl =
             '';
-
 
           notesBody.scrollTop =
             0;
@@ -3184,7 +2855,6 @@
 
           }
 
-
         }
       );
 
@@ -3197,7 +2867,6 @@
       window.addEventListener(
         'resize',
         () => {
-
 
           if(
             !notesModal.open ||
@@ -3220,18 +2889,15 @@
             setTimeout(
               () => {
 
-
                 renderPdfRange(
                   activePdfUrl,
                   activeStartPage,
                   activeEndPage
                 );
 
-
               },
               300
             );
-
 
         }
       );
