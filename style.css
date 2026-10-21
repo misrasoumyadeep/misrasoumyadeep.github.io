@@ -900,3 +900,11 @@ img{
     font-size:1.7rem;
   }
 }
+
+/* Show the entire homepage bio photo without cropping */
+.bio-accent.image-only img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
