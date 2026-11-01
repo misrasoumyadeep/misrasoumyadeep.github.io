@@ -1,65 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="google-site-verification" content="L8RPyYoaJHh0QAyTLHugqkpKr8_2rfopGF_ldG-5KYE">
-<meta name="description" content="Virtual CAAGS: Commutative Algebra and Algebraic Geometry Seminar talks from the 2025/26 and 2026/27 academic years.">
+
+<meta
+  name="google-site-verification"
+  content="L8RPyYoaJHh0QAyTLHugqkpKr8_2rfopGF_ldG-5KYE"
+>
+
+<meta
+  name="description"
+  content="Virtual CAAGS: Commutative Algebra and Algebraic Geometry Seminar talks from the 2025/26 and 2026/27 academic years."
+>
+
 <title>Virtual CAAGS | Soumyadeep Misra</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+>
+
 <link rel="stylesheet" href="assets/css/style.css">
 
 <style>
-.academic-year-stack{
+
+/* =========================================================
+   ACADEMIC YEAR CARDS
+   ========================================================= */
+
+.academic-year-stack {
   display:grid;
   gap:2rem;
 }
 
-.academic-year-card{
+.academic-year-card {
   position:relative;
   padding:1.45rem;
   border:1px solid var(--line);
   border-radius:20px;
   background:rgba(255,253,250,.82);
   box-shadow:0 18px 44px rgba(30,37,45,.06);
-  transition:transform 180ms ease,box-shadow 180ms ease,border-color 180ms ease;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
 }
 
-.academic-year-card:hover{
+.academic-year-card:hover {
   transform:translateY(-3px);
   border-color:#d2c7b8;
   box-shadow:0 26px 56px rgba(30,37,45,.09);
 }
 
-.academic-year-header{
+.academic-year-header {
   margin-bottom:1.35rem;
   padding-bottom:1rem;
   border-bottom:1px solid var(--line);
 }
 
-.academic-year-header h2{
+.academic-year-header h2 {
   font-family:var(--serif);
   font-size:2rem;
   line-height:1.05;
   margin:.1rem 0 .45rem;
 }
 
-.academic-year-header p{
+.academic-year-header p {
   margin:0;
   color:var(--muted);
   font-size:.94rem;
 }
 
-.seminar-list{
+/* =========================================================
+   SEMINAR CARDS
+   ========================================================= */
+
+.seminar-list {
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:1.25rem;
 }
 
-.seminar-card{
+.seminar-card {
   position:relative;
   display:flex;
   flex-direction:column;
@@ -69,16 +96,19 @@
   border-radius:18px;
   background:rgba(255,253,250,.9);
   box-shadow:0 14px 34px rgba(30,37,45,.055);
-  transition:transform 180ms ease,box-shadow 180ms ease,border-color 180ms ease;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
 }
 
-.seminar-card:hover{
+.seminar-card:hover {
   transform:translateY(-5px);
   border-color:#d2c7b8;
   box-shadow:0 24px 48px rgba(30,37,45,.1);
 }
 
-.seminar-card-header{
+.seminar-card-header {
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -86,7 +116,7 @@
   margin-bottom:.9rem;
 }
 
-.seminar-date{
+.seminar-date {
   display:inline-flex;
   align-items:center;
   min-height:29px;
@@ -101,20 +131,20 @@
   text-transform:uppercase;
 }
 
-.seminar-year{
+.seminar-year {
   color:var(--muted);
   font-size:.78rem;
   font-weight:700;
 }
 
-.seminar-card h2{
+.seminar-card h2 {
   font-family:var(--serif);
   font-size:1.55rem;
   line-height:1.08;
   margin:0 0 .85rem;
 }
 
-.seminar-speaker{
+.seminar-speaker {
   display:flex;
   flex-direction:column;
   align-items:flex-start;
@@ -124,19 +154,23 @@
   font-size:.92rem;
 }
 
-.seminar-speaker .text-link{
+.seminar-speaker .text-link {
   font-size:.96rem;
 }
 
-.upcoming-talk{
+/* =========================================================
+   UPCOMING TALKS
+   ========================================================= */
+
+.upcoming-talk {
   min-height:175px;
 }
 
-.upcoming-talk .seminar-speaker{
+.upcoming-talk .seminar-speaker {
   margin:auto 0 0;
 }
 
-.upcoming-talk .seminar-speaker .text-link{
+.upcoming-talk .seminar-speaker .text-link {
   font-family:var(--serif);
   font-size:1.5rem;
   line-height:1.08;
@@ -145,11 +179,15 @@
   text-decoration:none;
 }
 
-.upcoming-talk .seminar-speaker .text-link:hover{
+.upcoming-talk .seminar-speaker .text-link:hover {
   color:var(--accent);
 }
 
-.talk-actions{
+/* =========================================================
+   ABSTRACT AND NOTES BUTTONS
+   ========================================================= */
+
+.talk-actions {
   display:flex;
   align-items:center;
   gap:.65rem;
@@ -157,12 +195,12 @@
   margin-top:auto;
 }
 
-.talk-actions .abstract-button{
+.talk-actions .abstract-button {
   margin-top:0;
 }
 
 .abstract-button,
-.notes-button{
+.notes-button {
   align-self:flex-start;
   border:1px solid var(--accent);
   border-radius:999px;
@@ -173,35 +211,40 @@
   font-size:.84rem;
   font-weight:800;
   cursor:pointer;
-  transition:background-color 180ms ease,color 180ms ease,transform 180ms ease;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
 }
 
-.abstract-button{
+.abstract-button {
   margin-top:auto;
 }
 
-.notes-button{
+.notes-button {
   background:#edf3ef;
 }
 
 .abstract-button:hover,
 .abstract-button:focus-visible,
 .notes-button:hover,
-.notes-button:focus-visible{
+.notes-button:focus-visible {
   background:var(--accent);
   color:#fff;
   transform:translateY(-1px);
 }
 
 .abstract-button:focus-visible,
-.notes-button:focus-visible{
+.notes-button:focus-visible {
   outline:3px solid rgba(36,77,63,.22);
   outline-offset:3px;
 }
 
-/* ABSTRACT MODAL */
+/* =========================================================
+   ABSTRACT MODAL
+   ========================================================= */
 
-.abstract-modal{
+.abstract-modal {
   width:min(760px,calc(100% - 32px));
   max-height:min(82vh,760px);
   padding:0;
@@ -213,18 +256,18 @@
   overflow:hidden;
 }
 
-.abstract-modal::backdrop{
+.abstract-modal::backdrop {
   background:rgba(19,30,27,.62);
   backdrop-filter:blur(4px);
 }
 
-.abstract-modal-inner{
+.abstract-modal-inner {
   display:flex;
   flex-direction:column;
   max-height:min(82vh,760px);
 }
 
-.abstract-modal-header{
+.abstract-modal-header {
   display:flex;
   align-items:flex-start;
   justify-content:space-between;
@@ -234,20 +277,20 @@
   background:var(--surface-2);
 }
 
-.abstract-modal-header h2{
+.abstract-modal-header h2 {
   font-family:var(--serif);
   font-size:1.65rem;
   line-height:1.08;
   margin:0;
 }
 
-.abstract-modal-meta{
+.abstract-modal-meta {
   margin:.35rem 0 0;
   color:var(--muted);
   font-size:.88rem;
 }
 
-.modal-close{
+.modal-close {
   flex:0 0 auto;
   width:38px;
   height:38px;
@@ -262,29 +305,31 @@
 }
 
 .modal-close:hover,
-.modal-close:focus-visible{
+.modal-close:focus-visible {
   border-color:var(--accent);
   color:var(--accent);
 }
 
-.abstract-modal-body{
+.abstract-modal-body {
   overflow-y:auto;
   padding:1.35rem;
 }
 
-.abstract-modal-body p{
+.abstract-modal-body p {
   margin:0 0 1rem;
   color:#3f4852;
   line-height:1.75;
 }
 
-.abstract-modal-body p:last-child{
+.abstract-modal-body p:last-child {
   margin-bottom:0;
 }
 
-/* LECTURE NOTES MODAL */
+/* =========================================================
+   LECTURE NOTES MODAL
+   ========================================================= */
 
-.notes-modal{
+.notes-modal {
   width:min(1000px,calc(100% - 32px));
   height:min(90vh,900px);
   padding:0;
@@ -296,18 +341,18 @@
   overflow:hidden;
 }
 
-.notes-modal::backdrop{
+.notes-modal::backdrop {
   background:rgba(19,30,27,.68);
   backdrop-filter:blur(4px);
 }
 
-.notes-modal-inner{
+.notes-modal-inner {
   display:flex;
   flex-direction:column;
   height:100%;
 }
 
-.notes-modal-header{
+.notes-modal-header {
   flex:0 0 auto;
   display:flex;
   align-items:flex-start;
@@ -318,20 +363,20 @@
   background:var(--surface-2);
 }
 
-.notes-modal-header h2{
+.notes-modal-header h2 {
   margin:0;
   font-family:var(--serif);
   font-size:1.65rem;
   line-height:1.08;
 }
 
-.notes-modal-meta{
+.notes-modal-meta {
   margin:.35rem 0 0;
   color:var(--muted);
   font-size:.88rem;
 }
 
-.notes-modal-body{
+.notes-modal-body {
   position:relative;
   flex:1;
   min-height:0;
@@ -342,7 +387,7 @@
   -webkit-overflow-scrolling:touch;
 }
 
-.pdf-status{
+.pdf-status {
   position:absolute;
   inset:0;
   z-index:10;
@@ -357,11 +402,11 @@
   pointer-events:none;
 }
 
-.pdf-status[hidden]{
+.pdf-status[hidden] {
   display:none !important;
 }
 
-.pdf-pages{
+.pdf-pages {
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -369,18 +414,18 @@
   width:100%;
 }
 
-.pdf-pages[hidden]{
+.pdf-pages[hidden] {
   display:none !important;
 }
 
-.pdf-page-wrap{
+.pdf-page-wrap {
   width:100%;
   display:flex;
   justify-content:center;
   flex:0 0 auto;
 }
 
-.pdf-page-canvas{
+.pdf-page-canvas {
   display:block;
   max-width:100%;
   height:auto;
@@ -388,7 +433,7 @@
   box-shadow:0 2px 10px rgba(0,0,0,.35);
 }
 
-.notes-modal-footer{
+.notes-modal-footer {
   flex:0 0 auto;
   display:flex;
   justify-content:flex-end;
@@ -398,7 +443,7 @@
   background:var(--surface);
 }
 
-.notes-open-link{
+.notes-open-link {
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -408,102 +453,114 @@
   color:var(--accent);
   font-size:.84rem;
   font-weight:800;
-  transition:background-color 180ms ease,color 180ms ease;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
 }
 
 .notes-open-link:hover,
-.notes-open-link:focus-visible{
+.notes-open-link:focus-visible {
   background:var(--accent);
   color:#fff;
 }
 
-body.modal-open{
+body.modal-open {
   overflow:hidden;
 }
 
-/* RESPONSIVE DESIGN */
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
 
-@media(max-width:820px){
-  .seminar-list{
+@media(max-width:820px) {
+
+  .seminar-list {
     grid-template-columns:1fr;
   }
 
-  .seminar-card{
+  .seminar-card {
     min-height:0;
   }
 
-  .upcoming-talk{
+  .upcoming-talk {
     min-height:145px;
   }
 
-  .notes-modal{
+  .notes-modal {
     height:92vh;
   }
 }
 
-@media(max-width:520px){
-  .academic-year-card{
+@media(max-width:520px) {
+
+  .academic-year-card {
     padding:1rem;
   }
 
-  .academic-year-header h2{
+  .academic-year-header h2 {
     font-size:1.65rem;
   }
 
-  .seminar-card{
+  .seminar-card {
     padding:1.1rem;
   }
 
-  .seminar-card h2{
+  .seminar-card h2 {
     font-size:1.38rem;
   }
 
-  .upcoming-talk .seminar-speaker .text-link{
+  .upcoming-talk .seminar-speaker .text-link {
     font-size:1.38rem;
   }
 
   .abstract-modal-header,
   .abstract-modal-body,
-  .notes-modal-header{
+  .notes-modal-header {
     padding:1.05rem;
   }
 
-  .notes-modal{
+  .notes-modal {
     width:calc(100% - 16px);
     height:94vh;
     border-radius:16px;
   }
 
-  .notes-modal-header h2{
+  .notes-modal-header h2 {
     font-size:1.38rem;
   }
 
-  .notes-modal-body{
+  .notes-modal-body {
     padding:8px;
   }
 
-  .notes-modal-footer{
+  .notes-modal-footer {
     padding:.7rem .85rem;
   }
 }
+
 </style>
 
-<!-- MATHJAX -->
+<!-- =========================================================
+     MATHJAX
+     ========================================================= -->
 
 <script>
-window.MathJax={
-  tex:{
-    inlineMath:[['$','$'],['\\(','\\)']],
-    displayMath:[['$$','$$'],['\\[','\\]']],
-    processEscapes:true
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true
   },
-  svg:{
-    fontCache:'global'
+  svg: {
+    fontCache: 'global'
   }
 };
 </script>
 
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"
+></script>
 
 </head>
 
@@ -525,11 +582,16 @@ window.MathJax={
     </a>
 
     <nav class="nav-links" aria-label="Main navigation">
+
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
       <a href="teaching.html">Teaching</a>
       <a href="notes.html">Notes</a>
-      <a href="organizing.html" class="active">Organizing</a>
+
+      <a href="organizing.html" class="active">
+        Organizing
+      </a>
+
     </nav>
 
     <a
@@ -553,13 +615,16 @@ window.MathJax={
 
   </div>
 
-  <div class="shell mobile-panel" data-mobile-panel">
+  <div class="shell mobile-panel" data-mobile-panel>
 
     <a href="index.html">Home</a>
     <a href="research.html">Research</a>
     <a href="teaching.html">Teaching</a>
     <a href="notes.html">Notes</a>
-    <a href="organizing.html" class="active">Organizing</a>
+
+    <a href="organizing.html" class="active">
+      Organizing
+    </a>
 
     <a
       class="cv-button"
@@ -583,7 +648,7 @@ window.MathJax={
   <section class="page-hero">
 
     <img
-      src="assets/img/Participants 2560x1601.jpg"
+      src="assets/img/cover-conferences.jpeg"
       alt=""
       aria-hidden="true"
     >
@@ -603,6 +668,7 @@ window.MathJax={
           rel="noopener noreferrer"
         >Ganapathy Krishnamoorthy</a>
         (Chennai Mathematical Institute),
+
         <a
           class="text-link"
           href="https://math.missouri.edu/people/graduate-student/fernandes"
@@ -610,6 +676,7 @@ window.MathJax={
           rel="noopener noreferrer"
         >Mifron Fernandes</a>
         (University of Missouri), and
+
         <a
           class="text-link"
           href="https://misrasoumyadeep.github.io"
@@ -632,7 +699,9 @@ window.MathJax={
 
   </section>
 
-  <!-- SEMINAR CONTENT -->
+  <!-- =======================================================
+       SEMINAR CONTENT
+       ======================================================= -->
 
   <section class="content">
 
@@ -646,7 +715,9 @@ window.MathJax={
 
       <div class="academic-year-stack">
 
-        <!-- UPCOMING TALKS -->
+        <!-- =================================================
+             UPCOMING TALKS
+             ================================================= -->
 
         <article class="academic-year-card">
 
@@ -671,7 +742,9 @@ window.MathJax={
 
         </article>
 
-        <!-- 2026/27 TALKS -->
+        <!-- =================================================
+             2026/27 ACADEMIC YEAR
+             ================================================= -->
 
         <article class="academic-year-card">
 
@@ -696,7 +769,9 @@ window.MathJax={
 
         </article>
 
-        <!-- 2025/26 TALKS -->
+        <!-- =================================================
+             2025/26 ACADEMIC YEAR
+             ================================================= -->
 
         <article class="academic-year-card">
 
@@ -743,11 +818,16 @@ window.MathJax={
     <header class="abstract-modal-header">
 
       <div>
-        <h2 id="abstract-modal-title">Talk abstract</h2>
+
+        <h2 id="abstract-modal-title">
+          Talk abstract
+        </h2>
+
         <p
           class="abstract-modal-meta"
           id="abstract-modal-meta"
         ></p>
+
       </div>
 
       <button
@@ -785,11 +865,16 @@ window.MathJax={
     <header class="notes-modal-header">
 
       <div>
-        <h2 id="notes-modal-title">Lecture Notes</h2>
+
+        <h2 id="notes-modal-title">
+          Lecture Notes
+        </h2>
+
         <p
           class="notes-modal-meta"
           id="notes-modal-meta"
         ></p>
+
       </div>
 
       <button
@@ -808,7 +893,10 @@ window.MathJax={
       id="notes-modal-body"
     >
 
-      <div class="pdf-status" id="pdf-status">
+      <div
+        class="pdf-status"
+        id="pdf-status"
+      >
         Loading lecture notes…
       </div>
 
@@ -845,7 +933,9 @@ window.MathJax={
 
   <div class="shell footer-inner">
 
-    <span>© 2026 Soumyadeep Misra.</span>
+    <span>
+      © 2026 Soumyadeep Misra.
+    </span>
 
     <span>
       Department of Mathematics · University of Kansas · Snow Hall 562
@@ -855,7 +945,9 @@ window.MathJax={
 
 </footer>
 
-<!-- INVISIBLE VISITOR COUNTER -->
+<!-- =========================================================
+     INVISIBLE VISITOR COUNTER
+     ========================================================= -->
 
 <a
   href="https://info.flagcounter.com/Uzr2"
@@ -863,7 +955,13 @@ window.MathJax={
   rel="noopener noreferrer"
   aria-hidden="true"
   tabindex="-1"
-  style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"
+  style="
+    position:absolute;
+    left:-9999px;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  "
 >
   <img
     src="https://s01.flagcounter.com/count2/Uzr2/bg_F8F6F1/txt_1E252D/border_E5DED2/columns_2/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/"
@@ -875,6 +973,8 @@ window.MathJax={
 </a>
 
 <script src="assets/js/main.js"></script>
+
+<!-- PDF.JS -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
@@ -891,15 +991,6 @@ const TALKS = [
    ========================================================= */
 
 [
-  {
-    "d":"November 1",
-    "n":"Amit Phogat",
-    "u":"https://math.iitgn.ac.in/phd.php#:~:text=Amit%20phogat%20",
-    "i":"IIT Gandhinagar",
-    "t":"When Is an Ideal Generated by a Regular Sequence?",
-    "a":"<p>Ideals generated by regular sequences have many nice properties. A natural question is whether one can characterize such ideals without explicitly finding a regular sequence.</p><p>In this talk, we shall discuss a classical result of Vasconcelos which provides a homological characterization of ideals generated by regular sequences in a Noetherian local ring. We shall begin with some motivating examples, develop the necessary preliminaries, and discuss the main ideas behind the proof of this characterization.</p>"
-  },
-
   {
     "d":"November 15",
     "n":"Dr. Sudeshna Roy",
@@ -920,6 +1011,24 @@ const TALKS = [
    ========================================================= */
 
 [
+  /* =======================================================
+     NOVEMBER 1 — AMIT PHOGAT
+     MOVED FROM UPCOMING TO COMPLETED
+     LECTURE NOTES ADDED
+     ======================================================= */
+
+  {
+    "d":"November 1",
+    "n":"Amit Phogat",
+    "u":"https://math.iitgn.ac.in/phd.php#:~:text=Amit%20phogat%20",
+    "i":"IIT Gandhinagar",
+    "t":"When Is an Ideal Generated by a Regular Sequence?",
+    "a":"<p>Ideals generated by regular sequences have many nice properties. A natural question is whether one can characterize such ideals without explicitly finding a regular sequence.</p><p>In this talk, we shall discuss a classical result of Vasconcelos which provides a homological characterization of ideals generated by regular sequences in a Noetherian local ring. We shall begin with some motivating examples, develop the necessary preliminaries, and discuss the main ideas behind the proof of this characterization.</p>",
+    "p":"assets/files/CAAGS%202026%20-%20Amit.pdf"
+  },
+
+  /* OCTOBER 25 — ADITYA DWIVEDI */
+
   {
     "d":"October 25",
     "n":"Aditya Dwivedi",
@@ -928,6 +1037,8 @@ const TALKS = [
     "t":"A proof of the HKR theorem.",
     "a":"<p> The Hochschild-Kostant-Rosenberg (HKR) theorem states that for a smooth e.f.type algebra over a field the nth Hochschild homology is isomorphic to the nth wedge of the module of Kahler differentials. In this talk, we give a new proof of this theorem using a spectral sequence argument and Andre-Quillen homology. If there is time, we also highlight some connections with cotriples. This is an ongoing work with Santhanam. </p>"
   },
+
+  /* OCTOBER 18 — MANAV BATAVIA */
 
   {
     "d":"October 18",
@@ -939,6 +1050,8 @@ const TALKS = [
     "p":"https://arxiv.org/pdf/2610.25680v1"
   },
 
+  /* SEPTEMBER 27 — KESAVAN MOHANA SUNDARAM */
+
   {
     "d":"September 27",
     "n":"Kesavan Mohana Sundaram",
@@ -948,6 +1061,8 @@ const TALKS = [
     "a":"<p> Given a ring R and an R-module M, the cohomological support variety of M is a geometric object that encodes homological information about M. Work of Briggs, Grifo, and Pollitz considers the case when R is the quotient of a monomial ideal I, and M = R. Their work classifies all varieties that arise when I has 5 minimal generators. </p> <p> In this talk, we will exhibit monomial ideals with support varieties that obtain arbitrary codimension (and admit no embedded deformation) as well as support varieties that are the union of arbitrarily many hyperplanes. We will also classify all varieties that arise when I has 6 minimal generators. </p> <p> This is based on joint work with Fagerstrom, Faur, Katz, Stern, and Watson. </p>",
     "p":"assets/files/CAAGS_Kesavan.pdf"
   },
+
+  /* SEPTEMBER 20 — DINESH LIMBU */
 
   {
     "d":"September 20",
@@ -959,6 +1074,8 @@ const TALKS = [
     "p":"assets/files/CAAGS_Dinesh.pdf"
   },
 
+  /* SEPTEMBER 13 — POOJA JOSHI */
+
   {
     "d":"September 13",
     "n":"Pooja Joshi",
@@ -968,6 +1085,8 @@ const TALKS = [
     "a":"<p> A classical problem in enumerative geometry is to count the number of lines in $\\mathbb{P}^3$ meeting four general lines. Schubert calculus provides a way to answer this and much more general incidence questions. </p> <p> In this talk we answer above stated problem by reinterpreting lines as points of a Grassmannian and incidence conditions as Schubert varieties. This translates a geometric counting problem into a simple combinatorial calculation. </p> <p> This talk is mainly prepared from the expository article “Variations on a Theme of Schubert Calculus” by Maria Gillespie. </p>",
     "p":"assets/files/CAAGS_Pooja.pdf"
   },
+
+  /* SEPTEMBER 6 — ARYAMAN MAITHANI */
 
   {
     "d":"September 6",
@@ -979,6 +1098,8 @@ const TALKS = [
     "p":"assets/files/Notes_Aryaman_Maithani.pdf"
   },
 
+  /* AUGUST 23 — SUPRAJO DAS */
+
   {
     "d":"August 23",
     "n":"Dr. Suprajo Das",
@@ -988,6 +1109,7 @@ const TALKS = [
     "a":"<p> Let $(R,\\mathfrak m)$ be a Noetherian local ring of dimension $d$, and let $I\\subseteq R$ be an ideal. Ulrich and Validashti defined the $\\varepsilon$-multiplicity of $I$ as </p> \\[ \\varepsilon(I) = \\limsup_{n\\to\\infty} \\frac{ \\lambda_R\\!\\left( H^0_{\\mathfrak m}(R/I^n) \\right) }{ n^d/d! }. \\] <p> This invariant may be viewed as a generalization of the classical Hilbert--Samuel multiplicity. Cutkosky showed that the $\\limsup$ in this definition can be replaced by an actual limit when $R$ is analytically unramified. A surprising example due to Cutkosky, Hà, Srinivasan, and Theodorescu demonstrates that this limit can be an irrational number even when $R$ is a regular local ring. </p> <p> In this talk, we shall focus on the case of homogeneous ideals in a standard graded domain over a field. Motivated by Trivedi's approach to the Hilbert--Kunz multiplicity via density functions, we introduce a compactly supported continuous real-valued function, called the $\\varepsilon$-density function, whose integral recovers the $\\varepsilon$-multiplicity. If time permits, we will present explicit examples and discuss applications in the context of integral closures. </p> <p> This talk is based on joint works with Roy and Trivedi. </p>",
     "p":"assets/files/Notes_Suprajo.pdf"
   }
+
 ],
 
 /* =========================================================
@@ -1219,6 +1341,7 @@ const TALKS = [
     "t":"Invariant Theory of Commutative Rings",
     "a":"<p> Given a group G acting on a ring R, we consider the subring R^G, the subring of elements fixed by G. It's a natural question to ask what good properties of R are inherited by R^G. Some of these questions were considered by Hilbert and Noether, and were a motivation to study Noetherian rings. </p> <p> We will discuss some of these results. This talk should be accessible to someone who has done a first course in modules. </p>"
   }
+
 ]
 
 ];
@@ -1245,64 +1368,95 @@ const esc = s =>
   'talks-past'
 ].forEach((id,index)=>{
 
-  const holder=document.getElementById(id);
+  const holder = document.getElementById(id);
 
-  for(const t of TALKS[index]){
+  for(const t of TALKS[index]) {
 
-    const card=document.createElement('article');
+    const card = document.createElement('article');
 
-    card.className=
-      'seminar-card'+(!t.t?' upcoming-talk':'');
+    card.className =
+      'seminar-card' + (!t.t ? ' upcoming-talk' : '');
 
-    card.innerHTML=
+    card.innerHTML =
+
       `<div class="seminar-card-header">
-        <span class="seminar-date">${esc(t.d)}</span>
-        <span class="seminar-year">
-          ${index===2?'2025/26':'2026/27'}
-        </span>
-      </div>`+
 
-      (t.t?`<h2>${esc(t.t)}</h2>`:'')+
+        <span class="seminar-date">
+          ${esc(t.d)}
+        </span>
+
+        <span class="seminar-year">
+          ${index===2 ? '2025/26' : '2026/27'}
+        </span>
+
+      </div>` +
+
+      (t.t ? `<h2>${esc(t.t)}</h2>` : '') +
 
       `<p class="seminar-speaker">
+
         <a
           class="text-link"
           href="${esc(t.u)}"
           target="_blank"
           rel="noopener noreferrer"
-        >${esc(t.n)}</a>
-        <span>${esc(t.i)}</span>
-      </p>`+
+        >
+          ${esc(t.n)}
+        </a>
+
+        <span>
+          ${esc(t.i)}
+        </span>
+
+      </p>` +
 
       (
-        (t.a||t.p)
+        (t.a || t.p)
+
           ? `<div class="talk-actions">
+
                ${
                  t.a
                    ? '<button type="button" class="abstract-button" data-abstract-button aria-haspopup="dialog">Abstract</button>'
                    : ''
                }
+
                ${
                  t.p
                    ? '<button type="button" class="notes-button" data-notes-button aria-haspopup="dialog">Lecture Notes</button>'
                    : ''
                }
+
              </div>`
+
           : ''
       );
 
-    if(t.a){
-      const template=document.createElement('template');
-      template.className='abstract-template';
-      template.innerHTML=t.a;
+    /* ATTACH ABSTRACT */
+
+    if(t.a) {
+
+      const template = document.createElement('template');
+
+      template.className = 'abstract-template';
+
+      template.innerHTML = t.a;
+
       card.append(template);
     }
 
-    if(t.p){
-      card.querySelector('[data-notes-button]').dataset.pdf=t.p;
+    /* ATTACH PDF */
+
+    if(t.p) {
+
+      card
+        .querySelector('[data-notes-button]')
+        .dataset.pdf = t.p;
+
     }
 
     holder.append(card);
+
   }
 
 });
@@ -1311,153 +1465,216 @@ const esc = s =>
    ABSTRACT AND LECTURE NOTES VIEWERS
    ========================================================= */
 
-const abstract=document.getElementById('abstract-modal');
-const notes=document.getElementById('notes-modal');
+const abstract = document.getElementById('abstract-modal');
 
-const pdfPages=document.getElementById('pdf-pages');
-const pdfStatus=document.getElementById('pdf-status');
+const notes = document.getElementById('notes-modal');
 
-let focusBefore=null;
-let version=0;
+const pdfPages = document.getElementById('pdf-pages');
 
-document.addEventListener('click',async ev=>{
+const pdfStatus = document.getElementById('pdf-status');
 
-  const ab=ev.target.closest('[data-abstract-button]');
-  const nb=ev.target.closest('[data-notes-button]');
+let focusBefore = null;
 
-  if(!ab&&!nb)return;
+let version = 0;
 
-  const card=ev.target.closest('.seminar-card');
+/* =========================================================
+   BUTTON CLICK HANDLERS
+   ========================================================= */
 
-  const title=
-    card.querySelector('h2')?.textContent.trim()||
+document.addEventListener('click', async ev => {
+
+  const ab = ev.target.closest('[data-abstract-button]');
+
+  const nb = ev.target.closest('[data-notes-button]');
+
+  if(!ab && !nb) return;
+
+  const card = ev.target.closest('.seminar-card');
+
+  const title =
+    card.querySelector('h2')?.textContent.trim() ||
     'Seminar talk';
 
-  const speaker=
+  const speaker =
     card.querySelector('.seminar-speaker a')
         .textContent.trim();
 
-  const affiliation=
+  const affiliation =
     card.querySelector('.seminar-speaker span')
         .textContent.trim();
 
-  focusBefore=ev.target;
+  focusBefore = ev.target;
 
-  if(ab){
+  /* =======================================================
+     ABSTRACT BUTTON
+     ======================================================= */
+
+  if(ab) {
 
     document.getElementById('abstract-modal-title')
-      .textContent=title;
+      .textContent = title;
 
     document.getElementById('abstract-modal-meta')
-      .textContent=`${speaker} · ${affiliation}`;
+      .textContent = `${speaker} · ${affiliation}`;
 
     document.getElementById('abstract-modal-body')
-      .innerHTML=
+      .innerHTML =
         card.querySelector('.abstract-template').innerHTML;
 
     abstract.showModal();
 
-    if(window.MathJax?.typesetPromise){
+    document.body.classList.add('modal-open');
 
-      await MathJax.typesetPromise([
-        document.getElementById('abstract-modal-body')
-      ]);
+    if(window.MathJax?.typesetPromise) {
+
+      try {
+
+        await MathJax.typesetPromise([
+          document.getElementById('abstract-modal-body')
+        ]);
+
+      } catch(error) {
+
+        console.error('MathJax error:',error);
+
+      }
 
     }
 
-  }else{
+  }
 
-    const url=nb.dataset.pdf;
+  /* =======================================================
+     LECTURE NOTES BUTTON
+     ======================================================= */
+
+  else {
+
+    const url = nb.dataset.pdf;
 
     document.getElementById('notes-modal-title')
-      .textContent=title;
+      .textContent = title;
 
     document.getElementById('notes-modal-meta')
-      .textContent=
+      .textContent =
         `Lecture notes · ${speaker} · ${affiliation}`;
 
-    document.getElementById('notes-open-link').href=url;
+    document.getElementById('notes-open-link').href = url;
 
     notes.showModal();
 
-    const token=++version;
+    document.body.classList.add('modal-open');
+
+    const token = ++version;
 
     pdfPages.replaceChildren();
-    pdfPages.hidden=true;
 
-    pdfStatus.hidden=false;
-    pdfStatus.textContent='Loading lecture notes…';
+    pdfPages.hidden = true;
 
-    try{
+    pdfStatus.hidden = false;
 
-      if(!window.pdfjsLib){
+    pdfStatus.textContent = 'Loading lecture notes…';
+
+    try {
+
+      if(!window.pdfjsLib) {
         throw Error('PDF library unavailable');
       }
 
-      pdfjsLib.GlobalWorkerOptions.workerSrc=
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
         'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-      const pdf=await pdfjsLib.getDocument(url).promise;
+      const pdf = await pdfjsLib.getDocument(url).promise;
 
-      if(token!==version)return;
+      if(token !== version) return;
 
-      pdfPages.hidden=false;
+      pdfPages.hidden = false;
 
-      for(let i=1;i<=pdf.numPages;i++){
+      for(let i=1; i<=pdf.numPages; i++) {
 
-        if(token!==version)return;
+        if(token !== version) return;
 
-        const page=await pdf.getPage(i);
-        const base=page.getViewport({scale:1});
+        const page = await pdf.getPage(i);
 
-        const width=Math.max(
+        const base = page.getViewport({
+          scale:1
+        });
+
+        const width = Math.max(
           240,
-          document.getElementById('notes-modal-body')
-            .clientWidth-32
+          document
+            .getElementById('notes-modal-body')
+            .clientWidth - 32
         );
 
-        const scale=Math.min(width/base.width,2);
-        const viewport=page.getViewport({scale});
+        const scale = Math.min(
+          width / base.width,
+          2
+        );
 
-        const wrap=document.createElement('div');
-        wrap.className='pdf-page-wrap';
+        const viewport = page.getViewport({
+          scale
+        });
 
-        const canvas=document.createElement('canvas');
-        canvas.className='pdf-page-canvas';
+        const wrap = document.createElement('div');
 
-        const dpr=Math.min(
-          window.devicePixelRatio||1,
+        wrap.className = 'pdf-page-wrap';
+
+        const canvas = document.createElement('canvas');
+
+        canvas.className = 'pdf-page-canvas';
+
+        const dpr = Math.min(
+          window.devicePixelRatio || 1,
           1.5
         );
 
-        canvas.width=Math.floor(viewport.width*dpr);
-        canvas.height=Math.floor(viewport.height*dpr);
+        canvas.width =
+          Math.floor(viewport.width * dpr);
 
-        canvas.style.width=viewport.width+'px';
-        canvas.style.height=viewport.height+'px';
+        canvas.height =
+          Math.floor(viewport.height * dpr);
+
+        canvas.style.width =
+          viewport.width + 'px';
+
+        canvas.style.height =
+          viewport.height + 'px';
 
         wrap.append(canvas);
+
         pdfPages.append(wrap);
 
         await page.render({
-          canvasContext:canvas.getContext('2d'),
+
+          canvasContext: canvas.getContext('2d'),
+
           viewport,
-          transform:[dpr,0,0,dpr,0,0]
+
+          transform: [
+            dpr,0,
+            0,dpr,
+            0,0
+          ]
+
         }).promise;
 
-        if(i===1){
-          pdfStatus.hidden=true;
+        if(i === 1) {
+
+          pdfStatus.hidden = true;
+
         }
 
       }
 
-    }catch(e){
+    } catch(error) {
 
-      if(token===version){
+      console.error('PDF rendering error:',error);
 
-        pdfPages.hidden=true;
+      if(token === version) {
 
-        pdfStatus.textContent=
+        pdfPages.hidden = true;
+
+        pdfStatus.textContent =
           'Preview unavailable. Select “Open PDF in new tab” below.';
 
       }
@@ -1473,28 +1690,39 @@ document.addEventListener('click',async ev=>{
    ========================================================= */
 
 for(const [dlg,selector] of [
+
   [abstract,'[data-modal-close]'],
+
   [notes,'[data-notes-close]']
-]){
 
-  dlg.querySelector(selector).addEventListener(
-    'click',
-    ()=>dlg.close()
-  );
+]) {
 
-  dlg.addEventListener('click',e=>{
-    if(e.target===dlg){
+  dlg
+    .querySelector(selector)
+    .addEventListener('click',() => {
+      dlg.close();
+    });
+
+  dlg.addEventListener('click',e => {
+
+    if(e.target === dlg) {
       dlg.close();
     }
+
   });
 
-  dlg.addEventListener('close',()=>{
+  dlg.addEventListener('close',() => {
 
-    if(dlg===notes){
+    if(dlg === notes) {
 
       version++;
+
       pdfPages.replaceChildren();
 
+    }
+
+    if(!abstract.open && !notes.open) {
+      document.body.classList.remove('modal-open');
     }
 
     focusBefore?.focus();
